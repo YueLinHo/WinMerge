@@ -1,0 +1,77 @@
+2006-09-11 Kimmo
+ PATCH: [ 1555893 ] Update readme-developers.html
+  Developers: readme-developers.html
+
+2006-09-10 Kimmo
+ PATCH: [ 1555237 ] Update installer doc after switch to SVN
+  Developers: rename readme-developers-InnoSetup.html to readme-InnoSetup.html
+  Developers: readme-InnoSetup.html
+ PATCH: [ 1555340 ] New Subversion-doc for devels
+  Developers new file: readme-Subversion.html
+
+2006-09-09 Kimmo
+ Add few words about registry subkeys. Clarify  situation when winAPI functions could be used.
+  Developers: Options.html
+
+2006-09-06 Kimmo
+ PATCH: [ 1552845 ] Small improvements to readme-manual
+  Developers: readme-manual.html
+
+2006-08-21 Kimmo
+ Add recommendation about running tidy tool for generated HTML files
+  Developers: readme-manual.html
+ Add info about targets used to build releases
+  Developers: readme-developers.html
+
+2006-08-08 Tim
+ BUG: [ 1379278 ] Docs fix: Generate new GUIDs for new plugins
+  Developers: Plugins.html
+
+2006-08-07 Kimmo
+ Update info about options reading and saving in Options-dialog.
+  Developers: Options.html
+ Several small additions, fixes and improvements to readme-developers
+  Developers: readme-developers.html
+
+2006-07-12 Kimmo
+ readme-developers had wrong build path for languages and still referred to readme.txt
+  Developers: readme-developers.html
+
+2006-05-06 Kimmo
+ Update doxygen config file
+  Developers: doxygen.cfg
+
+2006-03-12 Kimmo
+ PATCH: [ 1448004 ] Update installer doc
+  Developers: readme-developers-Innosetup.html
+
+2006-02-21 Kimmo
+ PATCH: [ 1435488 ] Update for readme-developers.html
+  Developers: readme-developers.html
+
+2006-02-20 Kimmo
+ Remove outdated planning file
+  Developers: Planning_2_2.txt
+
+2006-02-09 Kimmo
+ PATCH: [ 1427951 ] Add compiling instructions (for HTML help)
+  Developers: readme-developers.html
+
+2006-01-11 Tim
+ PATCH: [ 1402858 ] Web: New background color for 'important' and 'note'
+  Developers: readme-developers.html
+
+2006-01-02 Perry
+ PATCH: [ 1394717 ] Fix resource.h include for translations
+  Developers: readme-developers.html
+
+2005-12-28 Perry
+ BUG: [ 1389855 ] grammar fix in plugin docs
+  Developers: Plugins.html
+
+2005-09-22 Kimmo
+ PATCH: [ 1298109 ] Docs: Document ShellExtension versioning
+  Developers: readme-developers.html
+
+2005-09-22 Kimmo
+ Previous change history is in file readme.txt

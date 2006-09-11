@@ -1,0 +1,26 @@
+<FilesMatch "\.inc$">
+ Order Deny,Allow
+ Deny from all
+</FilesMatch>
+
+Redirect permanent /developer/wincvs.php http://sourceforge.net/cvs/?group_id=13216
+Redirect permanent /developer/translate.php http://winmerge.org/developer/l10n/index.php
+Redirect permanent /WinMerge17/index.html http://winmerge.org/1.7/index.php
+Redirect permanent /WinMerge17/WinMergeChanges.html http://winmerge.org/1.7/changes.php
+Redirect permanent /WinMerge17/docs http://winmerge.org/1.7/docs
+Redirect permanent /docs http://winmerge.org/1.7/docs
+Redirect permanent /WinMergeChanges.html http://winmerge.org/2.0/changes.php
+Redirect permanent /docs20 http://winmerge.org/2.0/docs
+Redirect permanent /images/screenshot.png http://winmerge.org/2.0/images/screenshot.png
+Redirect permanent /images/winmerge.gif http://winmerge.org/2.0/images/icon.gif
+Redirect permanent /images/winmerge22.gif http://winmerge.org/2.2/images/icon.gif
+Redirect permanent /2.2/images/filecomp1.gif http://winmerge.org/2.2/images/screenshot.gif
+
+#Tracker shortcuts...
+RewriteEngine On
+RewriteBase   /
+RewriteRule   ^bug/([0-9]+)$ http://sourceforge.net/tracker/index.php?func=detail&aid=$1&group_id=13216&atid=113216 [R]
+RewriteRule   ^patch/([0-9]+)$ http://sourceforge.net/tracker/index.php?func=detail&aid=$1&group_id=13216&atid=313216 [R]
+RewriteRule   ^support/([0-9]+)$ http://sourceforge.net/tracker/index.php?func=detail&aid=$1&group_id=13216&atid=213216 [R]
+RewriteRule   ^rfe/([0-9]+)$ http://sourceforge.net/tracker/index.php?func=detail&aid=$1&group_id=13216&atid=363216 [R]
+RewriteRule   ^todo/([0-9]+)$ http://sourceforge.net/tracker/index.php?func=detail&aid=$1&group_id=13216&atid=759426 [R]

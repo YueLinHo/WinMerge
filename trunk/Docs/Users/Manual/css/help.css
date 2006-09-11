@@ -1,0 +1,42 @@
+body,th,td {
+  font-family: Verdana,Helvetica,Arial,sans-serif;
+  font-size: 80%;
+}
+
+pre,code,tt {
+  font-family: "Courier New",Courier,monospace;
+  font-size: 100%;
+}
+
+.mediaobject {
+  margin-top: 10px;
+}
+
+.screen {
+  margin-left: 25px;
+  margin-right: 25px;
+  padding: 5px;
+  background-color: #EEEEEE;
+  border: 1px solid black;
+}
+
+.caution {
+  background-color: #FFDDAA;
+  border: 1px solid olive;
+}
+.important {
+  background-color: #FFFFDD;
+  border: 1px solid olive;
+}
+.note {
+  background-color: #DDDDFF;
+  border: 1px solid blue;
+}
+.tip {
+  background-color: #DDFFDD;
+  border: 1px solid green;
+}
+.warning {
+  background-color: #FFDDDD;
+  border: 1px solid red;
+}
