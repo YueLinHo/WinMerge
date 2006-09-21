@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sect1 id="Faq">
+  <title>Frequently asked questions</title>
+
+  <sect2>
+    <title>General questions</title>
+
+    <qandaset>
+      <qandaentry>
+        <question>
+          <para>Why are there two executable files,
+          <filename>WinMerge.exe</filename> and
+          <filename>WinMergeU.exe</filename>?</para>
+        </question>
+
+        <answer>
+          <itemizedlist>
+            <listitem>
+              <para><filename>WinMerge.exe</filename> is an ANSI (8-bit)
+              executable which works in all 32-bit Windows systems. It does
+              not have Unicode support.</para>
+
+              <para>Internally, it stores only ANSI characters (256
+              possibilities). If you open a Unicode file, the characters must
+              be converted to the ANSI codepage. As there are over 100,000
+              Unicode characters, and only 256 can be represented in the ANSI
+              codepage, data loss may occur. Conversion may be approximative
+              (accents are lost), or impossible (characters appear as
+              "?").</para>
+
+              <para><filename>WinMerge.exe</filename> also can not open files
+              with names outside the current ANSI codepag (e.g., WinMerge.exe
+              can not open a file with a Hebrew name, if run on an English
+              system. WinMergeU.exe can open such files.</para>
+            </listitem>
+
+            <listitem>
+              <para><filename>WinMergeU.exe</filename> is a Unicode enabled
+              executable which works on Windows NT4, Windows 2000, and newer
+              systems.</para>
+            </listitem>
+          </itemizedlist>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>That splash screen is annoying, how do I turn it off?</para>
+        </question>
+
+        <answer>
+          <para>From menu, select <menuchoice>
+              <guimenu>Edit</guimenu>
+
+              <guisubmenu>Options...</guisubmenu>
+
+              <guisubmenu>General</guisubmenu>
+
+              <guimenuitem>Disable Splash Screen</guimenuitem>
+            </menuchoice></para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>When wanting to compare directories, I cannot select a
+          directory in Browse?</para>
+        </question>
+
+        <answer>
+          <para>Are you trying to select a directory by clicking on it in the
+          upper part of the Open File dialog ? The Open File dialog will then
+          open it, and you have to push <guibutton>Ok</guibutton> again to get
+          out.</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>Does WinMerge support merging three files? Sometimes it is
+          called 3-way merge, where one file is ancestor. This would be useful
+          for version control!</para>
+        </question>
+
+        <answer>
+          <para>Unfortunately not. We acknowledge it would be good feature but
+          have no plans to implement it in near future. This can be somewhat
+          worked around by using two WinMerge instances. (One developer has
+          begun preliminary work on this feature, but it is not yet available,
+          even in experimental releases.)</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>Do you have any plans to support other operating systems than
+          Windows?</para>
+        </question>
+
+        <answer>
+          <para>Not currently. If somebody wants to help/work with
+          cross-platform support (using <ulink
+          url="http://www.wxwidgets.org/">wxWidgets</ulink> for example) we
+          are interested, of course.</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>There is no CVS integration?!</para>
+        </question>
+
+        <answer>
+          <para>Which kind of CVS integration WinMerge should have? Adding CVS
+          client features to WinMerge is questionable since there are many
+          good CVS clients already. Conflict file resolution is a feature we
+          are planning to add in future releases.</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>What is MRU (list)? What it means?</para>
+        </question>
+
+        <answer>
+          <para>MRU is the abbreviation for "Most Recently Used", and means
+          the history lists in the Open-dialog which contain the 20 last used
+          files/paths per side.</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>Can WinMerge open Open Office files?</para>
+        </question>
+
+        <answer>
+          <para>Yes, enable <guilabel>Detect archive type from file
+          signature</guilabel> option in <guilabel>Archive
+          Options</guilabel>.</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>Why do large files sometimes show as different in the
+          directory view, but come up as identical in the merge editor?</para>
+        </question>
+
+        <answer>
+          <para>This is because large files use the "<guilabel>Quick
+          Compare</guilabel>" method, even when the [<menuchoice>
+              <guimenu>Edit</guimenu>
+
+              <guimenuitem>Options /</guimenuitem>
+            </menuchoice> <guilabel>Compare</guilabel> / <guilabel>File
+          Compare Method</guilabel>] setting is set to "<guilabel>Full
+          Compare</guilabel>". This is a speed optimization. To test if this
+          is causing the behavior you're seeing, you could raise the limit for
+          the <guilabel>Quick Compare</guilabel> threshold for large files. It
+          is stored in the registry as:</para>
+
+          <screen>HKEY_CURRENT_USER\Software\Thingamahoochie\WinMerge\Settings\QuickMethodLimit</screen>
+        </answer>
+      </qandaentry>
+    </qandaset>
+  </sect2>
+
+  <sect2>
+    <title>Questions about binary files</title>
+
+    <qandaset>
+      <qandaentry>
+        <question>
+          <para>WinMerge says "<guilabel>Binary files are
+          different</guilabel>", but I am not comparing binary files?</para>
+        </question>
+
+        <answer>
+          <para>If you are using <filename>WinMerge.exe</filename> (not
+          <filename>WinMergeU.exe</filename>), then your files may be Unicode
+          files. <filename>WinMerge.exe</filename> cannot handle Unicode
+          files. Please try comparing files with
+          <filename>WinMergeU.exe</filename> if you have Windows NT4, Windows
+          2000 or newer Windows version.</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>WinMerge cannot compare registry files
+          (<filename><replaceable>*</replaceable>.reg</filename>)?</para>
+        </question>
+
+        <answer>
+          <para>Windows registry files
+          (<filename><replaceable>*</replaceable>.reg</filename>) are Unicode
+          files (UTF-16 or UCS-2) -- see previous answer.</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>WinMerge tells my files are binary files even when they are
+          not?</para>
+        </question>
+
+        <answer>
+          <para>There is one or more zero-bytes in your file(s). If WinMerge
+          finds zero-bytes from files, it considers the files to be binary
+          files. You can try to remove those zero-bytes from files.
+          Alternatively, you may open the files with the DisplayBinaryFiles
+          plugin. This plugin allows viewing binary files, but not editing
+          them. If you have a very recent version of WinMerge (2.5.0.4+), you
+          may use the new EditBinaryFiles plugin, which does allow editing
+          binary files (using an escape scheme for representing non-printable
+          characters).</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>I cannot merge binary files?</para>
+        </question>
+
+        <answer>
+          <para>A plugin to merge binary files has only recently been added to
+          WinMerge, and is not in any release before 2.5.0.4. Therefore,
+          WinMerge can only show if binary files are identical or
+          different.</para>
+        </answer>
+      </qandaentry>
+    </qandaset>
+  </sect2>
+
+  <sect2>
+    <title>Questions about editor</title>
+
+    <qandaset>
+      <qandaentry>
+        <question>
+          <para>Some characters are cut in half?</para>
+        </question>
+
+        <answer>
+          <para>Try selecting a different font from menu <menuchoice>
+              <guimenu>View</guimenu>
+
+              <guimenuitem>Select Font...</guimenuitem>
+            </menuchoice></para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>I would like to see the line numbers?</para>
+        </question>
+
+        <answer>
+          <para>WinMerge shows current line in editor statusbar. WinMerge
+          cannot show in-editor linenumbers. That is one feature we might
+          consider for future releases.</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>I see question marks instead of letters in files?</para>
+        </question>
+
+        <answer>
+          <para>This is what we call a "lossy" conversion.</para>
+
+          <para>For Unicode files (UCS-2, UTF-8), use
+          <filename>WinMergeU.exe</filename>.</para>
+
+          <para>For ANSI files, this is probably due to code-page problems. If
+          "<guilabel>Use codepage info</guilabel>" is selected from
+          <guimenuitem>Options</guimenuitem>, turn that off and see if it
+          helps.</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>I cannot select proportional fonts for editor?</para>
+        </question>
+
+        <answer>
+          <para>Unfortunately WinMerge supports only non-proportional
+          fonts.</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>What is delaying of (automatic) rescan? Why it is
+          needed?</para>
+        </question>
+
+        <answer>
+          <para>When <guilabel>Automatic Rescan</guilabel> is enabled,
+          WinMerge delays rescanning while user edits files. So there is no
+          rescanning happening when user types text but shortly after user has
+          finished typing. Without this delaying WinMerge would do rescan
+          after every typed letter and editing files would become slow. This
+          delaying especially improves editing of bigger files which can take
+          several seconds to rescan.</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>Can I print files from editor?</para>
+        </question>
+
+        <answer>
+          <para>Unfortunately printing is not supported. This is one area
+          where we would really appreciate help in implementation!</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>Can I hide similar lines in editor (so that only different
+          lines are visible)?</para>
+        </question>
+
+        <answer>
+          <para>No, you can't. Many users have requested this feature but we
+          don't have any plans to implement it. We don't believe it would
+          really improve usability.</para>
+        </answer>
+      </qandaentry>
+    </qandaset>
+  </sect2>
+
+  <sect2>
+    <title>WinMerge as external compare or diff-tool</title>
+
+    <qandaset>
+      <qandaentry>
+        <question>
+          <para>I want WinMerge to close with a single <keycap>ESC</keycap>
+          press after I'm done?</para>
+        </question>
+
+        <answer>
+          <para>Use <option>-e</option> commandline switch.</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>How can I avoid temporary paths filling Open-dialog history
+          lists?</para>
+        </question>
+
+        <answer>
+          <para>Tell your external program to invoke WinMerge with the
+          <option>/ub</option> option, which tells WinMerge to not add the
+          files to the MRU.</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>But the program I'm using doesn't allow commandline
+          parameters!</para>
+        </question>
+
+        <answer>
+          <para>Create a batch file where you add one of these lines (but not
+          both):</para>
+
+          <itemizedlist>
+            <listitem>
+              <screen>CALL "<replaceable>&lt;winmerge path&gt;\WinMerge</replaceable>" /ub %1 %2</screen>
+            </listitem>
+
+            <listitem>
+              <screen>start "WinMerge" "<replaceable>&lt;winmerge path&gt;</replaceable>" /ub %1 %2</screen>
+            </listitem>
+          </itemizedlist>
+
+          <para>And then call this batch file from program.</para>
+        </answer>
+      </qandaentry>
+    </qandaset>
+  </sect2>
+
+  <sect2>
+    <title>Archive support</title>
+
+    <qandaset>
+      <qandaentry>
+        <question>
+          <para>How can I open "Perry-style" patch files WinMerge developers
+          use when submitting patches?</para>
+        </question>
+
+        <answer>
+          <para>"Perry-style" patches are zip-files containing original and
+          changed files in different directories. WinMerge has internal
+          support (surprise?) for handling these files. Just select zip file
+          in question to left side and right side and WinMerge opens zip files
+          contents to directory compare comparing original and altered
+          files.</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>I do not want to install 7-zip. Can archive support use other
+          archive tools (like WinZip or WinRar)?</para>
+        </question>
+
+        <answer>
+          <para>Unfortunately WinMerge can only use 7-zip.</para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>Can WinMerge open archive files with non-standard
+          file-extensions? (For example .jar files as zip-files)</para>
+        </question>
+
+        <answer>
+          <para>Yes, enable <guilabel>Detect archive type from file
+          signature</guilabel> option in <guilabel>Archive
+          Options</guilabel>.</para>
+        </answer>
+      </qandaentry>
+    </qandaset>
+  </sect2>
+
+  <sect2>
+    <title>Text encoding (codepages)</title>
+
+    <qandaset>
+      <qandaentry>
+        <question>
+          <para>How do I tell if my file is coded in the local windows (ie,
+          ANSI) codepage?</para>
+        </question>
+
+        <answer>
+          <para>Open the file with Windows notepad (eg. <menuchoice>
+              <guimenu>Start</guimenu>
+
+              <guisubmenu>(All) Programs</guisubmenu>
+
+              <guisubmenu>Accessories</guisubmenu>
+
+              <guimenuitem>Notepad</guimenuitem>
+            </menuchoice>. Choose <menuchoice>
+              <guimenu>File</guimenu>
+
+              <guimenuitem>Save As</guimenuitem>
+            </menuchoice>, and in the Save As dialog which appears, look at
+          the dropdown list at the very bottom, labelled
+          "<guilabel>Encoding</guilabel>".</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>If it says "<guilabel>ANSI</guilabel>", the file is
+              (apparently) in the local windows codepage. If the file is
+              entirely in English and normal punctuation, then the file is
+              also in ASCII.</para>
+            </listitem>
+
+            <listitem>
+              <para>If it says "<guilabel>Unicode</guilabel>", the file is
+              (probably) in the default Windows Unicode encoding
+              "UCS-2LE".</para>
+            </listitem>
+
+            <listitem>
+              <para>If it says "<guilabel>UTF-8</guilabel>", the file is in
+              the cross-platform Unicode encoding "UTF-8".</para>
+            </listitem>
+
+            <listitem>
+              <para>If it says "<guilabel>Unicode big endian</guilabel>", the
+              file is in a different Unicode encoding not much used or
+              supported under Windows, probably "UCS-2BE".</para>
+            </listitem>
+          </itemizedlist>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>How do I compare UTF-8 files? WinMerge is not showing them
+          correctly.</para>
+        </question>
+
+        <answer>
+          <para>Using WinMerge encoding detection.</para>
+
+          <itemizedlist>
+            <listitem>
+              <para>If they are XML files, they should have an encoding
+              attribute in the XML declaration, which should say "UTF-8". For
+              example: <screen>&lt;?xml version="1.0" encoding="UTF-8"?&gt;</screen></para>
+            </listitem>
+
+            <listitem>
+              <para>If they are HTML files, they should have the encoding
+              embedded in a content attribute in a meta tag in the header. For
+              example: <screen>&lt;meta http-equiv="content-type" content="text/html; charset=UTF-8"&gt;</screen></para>
+            </listitem>
+
+            <listitem>
+              <para>For WinMerge to read encodings specified in XML or HTML
+              (or Windows RC resource) files, the option checkbox
+              <guilabel>Detect codepage info for...</guilabel> in
+              <guilabel>Codepage</guilabel> options (<menuchoice>
+                  <guimenu>Edit</guimenu>
+
+                  <guimenuitem>Options</guimenuitem>
+                </menuchoice> from main menu) must be checked.</para>
+            </listitem>
+          </itemizedlist>
+        </answer>
+
+        <answer>
+          <para>For all other cases, to instruct WinMerge to assume that all
+          documents are UTF-8, set the default WinMerge codepage to 65001
+          (which is Microsoft's code for UTF-8) in
+          <guilabel>Codepage</guilabel> options (<menuchoice>
+              <guimenu>Edit</guimenu>
+
+              <guimenuitem>Options</guimenuitem>
+            </menuchoice> from main menu) and then <guilabel>Custom
+          Codepage</guilabel>.</para>
+        </answer>
+      </qandaentry>
+    </qandaset>
+  </sect2>
+
+  <sect2>
+    <title>Patch files</title>
+
+    <qandaset>
+      <qandaentry>
+        <question>
+          <para>Is there way to create patch files from the
+          commandline?</para>
+        </question>
+
+        <answer>
+          <para>No. It may be added in later versions but until then Win32
+          port of diffutils can be used. The Win32 port of diffutils (and
+          patch) can be downloaded from <productname>GnuWin32</productname>
+          project from SourceForge: <ulink
+          url="http://sourceforge.net/projects/gnuwin32/">
+          http://sourceforge.net/projects/gnuwin32</ulink></para>
+        </answer>
+      </qandaentry>
+
+      <qandaentry>
+        <question>
+          <para>Can patches be applied using WinMerge?</para>
+        </question>
+
+        <answer>
+          <para>No. The patch tool from GnuWin32 project can be used for patch
+          applying since WinMerge produces GNU/diffutils compatible patch
+          files. See above question.</para>
+        </answer>
+      </qandaentry>
+    </qandaset>
+
+    <para></para>
+  </sect2>
+</sect1>

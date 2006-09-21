@@ -1,0 +1,95 @@
+body {
+	margin: 0;
+	padding: 0;
+	color: black;
+	background: white;
+	font-family: sans-serif;
+}
+
+#head {
+	margin: 0;
+	padding: 5px;
+	background: white;
+}
+
+#head h1 {
+	margin: 0;
+	padding: 0;
+}
+
+#tabs {
+	display: none;
+}
+
+#nav {
+	display: none;
+}
+
+#content {
+	margin: 0;
+	padding: 5px;
+}
+
+#content h2, p {
+	margin-top: 0;
+}
+
+h1, h2, h3, h4 {
+	font-family: serif;
+	font-weight: bold;
+}
+
+p.important {
+	padding: 5px;
+	background-color: #FFFFFF;
+	border: 1px solid black;
+	font-weight: bold;
+}
+
+p.note {
+	padding: 5px;
+	background-color: #FFFFFF;
+	border: 1px solid black;
+}
+
+pre.code {
+	margin-left: 0;
+	margin-right: 0;
+	padding: 5px;
+	background-color: #FFFFFF;
+	border: 1px solid black;
+}
+
+acronym {
+	cursor: help;
+	border-bottom: 1px dotted black;
+}
+
+.noprint {
+	display: none;
+}
+
+/* Status of translations */
+#status {
+	margin-bottom: 10px;
+	border-collapse: collapse;
+}
+
+#status th {
+	padding: 3px;
+	border: 1px solid black;
+}
+
+#status td {
+	padding: 3px;
+	border: 1px solid black;
+}
+
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+
+.actively { background-color: white; }
+.maintained { background-color: white; }
+.unmaintained { background-color: white; }
+.unknown { background-color: white; }

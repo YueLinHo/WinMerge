@@ -1,0 +1,107 @@
+2006-09-21 Kimmo
+ PATCH: [ 1561668 ] Install translated readme texts
+   InnoSetup: WinMerge.iss
+
+2006-09-20 Gal
+  PATCH: [ 1552248 ] Install as a ClearCase diff tool
+   InnoSetup: WinMerge.iss
+   InnoSetup/Languages: *.isl
+
+2006-09-20 Kimmo
+ PATCH: [ 1560904 ] Install 64-bit ShellExtension
+  InnoSetup: WinMerge.iss
+
+2006-09-18 Kimmo
+ Synchronize language files from upstream (http://www.jrsoftware.org/files/istrans/)
+  InnoSetup/Languages: Bulgarian.isl Catalan.isl Czech.isl Italian.isl Japanese.isl
+   Slovak.isl Spanish.isl Turkish.isl
+
+2006-09-13 Kimmo
+ PATCH: [ 1557892 ] Updated Swedish.isl InnoSetup translation
+  Submitted by Hans Eriksson
+  InnoSetup/Languages: Swedish.isl
+
+2006-09-11 Takashi
+ Japanese translation update
+  InnoSetup/Languages: Japanese.isl
+
+2006-09-05 Kimmo
+ PATCH: [ 1552248 ] Install as a TortoiseSVN diff tool
+  InnoSetup: WinMerge.iss
+  InnoSetup/Languages: *.isl
+
+2006-08-31 Kimmo
+ PATCH: [ 1548912 ] Combine "WinMerge core" and "Runtimes" categories
+  InnoSetup: WinMerge.iss
+
+2006-08-28 Kimmo
+ PATCH: [ 1547482 ] Plugins.txt shortcut is installed even if plugins are not
+  InnoSetup: WinMerge.iss
+
+2006-08-27 Kimmo
+ PATCH: [ 1547258 ] Fix installer paths
+  InnoSetup: WinMerge.iss
+
+2006-08-05 Kimmo
+ PATCH: [ 1471755 ] Install plugins only for full install
+  Innosetup: WinMerge.iss
+
+2006-05-15 Tim
+ TODO: [ 1483281 ] Update installer graphics for new icon
+  InnoSetup/Art: Large Logo.bmp Small Logo.bmp
+  InnoSetup/Art deleted files: Large Logo.rle Small Logo.rle
+  InnoSetup/Art/Src deleted files: Large Logo.ufo Small Logo.ico
+
+2006-04-18 Kimmo
+ PATCH: [ 1471760 ] Remove plugins.txt reference from component selection
+  InnoSetup/Languages: *.isl
+ PATCH: [ 1471767 ] Change Plugins.txt in Start-menu to Plugins
+  InnoSetup: WinMerge.iss
+  InnoSetup/Languages: *.isl
+
+2006-03-12 Kimmo
+ PATCH: [ 1447991 ] Let installer pick lang files from build folder
+  InnoSetup: WinMerge.iss  
+
+2006-03-09 Kimmo
+ PATCH: [ 1445719 ] Fix broken installer (2.5.3.3)
+  InnoSetup: WinMerge.iss
+
+2006-02-23 Kimmo
+ PATCH: [ 1436127 ] Add VS2003 runtimes to installer
+  InnoSetup: WinMerge.iss
+  InnoSetup/Runtimes new files: mfc71.dll mfc71u.dll msvcp71.dll msvcr71.dll
+  InnoSetup/Runtimes deleted files: atla.dll atlu.dll mfc42.dll mfc42u.dll
+   msvcrt.dll oleaut32.dll
+
+2006-02-21 Kimmo
+ PATCH: [ 1435514 ] Minor tweaks for installer
+  InnoSetup: WinMerge.iss
+
+2006-02-20 Kimmo
+ Remove outdated and unused files
+  Innosetup: WinMerge Beta.txt WinMerge Localized.iss
+
+2006-02-01 Perry
+ PATCH: [ 1412386 ] Adding readme files
+  Moved readme.txt to Changes_old.txt & added real readme.txt
+  InnoSetup: Changes_old.txt readme.txt
+
+2006-01-30 Kimmo
+ PATCH: [ 1417858 ] Fix manual path
+  InnoSetup: WinMerge.iss
+
+2006-01-24 Kimmo
+ PATCH: [ 1413909 ] Install HTMLHelp manual
+  InnoSetup: WinMerge.iss
+
+2005-11-02 Tim
+ Translate "OptionalFeatures" and "ProjectFileDesc" to German
+  InnoSetup/Languages: German.isl
+
+2005-10-20 Kimmo
+ PATCH: [ 1332160 ] Fix Project file description in shell
+   InnoSetup: WinMerge.iss
+  
+2005-10-20 Kimmo
+ Previous change history is in file readme.txt

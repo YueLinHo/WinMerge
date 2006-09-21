@@ -1,0 +1,51 @@
+body,th,td {
+  font-family: Verdana,Helvetica,Arial,sans-serif;
+  font-size: 80%;
+}
+
+pre,code,tt {
+  font-family: "Courier New",Courier,monospace;
+  font-size: 100%;
+}
+
+.navheader {
+  display: none;
+}
+.navfooter {
+  display: none;
+}
+
+#ads {
+  display: none;
+}
+
+.mediaobject {
+  margin-top: 10px;
+}
+
+.screen {
+  padding: 0;
+  background-color: white;
+  border: 0;
+}
+
+.caution {
+  background-color: white;
+  border: 1px solid black;
+}
+.important {
+  background-color: white;
+  border: 1px solid black;
+}
+.note {
+  background-color: white;
+  border: 1px solid black;
+}
+.tip {
+  background-color: white;
+  border: 1px solid black;
+}
+.warning {
+  background-color: white;
+  border: 1px solid black;
+}

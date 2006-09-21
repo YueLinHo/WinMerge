@@ -1,0 +1,138 @@
+
+People who have contributed to WinMerge
+---------------------------------------
+
+Original developer, project admin:
+* Dean Grimm
+
+Project lead:
+* Christian List
+
+Other developers:
+* Laurent Ganier
+* Tim Gerundt
+* Gal Hammer
+* Dennis Limm
+* Chris Mumford
+* Perry Rapp
+* Takashi Sawanaka
+* Christian "Seier" Blackburn (Installer)
+* Jochen Tucht
+* Kimmo Varis
+
+Graphic Design:
+* Alexander Skinner
+
+Localization:
+* Bulgarian:	
+  Sld
+  tigertron
+
+* Catalan:	
+  Jordi Vilar
+
+* Simplified Chinese:
+  Liaobin
+
+* Traditional Chinese:
+  Koko
+
+* Czech:
+  Jiri Tax
+  Jan Hryz
+
+* Danish:
+  Christian List
+
+* Dutch:
+  Michel Coene
+  Ronald Schaap
+
+* French:	
+  Jean-F Jolin
+  Gil Andre 
+  Laurent Ganier
+  Matthieu Pupat
+    
+* German:	
+  Tim Gerundt
+  Winfried Peter
+  Joerg Schneider   
+
+* Hungarian:
+  Márton Balázs  
+
+* Italian:	
+  Andrea Decorte
+  Michele Merega
+             
+* Korean:
+  Sukjoon
+  Lee Jae-Hong
+           
+* Norwegian:	
+  Hans Fredrik Nordhaug
+            
+* Polish:	
+  Pawel Wawrzysko
+
+* Portuguese (Brazilian):	
+  Wender Firmino
+
+* Russian:	
+  Dmitriy S. Aleshkowskiy
+              
+* Slovak:	
+  Majvan
+             
+* Spanish:	
+  Jesús M. Delgado 'MacK'
+  Dean Grimm
+             
+* Swedish:	
+  Hans Eriksson
+  Göran Håkansson
+
+* Turkish:
+  Ozkan UNVER
+
+
+Other Contributors (code, ideas, testing..):
+* Andre Arpin
+* Steve Beaudoin
+* Hern Chen
+* Jim Fougeron
+* Marvin Gouw
+* Jan Hryz
+* Ed_K
+* Ferenc Kubatovics
+* Vladimir Lukianov
+* David Maisonave
+* Harry Mckame
+* Oliver Mellet
+* Andreas Morsing
+* Tim Musschoot
+* Vincent Osele
+* Michael Richter
+* Markus Rollmann
+* Philippe Verdy
+* Vikrant
+* Gilbert Wellisch
+
+
+
+WinMerge includes code from:
+* Brent Corkum (BCMenu)
+* Paul DiLascia (CStaticLink) 
+* Michael Dunn (CShellFileOp)
+* Michael P. Mehl (CMessageBoxDialog)
+* Cristi Posea (CSizingControlBar)
+* Ferdinand Prantl (CrystalEditor syntax rules)
+* Henry Spencer (CRegExp)
+* Andrei Stcherbatchenko (CrystalEditor)
+
+*** NOTE ***
+If your name is missing please send email us to:
+winmerge-support@lists.sourceforge.net
+
+Thanks!
