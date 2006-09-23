@@ -2,6 +2,14 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2006-09-23 Kimmo
+ Fix Visual C 6 compile by backouting (partly) patches:
+  - Fix 64-bit pointer truncation in SetWindowLongPtr call (the last I hope)
+  - PATCH: [ 1561796 ] Get/SetWindowLong not supported in 64-bit Windows
+  - BUG: [ 1561781 ] 64-bit compile errors from 7zCommon.cpp
+  Src: 7zCommon.cpp ChildFrm.cpp
+  Src/Common: CSubclass.cpp MessageBoxDialog.cpp MessageBoxDialog.h sizecbar.cpp
+
 2006-09-21 WinMerge experimental release 2.5.7.1 (SVN revision 3600)
 
 2006-09-21 Kimmo

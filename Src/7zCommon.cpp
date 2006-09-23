@@ -199,7 +199,7 @@ protected:
 	static const DWORD m_dwVer7zRecommended;
 	static const TCHAR m_strRegistryKey[];
 	static const TCHAR m_strDownloadURL[];
-	static INT_PTR CALLBACK DlgProc(HWND, UINT, WPARAM, LPARAM);
+	static BOOL CALLBACK DlgProc(HWND, UINT, WPARAM, LPARAM);
 	static DWORD FormatVersion(LPTSTR, LPTSTR, DWORD);
 };
 
@@ -363,7 +363,7 @@ HCURSOR NTAPI CommCtrl_LoadCursor(LPCTSTR lpCursorName)
 /**
  * @brief DLGPROC for C7ZipMismatchException's ReportError() popup.
  */
-INT_PTR CALLBACK C7ZipMismatchException::DlgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+BOOL CALLBACK C7ZipMismatchException::DlgProc(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
 	switch (uMsg)
 	{
@@ -483,7 +483,7 @@ INT_PTR CALLBACK C7ZipMismatchException::DlgProc(HWND hWnd, UINT uMsg, WPARAM wP
 			if (hCursor)
 			{
 				SetCursor(hCursor);
-				SetWindowLongPtr(hWnd, DWLP_MSGRESULT, 1);
+				SetWindowLong(hWnd, DWL_MSGRESULT, 1);
 				return TRUE;
 			}
 		} return FALSE;
@@ -522,7 +522,7 @@ INT_PTR CALLBACK C7ZipMismatchException::DlgProc(HWND hWnd, UINT uMsg, WPARAM wP
  */
 int C7ZipMismatchException::ReportError(UINT nType, UINT nMessageID)
 {
-	UINT_PTR response = -1;
+	short response = -1;
 	m_bShowAllways = nMessageID;
 	if (!m_bShowAllways)
 	{
@@ -658,7 +658,7 @@ DWORD NTAPI VersionOf7z(BOOL bLocal)
 /**
  * @brief Callback to pass to EnumResourceLanguages.
  */
-BOOL CALLBACK FindNextResLang(HANDLE hModule, LPCTSTR lpType, LPCTSTR lpName,  WORD wLanguage,  LONG_PTR lParam)
+BOOL CALLBACK FindNextResLang(HMODULE hModule, LPCTSTR lpType, LPCTSTR lpName, WORD wLanguage, LONG lParam)
 {
 	LPWORD pwLanguage = (LPWORD)lParam;
 	WORD wPrevious = *pwLanguage;
@@ -736,7 +736,7 @@ interface Merge7z *Merge7z::Proxy::operator->()
 		if (HINSTANCE hinstLang = AfxGetResourceHandle())
 		{
 			WORD wLangID = 0;
-			if (EnumResourceLanguages(hinstLang, RT_VERSION, MAKEINTRESOURCE(VS_VERSION_INFO), (ENUMRESLANGPROC)FindNextResLang, (LPARAM)&wLangID) == 0)
+			if (EnumResourceLanguages(hinstLang, RT_VERSION, MAKEINTRESOURCE(VS_VERSION_INFO), FindNextResLang, (LPARAM)&wLangID) == 0)
 			{
 				flags |= wLangID << 16;
 			}
