@@ -5,6 +5,9 @@ Add new items to top.
 2006-09-24 Kimmo
  PATCH: [ 1564280 ] Stack corruption in LanguageSelect
   Src/Common: LanguageSelect.cpp
+ PATCH: [ 1563386 ] Spanish translation update
+  Submitted by Jesus M. Delgado 'Mack'
+   Src/Languages/Spanish: MergeSpanish.rc
 
 2006-09-23 Kimmo
  Fix Visual C 6 compile by backouting (partly) patches:
