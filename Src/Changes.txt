@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2006-09-24 Kimmo
+ PATCH: [ 1564280 ] Stack corruption in LanguageSelect
+  Src/Common: LanguageSelect.cpp
+
 2006-09-23 Kimmo
  Fix Visual C 6 compile by backouting (partly) patches:
   - Fix 64-bit pointer truncation in SetWindowLongPtr call (the last I hope)
