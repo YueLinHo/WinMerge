@@ -894,6 +894,7 @@ bool CMergeDoc::ListCopy(int srcPane, int dstPane, int nDiff /* = -1*/,
 		}
 
 		// if the current diff contains missing lines, remove them from both sides
+		int deleted_lines=0;
 		int limit = cd_dend;
 
 		// curView is the view which is changed, so the opposite of the source view
@@ -904,14 +905,19 @@ bool CMergeDoc::ListCopy(int srcPane, int dstPane, int nDiff /* = -1*/,
 		{
 			// text was missing, so delete rest of lines on both sides
 			// delete only on destination side since rescan will clear the other side
-			if (cd_dend + 1 < dbuf.GetLineCount())
+			if(cd_blank==0)
 			{
 				dbuf.DeleteText(dstView, cd_blank, 0, cd_dend+1, 0, CE_ACTION_MERGE);
 			}
 			else
 			{
-				dbuf.DeleteText(dstView, cd_blank, 0, cd_dend, dbuf.GetLineLength(cd_dend), CE_ACTION_MERGE);
+				// If you are interesting in this code, please see at URL:
+				// https://sourceforge.net/tracker/index.php?func=detail&aid=1555664&group_id=13216&atid=113216
+				// and
+				// https://sourceforge.net/tracker/index.php?func=detail&aid=1570173&group_id=13216&atid=113216
+				dbuf.DeleteText(dstView, cd_blank-1, dbuf.GetLineLength(cd_blank-1), cd_dend, dbuf.GetLineLength(cd_dend), CE_ACTION_MERGE);
 			}
+			deleted_lines=cd_dend-cd_blank+1;
 
 			limit=cd_blank-1;
 			dbuf.FlushUndoGroup(dstView);
