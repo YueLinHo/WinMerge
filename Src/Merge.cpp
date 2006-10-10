@@ -203,19 +203,20 @@ BOOL CMergeApp::InitInstance()
 
 	// WinMerge registry settings are stored under HKEY_CURRENT_USER/Software/Thingamahoochie
 	// This is the name of the company of the original author (Dean Grimm)
-	SetRegistryKey(_T("Thingamahoochie"));
+	SetRegistryKey(_T("WinMergeX"));
 
 	BOOL bSingleInstance = GetProfileInt(_T("Settings"), _T("SingleInstance"), FALSE) ||
 		(TRUE == cmdInfo.m_bSingleInstance);
 	
 	HANDLE hMutex = NULL;
+	CString mutexGuid = _T("{E10D9583-1261-47c8-B973-9E4F88074D72}");
 	if (bSingleInstance)
 	{
-		hMutex = CreateMutex(NULL, FALSE, _T("WinMerge{05963771-8B2E-11d8-B3B9-000000000000}"));
+		hMutex = CreateMutex(NULL, FALSE, mutexGuid);
 		WaitForSingleObject(hMutex, INFINITE);
 	}
 
-	CInstanceChecker instanceChecker(_T("{05963771-8B2E-11d8-B3B9-000000000000}"));
+	CInstanceChecker instanceChecker(mutexGuid);
 	if (bSingleInstance)
 	{
 		if (instanceChecker.PreviousInstanceRunning())

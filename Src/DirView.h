@@ -173,6 +173,7 @@ private:
 	void DoUpdateFileEncodingDialog(CCmdUI* pCmdUI);
 	BOOL DoItemRename(LPCTSTR szNewItemName);
 	BOOL RenameOnSameDir(LPCTSTR szOldFileName, LPCTSTR szNewFileName);
+	void DoDisplayItemProperties();
 // End DirActions.cpp
 	void ReflectGetdispinfo(NMLVDISPINFO *);
 
@@ -367,6 +368,8 @@ protected:
 	afx_msg void OnEditPaste();
 	afx_msg void OnEditUndo();
 	afx_msg void OnUpdateEditUndo(CCmdUI* pCmdUI);
+	afx_msg void OnItemProperties();
+	afx_msg void OnUpdateItemProperties(CCmdUI* pCmdUI);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 	BOOL OnHeaderBeginDrag(LPNMHEADER hdr, LRESULT* pResult);
@@ -396,6 +399,7 @@ private:
 	void DoUpdateCtxtDirCopyRightTo(CCmdUI* pCmdUI);
 	void DoUpdateCtxtDirMoveLeftTo(CCmdUI* pCmdUI);
 	void DoUpdateCtxtDirMoveRightTo(CCmdUI* pCmdUI);
+	void DoUpdateItemProperties(CCmdUI* pCmdUI);
 	POSITION GetItemKeyFromData(DWORD dw) const;
 	DIFFITEM GetDiffItem(int sel) const;
 	DIFFITEM & GetDiffItemRef(int sel);

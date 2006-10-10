@@ -2,7 +2,7 @@
 # Self-tests for diffutils diff & WinMerge
 #
 # Created: 2006-01-21, Perry Rapp
-# Edited:  2006-02-07, Perry Rapp
+# Edited:  2006-10-08, Perry Rapp
 #
 
 use strict;
@@ -25,12 +25,16 @@ my @testprogs = (
   [ "MergeUnicodeDebug", "diff2winmergeU.exe", "WinMergeU.exe" ],
   [ "MergeUnicodeRelease", "diff2winmergeU.exe", "WinMergeU.exe" ],
   [ "MergeDebug", "diff2winmerge.exe", "WinMerge.exe" ],
-  [ "MergeRelease", "diff2winmerge.exe", "WinMerge.exe" ]
+  [ "MergeRelease", "diff2winmerge.exe", "WinMerge.exe" ],
+  [ "diff", "path_will_be_here", "unused" ]
  );
 
 my $wmargs = " /noprefs /noninteractive /minimize /ub";
 # "..\\Build\\MergeUnicodeDebug\\diff2winmergeU.exe ..\\Build\\MergeUnicodeDebug\\WinMergeU.exe /noprefs /noninteractive /minimize /ub";
 my $DIFF = $wmargs;
+
+# diff -q doesn't display differences (q = quiet), only result
+my $diffargs = " -q";
 
 # Global options
 my $noisy=0; # 1 to echo every test
@@ -247,22 +251,31 @@ sub testdiff {
   for my $i ( 0 .. $#testprogs ) {
     my $build = $testprogs[$i][0];
     if (exists $testBuilds{$build} and $testBuilds{$build} == 1) {
+      my $label;
+      my $cmd;
+      if ($build eq "diff") {
+        my $diff = getDiff();
+        $label = $diff;
+        $cmd = "$diff $diffargs";
+      } else {
       my $diff2merge = getDiff2merge($i);
       my $winmerge = getWinMerge($i);
-      my $cmd = "$diff2merge $winmerge $wmargs";
-
+        $label = $winmerge;
+        $cmd = "$diff2merge $winmerge $wmargs";
+      }
       if ($noisy == 1) {
         my $ordCount = $testCount+1;
-        print "$ordCount) diffing $flags $file1 $file2 (expect $result) [$winmerge]\n";
+        print "$ordCount) diffing $flags $file1 $file2 (expect $result) [$label]\n";
       }
 
-      system("$cmd $flags $file1 $file2");
+      my $cmdline = "$cmd $flags $file1 $file2";
+      system($cmdline);
       my $exit_value  = $? >> 8;
 
       $testCount = $testCount + 1;
 
       if ($exit_value != $result) {
-         rpterr("$flags $file1 vs $file2 => $result ($exit_value) [$winmerge ]");
+         rpterr("test: $flags $file1 vs $file2 => $result ($exit_value) [$label]\ncmd: $cmdline\n");
       }
     }
   }
@@ -274,26 +287,40 @@ sub processArgs {
   my $buildset=0;
   foreach $argnum (0 .. $#ARGV) {
     $arg = $ARGV[$argnum];
-    if ($arg eq "noisy") { $noisy=1; }
-    if ($arg eq "abort") { $abort=1; }
-    if ($arg eq "--help" or $arg eq "/?") { doUsage; }
+    if ($arg eq "noisy") { $noisy=1; next; }
+    if ($arg eq "abort") { $abort=1; next; }
+    if ($arg eq "--help" or $arg eq "/?") { doUsage; next; }
     if ($arg eq "MergeUnicodeDebug" or $arg eq "UnicodeDebug") {
       $testBuilds{'MergeUnicodeDebug'} = 1;
       $buildset = 1;
+      next;
     }
     if ($arg eq "MergeUnicodeRelease" or $arg eq "UnicodeRelease") {
       $testBuilds{'MergeUnicodeRelease'} = 1;
       $buildset = 1;
+      next;
     }
     if ($arg eq "MergeDebug" or $arg eq "Debug") {
       $testBuilds{'MergeDebug'} = 1;
       $buildset = 1;
+      next;
     }
     if ($arg eq "MergeRelease" or $arg eq "Release") {
       $testBuilds{'MergeRelease'} = 1;
       $buildset = 1;
+      next;
     }
-    if ($arg eq "all") { $testMergeAll=1; }
+    if ($arg eq "all") { $testMergeAll=1; next; }
+    if ($arg =~ /^diff:(.+)/) {
+      $testprogs[4][1] = $1;
+      $testBuilds{'diff'} = 1;
+      my $msg = "Using diff program: " . $testprogs[4][1] . "\n";
+      if ($noisy == 1) { print "$msg\n"; }
+      $buildset = 1;
+      next;
+    }
+    print "Unknown argument: $arg\n";
+    doUsage; # exits
   }
   # if no build chosen, all are tested
   if ($buildset == 0) {
@@ -307,11 +334,14 @@ sub processArgs {
   }
 }
 
+# Display usage summary and exit
 sub doUsage {
-  print "testdiff [noisy] [abort] [all] [UnicodeDebug] [UnicodeRelease] [Debug] [Release]";
+  print "testdiff [noisy] [abort] [all] [UnicodeDebug] [UnicodeRelease] [Debug] [Release] [diff:..\\path_to_diff\\diff.exe]";
   exit;
 }
 
+# Report passed error
+# Exit if global abort option is set (meaning stop at first failure)
 sub rpterr {
   $failCount = $failCount + 1;
   my $msg = "FAILED TEST ($failCount): @_";
@@ -323,18 +353,28 @@ sub rpterr {
   }
 }
 
+# Check if required executables are present
+# eg, diff.exe, or diff2merge.exe & WinMerge(u).exe
+# Exits with failure message if any are missing
 sub checkRequiredPrograms {
 
   my $missing = "";
   for my $i ( 0 .. $#testprogs ) {
-
+    # $build is one of "MergeDebug", "diff", etc
     my $build = $testprogs[$i][0];
+    # Handle only build sets requested by user
     if (exists $testBuilds{$build} and $testBuilds{$build} == 1) {
-
+      # Figure out what exe(s) will be used by this build test
+      # and check if present
+      if ($build eq "diff") {
+        my $diff = getDiff();
+        -e $diff or $missing = "$missing\n$diff";
+      } else {
       my $diff2merge = getDiff2merge($i);
       my $WinMerge = getWinMerge($i);
       -e $diff2merge or $missing = "$missing\n$diff2merge";
       -e $WinMerge or $missing = "$missing\n$WinMerge";
+      }
     }
   }
   if (length($missing)>0) {
@@ -345,11 +385,17 @@ sub checkRequiredPrograms {
 # Request diff2merge path
 # Takes argument from 0-3 for build to test
 sub getDiff2merge {
-  "..\\Build\\$testprogs[$_[0]][0]\\$testprogs[$_[0]][1]";
+  "..\\..\\Tools\\Build\\$testprogs[$_[0]][0]\\$testprogs[$_[0]][1]";
 }
 
 # Request WinMerge path
 # Takes argument from 0-3 for build to test
 sub getWinMerge {
-  "..\\Build\\$testprogs[$_[0]][0]\\$testprogs[$_[0]][2]";
+  "..\\..\\Build\\$testprogs[$_[0]][0]\\$testprogs[$_[0]][2]";
+}
+
+# Request diff path
+# Was stored in testprogs by argument parser
+sub getDiff {
+  $testprogs[4][1];
 }

@@ -33,11 +33,6 @@
 #include "CompareStats.h"
 #include "IAbortable.h"
 
-// Set this to true in order to single step
-// through entire compare process all in a single thread
-// Either edit this line, or breakpoint & change it in CompareDirectories() below
-static bool bSinglethreaded=false;
-
 
 /**
  * @brief Data sent to diff thread
@@ -112,7 +107,7 @@ CDiffContext * CDiffThread::SetContext(CDiffContext * pCtx)
 /**
  * @brief Start directory compare thread
  */
-UINT CDiffThread::CompareDirectories(CString dir1, CString dir2, BOOL bRecursive)
+UINT CDiffThread::CompareDirectories(CString dir1, CString dir2, BOOL bRecursive, bool bSingleThreaded)
 {
 	ASSERT(m_pDiffParm->nThreadState != THREAD_COMPARING);
 
@@ -128,7 +123,7 @@ UINT CDiffThread::CompareDirectories(CString dir1, CString dir2, BOOL bRecursive
 
 	m_pDiffParm->nThreadState = THREAD_COMPARING;
 
-	if (bSinglethreaded)
+	if (bSingleThreaded)
 	{
 		DiffThread(m_pDiffParm);
 	}

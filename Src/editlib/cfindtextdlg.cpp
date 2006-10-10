@@ -47,6 +47,8 @@ CFindTextDlg::CFindTextDlg (CCrystalTextView * pBuddy)
 , m_bRegExp(FALSE)
 , m_bNoWrap(FALSE)
 , m_ptCurrentPos(CPoint (0, 0))
+, m_initHandler(NULL)
+, m_initHandlerParam(NULL)
 {
   ASSERT (pBuddy != NULL);
 }
@@ -164,6 +166,9 @@ OnInitDialog ()
   m_ctlFindText.LoadState(_T("Files\\FindInFile"));
   UpdateData (FALSE);
   UpdateControls();
+
+  if (m_initHandler)
+	  (*m_initHandler)(*this, m_initHandlerParam);
 
   return TRUE;
 }

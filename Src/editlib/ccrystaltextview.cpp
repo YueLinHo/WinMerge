@@ -3349,7 +3349,7 @@ OnSetCursor (CWnd * pWnd, UINT nHitTest, UINT message)
       CPoint pt;
       ::GetCursorPos (&pt);
       ScreenToClient (&pt);
-      if (pt.x < GetMarginWidth ())
+      if (pt.x < GetSignedMarginWidth ())
         {
           ::SetCursor (::LoadCursor (GetResourceHandle (), MAKEINTRESOURCE (IDR_MARGIN_CURSOR)));
         }
@@ -3421,7 +3421,7 @@ ClientToText (const CPoint & point)
 
   int nPos = 0;
   // Char index for margin area is 0
-  if (point.x > GetMarginWidth())
+  if (point.x > GetSignedMarginWidth())
     nPos = nOffsetChar + (point.x - GetMarginWidth()) / GetCharWidth();
   if (nPos < 0)
     nPos = 0;
@@ -4757,6 +4757,14 @@ FindTextInBlock (LPCTSTR pszText, const CPoint & ptStartPosition,
   return FALSE;
 }
 
+// Forward callback from CFindTextDlg's OnInit to CCrystalTextView's virtual handler
+void CCrystalTextView:: // static
+OnFindTextDlgInit(CFindTextDlg & dlg, LPVOID param)
+{
+	CCrystalTextView * pView = reinterpret_cast<CCrystalTextView *>(param);
+	pView->OnFindTextDlgInit(dlg);
+}
+
 void CCrystalTextView::
 OnEditFind ()
 {
@@ -4814,6 +4822,8 @@ OnEditFind ()
   dlg.m_ptCurrentPos = m_ptCursorPos;   //  Search from cursor position
 
   // m_bShowInactiveSelection = TRUE; // FP: removed because I like it
+  CCrystalTextView * pMe = this;
+  dlg.SetInitHandler(OnFindTextDlgInit, reinterpret_cast<LPVOID>(pMe));
   dlg.DoModal ();
   // m_bShowInactiveSelection = FALSE; // FP: removed because I like it
 
@@ -4963,7 +4973,7 @@ OnFilePageSetup ()
  */
 void CCrystalTextView::ToggleBookmark(UINT nLine)
 {
-  ASSERT(nLine < GetSubLineCount());
+  ASSERT(nLine < (UINT)GetSubLineCount());
   if (m_pTextBuffer != NULL)
     {
       DWORD dwFlags = GetLineFlags (nLine);
@@ -5428,10 +5438,20 @@ OnUpdateMatchBrace (CCmdUI * pCmdUI)
   pCmdUI->Enable (ptCursorPos.x < nLength && (bracetype (*pszText) || ptCursorPos.x > 0 && bracetype (pszText[-1])) || ptCursorPos.x > 0 && bracetype (pszText[-1]));
 }
 
+// Forward callback from CFindTextDlg's OnInit to CCrystalTextView's virtual handler
+void CCrystalTextView:: // static
+OnGotoDlgInit(CGotoDlg & dlg, LPVOID param)
+{
+	CCrystalTextView * pView = reinterpret_cast<CCrystalTextView *>(param);
+	pView->OnGotoDlgInit(dlg);
+}
+
 void CCrystalTextView::
 OnEditGoTo ()
 {
   CGotoDlg dlg (this);
+  CCrystalTextView * pMe = this;
+  dlg.SetInitHandler(OnGotoDlgInit, reinterpret_cast<LPVOID>(pMe));
   dlg.DoModal ();
 }
 

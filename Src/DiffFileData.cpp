@@ -643,7 +643,8 @@ int DiffFileData::byte_compare_files(BOOL bStopAfterFirstDiff, const IAbortable 
 			if (!eof[i] && bfend[i]<countof(buff[i])-1)
 			{
 				// Assume our blocks are in range of unsigned int
-				unsigned int space = countof(buff[i]) - bfend[i];
+				_int64 space64 = countof(buff[i]) - bfend[i];
+				unsigned int space = static_cast<unsigned int>(space64);
 				size_t rtn = fread(&buff[i][bfend[i]], 1, space, fp[i]);
 				if (ferror(fp[i]))
 					return DIFFCODE::CMPERR;

@@ -2369,8 +2369,8 @@ BOOL CMergeDoc::IsFileChangedOnDisk(LPCTSTR szPath, DiffFileInfo &dfi,
 
 	dfi.Update(szPath);
 
-	int timeDiff = dfi.mtime - fileInfo->mtime;
-	timeDiff = abs(timeDiff);
+	__int64 timeDiff = dfi.mtime - fileInfo->mtime;
+	timeDiff = abs((int)timeDiff);
 	if (timeDiff > tolerance ||
 		dfi.size != fileInfo->size)
 	{
@@ -2982,19 +2982,23 @@ void CMergeDoc::RefreshOptions()
  */
 void CMergeDoc::UpdateHeaderPath(int pane)
 {
-	CChildFrame *pf = GetParentFrame();
-	ASSERT(pf);
 	CString sText;
 	BOOL bChanges = FALSE;
 
-	if (m_nBufferType[pane] == BUFFER_UNNAMED ||
-		m_nBufferType[pane] == BUFFER_NORMAL_NAMED)
+	sText = m_strDesc[pane];
+	if (sText.IsEmpty())
 	{
-		sText = m_strDesc[pane];
+		if (pane == MERGE_VIEW_LEFT)
+			sText = m_pDirDoc->GetLeftDesc();
+		else
+			sText = m_pDirDoc->GetRightDesc();
 	}
-	else
+
+	if (!(m_nBufferType[pane] == BUFFER_UNNAMED ||
+		m_nBufferType[pane] == BUFFER_NORMAL_NAMED))
 	{
-		sText = m_filePaths.GetPath(pane);
+		sText += _T(": ");
+		sText += m_filePaths.GetPath(pane);
 		if (m_pDirDoc)
 		{
 			if (pane == 0)
@@ -3008,6 +3012,8 @@ void CMergeDoc::UpdateHeaderPath(int pane)
 	if (bChanges)
 		sText.Insert(0, _T("* "));
 
+	CChildFrame *pf = GetParentFrame();
+	ASSERT(pf);
 	pf->GetHeaderInterface()->SetText(pane, sText);
 
 	SetTitle(NULL);

@@ -46,6 +46,7 @@ const TCHAR OPT_USE_RECYCLE_BIN[] = _T("Settings/UseRecycleBin");
 const TCHAR OPT_SINGLE_INSTANCE[] = _T("Settings/SingleInstance");
 const TCHAR OPT_MERGE_MODE[] = _T("Settings/MergingMode");
 const TCHAR OPT_CLOSE_WITH_ESC[] = _T("Settings/CloseWithEsc");
+const TCHAR OPT_AUTOCLOSE_DIRCOMP_STATS[] = _T("Settings/AutoCloseDirCompStats");
 const TCHAR OPT_LOGGING[] = _T("Settings/Logging");
 const TCHAR OPT_VERIFY_OPEN_PATHS[] = _T("Settings/VerifyOpenPaths");
 const TCHAR OPT_AUTO_COMPLETE_SOURCE[] = _T("Settings/AutoCompleteSource");
@@ -109,6 +110,7 @@ const TCHAR OPT_CMP_METHOD[] = _T("Settings/CompMethod");
 const TCHAR OPT_CMP_MOVED_BLOCKS[] = _T("Settings/MovedBlocks");
 const TCHAR OPT_CMP_STOP_AFTER_FIRST[] = _T("Settings/StopAfterFirst");
 const TCHAR OPT_CMP_QUICK_LIMIT[] = _T("Settings/QuickMethodLimit");
+const TCHAR OPT_CMP_SINGLETHREADED[] = _T("Settings/CompareSingleThreaded");
 
 // Multidoc enable/disable per document type
 const TCHAR OPT_MULTIDOC_DIRDOCS[] = _T("Settings/MultiDirDocs");

@@ -1,0 +1,7 @@
+2006-10-09, Perry
+svn copy command did not complete successfully (generated a 500 error),
+so it did not report the version committed, but observation shows that
+this branch is based on r3696
+
+2006-10-10, Perry
+Merge in changes from my local UI version (no line transformations)

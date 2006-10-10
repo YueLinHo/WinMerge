@@ -1081,7 +1081,7 @@ DoDragScroll (const CPoint & point)
 	  //UpdateSiblingScrollPos(FALSE);
       return;
     }
-  if (point.x < rcClientRect.left + GetMarginWidth () + DRAG_BORDER_X)
+  if (point.x < rcClientRect.left + GetSignedMarginWidth () + DRAG_BORDER_X)
     {
       HideDropIndicator ();
       ScrollLeft ();
@@ -1256,6 +1256,15 @@ UpdateView (CCrystalTextView * pSource, CUpdateContext * pContext, DWORD dwFlags
     }
 }
 
+// Forward callback from CEditReplaceDlg's OnInit to CCrystalEditView's virtual handler
+void CCrystalEditView:: // static
+OnReplaceTextDlgInit(CEditReplaceDlg & dlg, LPVOID param)
+{
+	CCrystalEditView * pView = reinterpret_cast<CCrystalEditView *>(param);
+	pView->OnReplaceTextDlgInit(dlg);
+}
+
+
 void CCrystalEditView::
 OnEditReplace ()
 {
@@ -1315,6 +1324,9 @@ OnEditReplace ()
 
   //  Execute Replace dialog
   // m_bShowInactiveSelection = TRUE; // FP: removed because I like it
+
+  CCrystalEditView * pMe = this;
+  dlg.SetInitHandler(OnReplaceTextDlgInit, reinterpret_cast<LPVOID>(pMe));
   dlg.DoModal ();
   // m_bShowInactiveSelection = FALSE; // FP: removed because I like it
 

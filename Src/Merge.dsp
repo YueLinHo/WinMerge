@@ -380,6 +380,10 @@ SOURCE=.\DirViewColItems.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=.\DisplayProperties.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\dlgutil.cpp
 # End Source File
 # Begin Source File
@@ -680,6 +684,10 @@ SOURCE=.\PropCompare.cpp
 # Begin Source File
 
 SOURCE=.\PropEditor.cpp
+# End Source File
+# Begin Source File
+
+SOURCE=.\PropertyDlg.cpp
 # End Source File
 # Begin Source File
 
@@ -1097,6 +1105,10 @@ SOURCE=.\DirViewColItems.h
 # End Source File
 # Begin Source File
 
+SOURCE=.\DisplayProperties.h
+# End Source File
+# Begin Source File
+
 SOURCE=.\dlgutil.h
 # End Source File
 # Begin Source File
@@ -1342,6 +1354,10 @@ SOURCE=.\PropCompare.h
 # Begin Source File
 
 SOURCE=.\PropEditor.h
+# End Source File
+# Begin Source File
+
+SOURCE=.\PropertyDlg.h
 # End Source File
 # Begin Source File
 

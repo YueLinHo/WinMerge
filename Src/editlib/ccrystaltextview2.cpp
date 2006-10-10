@@ -585,7 +585,7 @@ OnLButtonDown (UINT nFlags, CPoint point)
   BOOL bShift = GetKeyState (VK_SHIFT) & 0x8000;
   BOOL bControl = GetKeyState (VK_CONTROL) & 0x8000;
 
-  if (point.x < GetMarginWidth ())
+  if (point.x < GetSignedMarginWidth ())
     {
       AdjustTextPoint (point);
       if (bControl)
@@ -701,7 +701,7 @@ OnMouseMove (UINT nFlags, CPoint point)
 
   if (m_bDragSelection)
     {
-      BOOL bOnMargin = point.x < GetMarginWidth ();
+      BOOL bOnMargin = point.x < GetSignedMarginWidth ();
 
       AdjustTextPoint (point);
       CPoint ptNewCursorPos = ClientToText (point);
@@ -1073,7 +1073,7 @@ OnLButtonDblClk (UINT nFlags, CPoint point)
 {
   CView::OnLButtonDblClk (nFlags, point);
 
-  if (point.x < GetMarginWidth ())
+  if (point.x < GetSignedMarginWidth ())
     {
       AdjustTextPoint (point);
       CPoint ptCursorPos = ClientToText (point);

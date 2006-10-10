@@ -46,6 +46,7 @@
 #include "DirCmpReport.h"
 #include "DirCompProgressDlg.h"
 #include "CompareStatisticsDlg.h"
+#include "DisplayProperties.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -193,6 +194,8 @@ BEGIN_MESSAGE_MAP(CDirView, CListView)
 	ON_COMMAND(ID_EDIT_PASTE, OnEditPaste)
 	ON_COMMAND(ID_EDIT_UNDO, OnEditUndo)
 	ON_UPDATE_COMMAND_UI(ID_EDIT_UNDO, OnUpdateEditUndo)
+	ON_COMMAND(ID_DIR_ITEM_PROPERTIES, OnItemProperties)
+	ON_UPDATE_COMMAND_UI(ID_DIR_ITEM_PROPERTIES, OnUpdateItemProperties)
 	//}}AFX_MSG_MAP
 	ON_NOTIFY_REFLECT(LVN_COLUMNCLICK, OnColumnClick)
 	ON_NOTIFY_REFLECT(LVN_ITEMCHANGED, OnItemChanged)
@@ -2025,9 +2028,12 @@ LRESULT CDirView::OnUpdateUIMessage(WPARAM wParam, LPARAM lParam)
 	ASSERT(pDoc);
 
 	// Close and destroy the dialog after compare
-	m_pCmpProgressDlg->CloseDialog();
-	delete m_pCmpProgressDlg;
-	m_pCmpProgressDlg = NULL;
+	if (GetOptionsMgr()->GetBool(OPT_AUTOCLOSE_DIRCOMP_STATS))
+	{
+		m_pCmpProgressDlg->CloseDialog();
+		delete m_pCmpProgressDlg;
+		m_pCmpProgressDlg = NULL;
+	}
 
 	pDoc->CompareReady();
 	Redisplay();
@@ -3051,4 +3057,80 @@ void CDirView::OnUpdateEditUndo(CCmdUI* pCmdUI)
 	{
 		pCmdUI->Enable(FALSE);
 	}
+}
+
+static void AddProps(PropertyList & props, PROPSIDE side, const DiffFileInfo & finfo)
+{
+	props.AddProperty(_T("Attr"), side, finfo.flags.toString());
+	props.AddProperty(_T("Encoding"), side, finfo.encoding.GetName());
+	props.AddProperty(_T("Zeros, number"), side, finfo.m_textStats.nzeros);
+	props.AddProperty(_T("Zeros, first offset"), side, finfo.m_textStats.first_zero);
+	props.AddProperty(_T("Zeros, last offset"), side, finfo.m_textStats.last_zero);
+	props.AddProperty(_T("ncrs"), side, finfo.m_textStats.ncrs);
+	props.AddProperty(_T("nlfs"), side, finfo.m_textStats.nlfs);
+	props.AddProperty(_T("ncrlfs"), side, finfo.m_textStats.ncrlfs);
+	props.AddProperty(_T("nlosses"), side, finfo.m_textStats.nlosses);
+}
+
+/**
+ * @brief For now, just display msgbox with comparison results, so use can see error
+ *
+ * @todo  Should do dialog with complete paths and perhaps more info
+ * Maybe a treeview or listview of all known column properties as well
+ */
+void CDirView::DoDisplayItemProperties()
+{
+	int sel = GetSingleSelectedItem();
+	if (sel == -1)
+		return;
+	const DIFFITEM& di = GetDiffItem(sel);
+	if (di.empty)
+		return;
+	PropertyList props;
+	CString filename = (di.isSideRight() ? di.sRightFilename : di.sLeftFilename);
+	props.AddProperty(_T("Filename"), PNONE, filename);
+	props.AddProperty(_T("Subdir"), PRIGHT, di.sRightSubdir);
+	props.AddProperty(_T("Subdir"), PLEFT, di.sLeftSubdir);
+	props.AddProperty(_T("Error"), PNONE, di.errorDesc);
+	props.AddProperty(_T("Diffs(sig)"), PNONE, di.nsdiffs);
+	props.AddProperty(_T("Diffs(insig)"), PNONE, di.nidiffs);
+	AddProps(props, PLEFT, di.left);
+	AddProps(props, PRIGHT, di.right);
+
+	DisplayProperties(this, props);
+}
+
+/**
+ * @brief Display item properties
+ */
+void CDirView::OnItemProperties()
+{
+	DoDisplayItemProperties();
+}
+
+/**
+ * @brief Update "Item Properties" menu item
+ */
+void CDirView::OnUpdateItemProperties(CCmdUI* pCmdUI) 
+{
+	DoUpdateItemProperties(pCmdUI);
+}
+
+/**
+ * @brief Update "Item Properties" menu item
+ *
+ * Currently we only display properties for single non-empty items
+ */
+void CDirView::DoUpdateItemProperties(CCmdUI* pCmdUI)
+{
+	BOOL bEnable = FALSE;
+	int sel = GetSingleSelectedItem();
+	if (sel != -1)
+	{
+		const DIFFITEM& di = GetDiffItem(sel);
+		if (!di.empty)
+			bEnable = TRUE;
+	}
+	pCmdUI->Enable(bEnable);
+
 }

@@ -93,6 +93,7 @@ static LPVOID NTAPI ComplainUnresolved()
 	return TlsGetValue(ThreadTopOfStack);
 }
 
+#pragma warning (disable:4731) // warning C4731: 'Unresolved' : frame pointer register 'ebp' modified by inline assembly code
 static INT NTAPI Unresolved()
 {
 	// declare a variable to produce a stack frame
@@ -126,6 +127,7 @@ static INT NTAPI Unresolved()
 #endif
 	return Unresolved;
 }
+#pragma warning (default:4731) // warning C4731: 'Unresolved' : frame pointer register 'ebp' modified by inline assembly code
 
 #else
 #ifdef _MSC_VER

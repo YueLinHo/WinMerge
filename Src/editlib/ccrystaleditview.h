@@ -133,6 +133,14 @@ public :
 
     // Implementation
 protected :
+	// Virtual hooks for child classes to customize behavior
+protected:
+	virtual void OnReplaceTextDlgInit(CEditReplaceDlg & dlg) { }
+
+	// Infrastructure for virtual hooks
+private:
+	static void OnReplaceTextDlgInit(CEditReplaceDlg & dlg, LPVOID param);
+
 
     // Generated message map functions
 protected :

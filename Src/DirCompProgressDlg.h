@@ -46,6 +46,8 @@ public:
 	void EndUpdating();
 	void CloseDialog();
 	void SetDirDoc(CDirDoc *pDirDoc);
+	void UpdateElements();
+	UINT GetIDFromResult(CompareStats::RESULT res);
 
 // Dialog Data
 	//{{AFX_DATA(DirCompProgressDlg)

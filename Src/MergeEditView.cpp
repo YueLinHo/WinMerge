@@ -45,6 +45,9 @@
 #include "SyntaxColors.h"
 #include "SplitterWndEx.h" // For printing (OnPrint, SlavePrint)
 #include "MergeLineFlags.h"
+#include "cfindtextdlg.h"
+#include "ceditreplacedlg.h"
+#include "gotodlg.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
@@ -1470,8 +1473,8 @@ void CMergeEditView::ShowDiff(BOOL bScroll, BOOL bSelectText)
 			// If diff first line outside current view - context OR
 			// if diff last line outside current view - context OR
 			// if diff is bigger than screen
-			if ((ptStart.y < m_nTopLine + CONTEXT_LINES_ABOVE) ||
-				(ptEnd.y >= m_nTopLine + GetScreenLines() - CONTEXT_LINES_BELOW) ||
+			if ((ptStart.y < m_nTopLine + (int)CONTEXT_LINES_ABOVE) ||
+				(ptEnd.y >= m_nTopLine + GetScreenLines() - (int)CONTEXT_LINES_BELOW) ||
 				(ptEnd.y - ptStart.y) >= GetScreenLines())
 			{
 				int line = ptStart.y - CONTEXT_LINES_ABOVE;
@@ -2985,4 +2988,48 @@ void CMergeEditView::UpdateLocationViewPosition(int nTopLine /*=-1*/,
 	{
 		m_pLocationView->UpdateVisiblePos(nTopLine, nBottomLine);
 	}
+}
+
+static bool IsLeftPane(int pane)
+{
+	return (pane == MERGE_VIEW_LEFT);
+}
+
+/**
+ * Customize title of Crystal Editor's find dialog
+ */
+void // virtual
+CMergeEditView::OnFindTextDlgInit(CFindTextDlg & dlg)
+{
+	CGhostTextView::OnFindTextDlgInit(dlg);
+	int id = (IsLeftPane(m_nThisPane) ? IDS_FIND_IN_LEFT_FILE : IDS_FIND_IN_RIGHT_FILE);
+	CString title = LoadResString(id);
+	if (!title.IsEmpty())
+		dlg.SetWindowText(title);
+}
+
+/**
+ * Customize title of Crystal Editor's replace dialog
+ */
+void // virtual
+CMergeEditView::OnReplaceTextDlgInit(CEditReplaceDlg & dlg)
+{
+	CGhostTextView::OnReplaceTextDlgInit(dlg);
+	int id = (IsLeftPane(m_nThisPane) ? IDS_REPLACE_IN_LEFT_FILE : IDS_REPLACE_IN_RIGHT_FILE);
+	CString title = LoadResString(id);
+	if (!title.IsEmpty())
+		dlg.SetWindowText(title);
+}
+
+/**
+ * Customize title of Crystal Editor's replace dialog
+ */
+void // virtual
+CMergeEditView::OnGotoDlgInit(CGotoDlg & dlg)
+{
+	CGhostTextView::OnGotoDlgInit(dlg);
+	int id = (IsLeftPane(m_nThisPane) ? IDS_GOTO_IN_LEFT_FILE : IDS_GOTO_IN_RIGHT_FILE);
+	CString title = LoadResString(id);
+	if (!title.IsEmpty())
+		dlg.SetWindowText(title);
 }

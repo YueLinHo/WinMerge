@@ -191,8 +191,8 @@ void CLocationView::OnDraw(CDC* pDC)
 
 	// Draw bar outlines
 	CPen* oldObj = (CPen*)pDC->SelectStockObject(BLACK_PEN);
-	pDC->Rectangle(m_nLeftBarLeft, Y_OFFSET - 1, m_nLeftBarRight, LineInPix * nbLines + Y_OFFSET);
-	pDC->Rectangle(m_nRightBarLeft, Y_OFFSET - 1, m_nRightBarRight, LineInPix * nbLines + Y_OFFSET);
+	pDC->Rectangle(m_nLeftBarLeft, Y_OFFSET - 1, m_nLeftBarRight, (int)(LineInPix * nbLines) + Y_OFFSET);
+	pDC->Rectangle(m_nRightBarLeft, Y_OFFSET - 1, m_nRightBarRight, (int)(LineInPix * nbLines) + Y_OFFSET);
 	pDC->SelectObject(oldObj);
 
 	while (true)

@@ -44,6 +44,7 @@ class CCrystalEditView;
 
 class EDITPADC_CLASS CEditReplaceDlg : public CDialog
   {
+	typedef void (*InitHandlerFnc)(CEditReplaceDlg & dlg, LPVOID param);
 private :
     CCrystalEditView * m_pBuddy;
     BOOL m_bFound;
@@ -59,12 +60,15 @@ public :
     void UseLastSearch ();
     LastSearchInfos * GetLastSearchInfos (); 
     void SetScope(BOOL bWithSelection);
+	void SetInitHandler(InitHandlerFnc handler, LPVOID param) { m_initHandler = handler; m_initHandlerParam = param; }
 
 
     BOOL m_bEnableScopeSelection;
     CPoint m_ptCurrentPos;
     CPoint m_ptBlockBegin, m_ptBlockEnd;
     LastSearchInfos lastSearch;
+	InitHandlerFnc m_initHandler;
+	LPVOID m_initHandlerParam;
 
     // Dialog Data
     //{{AFX_DATA(CEditReplaceDlg)

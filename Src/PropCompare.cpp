@@ -50,6 +50,7 @@ void CPropCompare::DoDataExchange(CDataExchange* pDX)
 	DDX_Radio(pDX, IDC_WHITESPACE, m_nIgnoreWhite);
 	DDX_Check(pDX, IDC_MOVED_BLOCKS, m_bMovedBlocks);
 	DDX_Check(pDX, IDC_COMPARE_STOPFIRST, m_bStopAfterFirst);
+	DDX_Check(pDX, IDC_SINGLETHREADED, m_bSingleThreaded);
 	//}}AFX_DATA_MAP
 }
 
@@ -76,6 +77,7 @@ void CPropCompare::ReadOptions()
 	m_bMovedBlocks = m_pOptionsMgr->GetBool(OPT_CMP_MOVED_BLOCKS);
 	m_compareMethod = m_pOptionsMgr->GetInt(OPT_CMP_METHOD);
 	m_bStopAfterFirst = m_pOptionsMgr->GetBool(OPT_CMP_STOP_AFTER_FIRST);
+	m_bSingleThreaded = m_pOptionsMgr->GetBool(OPT_CMP_SINGLETHREADED);
 }
 
 /** 
@@ -93,6 +95,7 @@ void CPropCompare::WriteOptions()
 	m_pOptionsMgr->SaveOption(OPT_CMP_METHOD, (int)m_compareMethod);
 	m_pOptionsMgr->SaveOption(OPT_CMP_MOVED_BLOCKS, m_bMovedBlocks == TRUE);
 	m_pOptionsMgr->SaveOption(OPT_CMP_STOP_AFTER_FIRST, m_bStopAfterFirst == TRUE);
+	m_pOptionsMgr->SaveOption(OPT_CMP_SINGLETHREADED, m_bSingleThreaded == TRUE);
 }
 
 /////////////////////////////////////////////////////////////////////////////

@@ -48,7 +48,9 @@ class CCrystalTextBuffer;
 class CUpdateContext;
 struct ViewableWhitespaceChars;
 class SyntaxColors;
-
+class CFindTextDlg;
+class CEditReplaceDlg;
+class CGotoDlg;
 
 ////////////////////////////////////////////////////////////////////////////
 // CCrystalTextView class declaration
@@ -213,6 +215,8 @@ protected :
     void UpdateCaret ();
     void SetAnchor (const CPoint & ptNewAnchor);
     UINT GetMarginWidth ();
+    int GetSignedMarginWidth() { return (int)GetMarginWidth(); }
+
     bool IsValidTextPos (const CPoint &point);
     bool IsValidTextPosX (const CPoint &point);
     bool IsValidTextPosY (const CPoint &point);
@@ -835,6 +839,16 @@ public :
     ~CCrystalTextView ();
 
 protected :
+
+	// Virtual hooks for child classes to customize behavior
+protected:
+	virtual void OnFindTextDlgInit(CFindTextDlg & dlg) { }
+	virtual void OnGotoDlgInit(CGotoDlg & dlg) { }
+
+	// Infrastructure for virtual hooks
+private:
+	static void OnFindTextDlgInit(CFindTextDlg & dlg, LPVOID param);
+	static void OnGotoDlgInit(CGotoDlg & dlg, LPVOID param);
 
     // Generated message map functions
 protected :

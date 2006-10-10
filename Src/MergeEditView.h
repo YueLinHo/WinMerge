@@ -198,6 +198,10 @@ protected:
 	virtual void OnUpdateCaret();
 	BOOL MergeModeKeyDown(MSG* pMsg);
 	int FindPrediffer(const CString & prediffer) const;
+	// Customize Crystal Text Editor
+	virtual void OnFindTextDlgInit(CFindTextDlg & dlg);
+	virtual void OnReplaceTextDlgInit(CEditReplaceDlg & dlg);
+	virtual void OnGotoDlgInit(CGotoDlg & dlg);
 
 
 	// Generated message map functions

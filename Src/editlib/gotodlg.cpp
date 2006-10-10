@@ -33,6 +33,9 @@ CGotoDlg::CGotoDlg (CCrystalTextView * pBuddy):CDialog (CGotoDlg::IDD, NULL)
   //{{AFX_DATA_INIT(CGotoDlg)
   m_sNumber = _T ("");
   //}}AFX_DATA_INIT
+  m_initHandler = NULL;
+  m_initHandlerParam = NULL;
+
 }
 
 void CGotoDlg::
@@ -75,6 +78,9 @@ OnInitDialog ()
   CDialog::OnInitDialog ();
 
   GetDlgItem (IDOK)->EnableWindow (!m_sNumber.IsEmpty ());
+
+  if (m_initHandler)
+	  (*m_initHandler)(*this, m_initHandlerParam);
 
   return TRUE;
 }

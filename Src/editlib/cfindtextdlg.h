@@ -63,6 +63,7 @@ struct LastSearchInfos
 
 class EDITPADC_CLASS CFindTextDlg : public CDialog
   {
+	typedef void (*InitHandlerFnc)(CFindTextDlg & dlg, LPVOID param);
 private :
     void UpdateControls();
     CCrystalTextView * m_pBuddy;
@@ -73,9 +74,12 @@ public :
     void SetLastSearch (LPCTSTR sText, BOOL bMatchCase, BOOL bWholeWord, BOOL bRegExp, int nDirection);
     void UseLastSearch ();
     LastSearchInfos * GetLastSearchInfos (); 
+	void SetInitHandler(InitHandlerFnc handler, LPVOID param) { m_initHandler = handler; m_initHandlerParam = param; }
 
     CPoint m_ptCurrentPos;
     LastSearchInfos lastSearch;
+	InitHandlerFnc m_initHandler;
+	LPVOID m_initHandlerParam;
 
     // Dialog Data
     //{{AFX_DATA(CFindTextDlg)

@@ -41,6 +41,19 @@ static const UINT UPDATE_INTERVAL = 400;
  */
 void DirCompProgressDlg::ClearStat()
 {
+	SetDlgItemInt(IDC_COUNT_LFILE, 0);
+	SetDlgItemInt(IDC_COUNT_RFILE, 0);
+	SetDlgItemInt(IDC_COUNT_NOTEQUAL, 0);
+	SetDlgItemInt(IDC_COUNT_EQUAL, 0);
+	SetDlgItemInt(IDC_COUNT_BINARYSAME, 0);
+	SetDlgItemInt(IDC_COUNT_BINARYDIFF, 0);
+	SetDlgItemInt(IDC_COUNT_LFOLDER, 0);
+	SetDlgItemInt(IDC_COUNT_RFOLDER, 0);
+	SetDlgItemInt(IDC_COUNT_FILESKIP, 0);
+	SetDlgItemInt(IDC_COUNT_FOLDERSKIP, 0);
+	SetDlgItemInt(IDC_COUNT_FOLDER, 0);
+	SetDlgItemInt(IDC_COUNT_ERROR, 0);
+
 	CProgressCtrl *pProg = (CProgressCtrl*) GetDlgItem(IDC_PROGRESSCOMPARE);
 	pProg->SetPos(0);
 
@@ -97,6 +110,69 @@ BOOL DirCompProgressDlg::OnInitDialog()
 
 	return TRUE;  // return TRUE unless you set the focus to a control
 	              // EXCEPTION: OCX Property Pages should return FALSE
+}
+
+/**
+ * @brief Return control ID for result code.
+ */
+UINT DirCompProgressDlg::GetIDFromResult(CompareStats::RESULT res)
+{
+	UINT resID = 0;
+
+	switch ((int)res)
+	{
+	case CompareStats::RESULT_LUNIQUE:
+		resID = IDC_COUNT_LFILE;
+		break;
+	case CompareStats::RESULT_RUNIQUE:
+		resID = IDC_COUNT_RFILE;
+		break;
+	case CompareStats::RESULT_DIFF:
+		resID = IDC_COUNT_NOTEQUAL;
+		break;
+	case CompareStats::RESULT_SAME:
+		resID = IDC_COUNT_EQUAL;
+		break;
+	case CompareStats::RESULT_BINSAME:
+		resID = IDC_COUNT_BINARYSAME;
+		break;
+	case CompareStats::RESULT_BINDIFF:
+		resID = IDC_COUNT_BINARYDIFF;
+		break;
+	case CompareStats::RESULT_LDIRUNIQUE:
+		resID = IDC_COUNT_LFOLDER;
+		break;
+	case CompareStats::RESULT_RDIRUNIQUE:
+		resID = IDC_COUNT_RFOLDER;
+		break;
+	case CompareStats::RESULT_SKIP:
+		resID = IDC_COUNT_FILESKIP;
+		break;
+	case CompareStats::RESULT_DIRSKIP:
+		resID = IDC_COUNT_FOLDERSKIP;
+		break;
+	case CompareStats::RESULT_DIR:
+		resID = IDC_COUNT_FOLDER;
+		break;
+	case CompareStats::RESULT_ERROR:
+		resID = IDC_COUNT_ERROR;
+		break;
+	}
+	return resID;
+}
+
+/**
+ * @brief Update all status counts at current values.
+ */
+void DirCompProgressDlg::UpdateElements()
+{
+	for (int i = 0; i < CompareStats::RESULT_COUNT; i++)
+	{
+		CompareStats::RESULT resnum = static_cast<CompareStats::RESULT>(i);
+		UINT resID = GetIDFromResult(resnum);
+		int count = m_pCompareStats->GetCount(resnum);
+		SetDlgItemInt(resID, count);
+	}
 }
 
 /**
@@ -169,6 +245,7 @@ void DirCompProgressDlg::OnTimer(UINT_PTR nIDEvent)
 			_itot(comparedItems, num, 10);
 			pCompared->SetWindowText(num);
 			pProg->SetPos(comparedItems);
+			UpdateElements();
 			m_prevState = CompareStats::STATE_COMPARE;
 		}
 		// Comparing items
@@ -180,6 +257,7 @@ void DirCompProgressDlg::OnTimer(UINT_PTR nIDEvent)
 			_itot(comparedItems, num, 10);
 			pCompared->SetWindowText(num);
 			pProg->SetPos(comparedItems);
+			UpdateElements();
 		}
 		// Compare is ready
 		// Update total items too since we might get only this one state
@@ -196,6 +274,7 @@ void DirCompProgressDlg::OnTimer(UINT_PTR nIDEvent)
 			pTotal->SetWindowText(num);
 			pProg->SetRange32(0, totalItems);
 			pProg->SetPos(comparedItems);
+			UpdateElements();
 			EndUpdating();
 			m_prevState = CompareStats::STATE_COMPARE;
 			m_bCompareReady = TRUE;

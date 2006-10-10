@@ -50,6 +50,7 @@
 #define IDD_TEST_FILTER                 231
 #define IDD_PROPPAGE_COLORS_TEXT        232
 #define IDD_PROJFILES_PATHS             233
+#define IDD_PROPERTYDIALOG              234
 #define IDR_SPLASH                      308
 #define IDB_WINMERGE                    309
 #define IDB_OLDSPLASH                   310
@@ -383,8 +384,24 @@
 #define IDC_PROJFILE_RREADONLY          1307
 #define IDC_FINDDLG_DONTWRAP            1308
 #define IDC_REPORT_COPYCLIPBOARD        1309
+#define IDC_AUTOCLOSE_DIRCOMP_STATS     1309
 #define IDC_EXPLORER_SUBFOLDERS         1310
 #define IDC_FILTERFILE_INSTALL          1311
+#define IDC_SINGLETHREADED              1311
+#define IDC_LIST                        1312
+#define IDC_EDIT                        1313
+#define IDB_FOLDER                      7410
+#define IDB_ERROR                       7411
+#define IDB_LFOLDER                     7412
+#define IDB_RFOLDER                     7413
+#define IDB_EQUAL                       7414
+#define IDB_NOTEQUAL                    7415
+#define IDB_BINARYSAME                  7416
+#define IDB_BINARYDIFF                  7417
+#define IDB_LFILE                       7418
+#define IDB_RFILE                       7419
+#define IDB_FOLDERSKIP                  7420
+#define IDB_FILESKIP                    7421
 #define IDC_EDIT_WHOLE_WORD             8603
 #define IDC_EDIT_MATCH_CASE             8604
 #define IDC_EDIT_FINDTEXT               8605
@@ -590,6 +607,7 @@
 #define ID_DIR_COPY_PATHNAMES_BOTH      17658
 #define IDS_ERROR_EXECUTE_FILE          17659
 #define IDS_UNKNOWN_EXECUTE_FILE        17660
+#define ID_DIR_ITEM_PROPERTIES          17661
 #define IDS_UNKNOWN_ARCHIVE_FORMAT      17664
 #define IDS_COLHDR_FILENAME             17696
 #define IDS_COLHDR_DIR                  17697
@@ -619,7 +637,6 @@
 #define IDS_CANT_COMPARE_FILES          17728
 #define IDS_FILE_SKIPPED                17729
 #define IDS_DIR_SKIPPED                 17730
-#define IDS_ONLY_IN_FMT                 17731
 #define IDS_BIN_FILES_SAME              17732
 #define IDS_IDENTICAL                   17733
 #define IDS_BIN_FILES_DIFF              17734
@@ -631,6 +648,8 @@
 #define IDS_ELAPSED_TIME                17744
 #define IDS_STATUS_SELITEM1             17745
 #define IDS_STATUS_SELITEMS             17746
+#define IDS_LEFT_ONLY_IN_FMT            17751
+#define IDS_RIGHT_ONLY_IN_FMT           17752
 #define IDS_COLDESC_FILENAME            17760
 #define IDS_COLDESC_DIR                 17761
 #define IDS_COLDESC_RESULT              17762
@@ -1064,15 +1083,21 @@
 #define ID_EDIT_GOTO_NEXT_BOOKMARK      33116
 #define ID_EDIT_GOTO_PREV_BOOKMARK      33117
 #define ID_EDIT_CLEAR_ALL_BOOKMARKS     33118
+#define IDS_FIND_IN_LEFT_FILE           33197
+#define IDS_FIND_IN_RIGHT_FILE          33198
+#define IDS_REPLACE_IN_LEFT_FILE        33199
+#define IDS_REPLACE_IN_RIGHT_FILE       33200
+#define IDS_GOTO_IN_LEFT_FILE           33201
+#define IDS_GOTO_IN_RIGHT_FILE          33202
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_3D_CONTROLS                     1
-#define _APS_NEXT_RESOURCE_VALUE        232
-#define _APS_NEXT_COMMAND_VALUE         33119
-#define _APS_NEXT_CONTROL_VALUE         1309
+#define _APS_NEXT_RESOURCE_VALUE        235
+#define _APS_NEXT_COMMAND_VALUE         33220
+#define _APS_NEXT_CONTROL_VALUE         1314
 #define _APS_NEXT_SYMED_VALUE           113
 #endif
 #endif

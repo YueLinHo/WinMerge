@@ -502,6 +502,15 @@ CString maketstring(LPCSTR lpd, UINT len, int codepage, bool * lossy)
 	int n = MultiByteToWideChar(codepage, flags, lpd, len, wbuff, wlen-1);
 	if (n)
 	{
+		/*
+		NB: MultiByteToWideChar is documented as only zero-terminating 
+		if input was zero-terminated, but it appears that it can 
+		zero-terminate even if input wasn't.
+		So we check if it zero-terminated and adjust count accordingly.
+		*/
+		if (wbuff[n-1] == 0)
+			--n;
+
 		str.ReleaseBuffer(n);
 		return str;
 	}

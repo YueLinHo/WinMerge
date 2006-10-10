@@ -53,7 +53,8 @@ public:
 	int     m_nIgnoreWhite;
 	BOOL    m_bMovedBlocks;
 	BOOL    m_bStopAfterFirst;
-	BOOL	m_bFilterCommentsLines;
+	BOOL    m_bFilterCommentsLines;
+	BOOL    m_bSingleThreaded;
 	//}}AFX_DATA
 
 

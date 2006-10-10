@@ -268,10 +268,12 @@ find_and_hash_each_line (current)
      further down (after hashing_done label)
       */
 
+     /* Note that all this logic must be essentially repeated in line_cmp */
+
       /* Hash this line until we find a newline. */
       if (ignore_case_flag)
         {
-          if (ignore_all_space_flag)
+          if (ignore_all_space_flag) {
             while ((c = *p++) != '\n' && (c != '\r' || *p == '\n'))
               {
                 if (ignore_eol_diff && (c=='\r' || c=='\n'))
@@ -279,7 +281,9 @@ find_and_hash_each_line (current)
                 if (! ISWSPACE (c))
                   h = HASH (h, isupper (c) ? tolower (c) : c);
               }
-          else if (ignore_space_change_flag)
+	    if (c == '\r' && !ignore_eol_diff)
+	      h = HASH(h, c);
+	  } else if (ignore_space_change_flag) {
             /* Note that \r must be hashed (if !ignore_eol_diff) */
             while ((c = *p++) != '\n' && (c != '\r' || *p == '\n'))
               {
@@ -314,6 +318,7 @@ find_and_hash_each_line (current)
                       {
                   /* runs of whitespace not ending line hashed as one space */
                         h = HASH (h, ' ');
+			/* c is not whitespace, so continue to hash it */
                       }
                   }
                 /* c is now the first non-space.  */
@@ -322,17 +327,22 @@ find_and_hash_each_line (current)
                 if (c == '\r' && *p != '\n')
                   goto hashing_done;
               }
-          else
+	    if (c == '\r' && !ignore_eol_diff)
+	      h = HASH(h, c);
+	  } else {
             while ((c = *p++) != '\n' && (c != '\r' || *p == '\n'))
               {
                 if (ignore_eol_diff && (c=='\r' || c=='\n'))
                   continue;
                 h = HASH (h, isupper (c) ? tolower (c) : c);
               }
+	    if (c == '\r' && !ignore_eol_diff)
+	      h = HASH(h, c);
+	  }
         }
       else
         {
-          if (ignore_all_space_flag)
+          if (ignore_all_space_flag) {
             while ((c = *p++) != '\n' && (c != '\r' || *p == '\n'))
               {
                 if (ignore_eol_diff && (c=='\r' || c=='\n'))
@@ -340,7 +350,9 @@ find_and_hash_each_line (current)
                 if (! ISWSPACE (c))
                   h = HASH (h, c);
               }
-          else if (ignore_space_change_flag)
+	    if (c == '\r' && !ignore_eol_diff)
+	      h = HASH(h, c);
+          } else if (ignore_space_change_flag) {
             /* Note that \r must be hashed (if !ignore_eol_diff) */
             while ((c = *p++) != '\n' && (c != '\r' || *p == '\n'))
               {
@@ -375,6 +387,7 @@ find_and_hash_each_line (current)
                       {
                   /* runs of whitespace not ending line hashed as one space */
                         h = HASH (h, ' ');
+			/* c is not whitespace, so continue to hash it */
                       }
                   }
                 /* c is now the first non-space.  */
@@ -383,13 +396,18 @@ find_and_hash_each_line (current)
                 if (c == '\r' && *p != '\n')
                   goto hashing_done;
               }
-          else
+	    if (c == '\r' && !ignore_eol_diff)
+	      h = HASH(h, c);
+	  } else {
             while ((c = *p++) != '\n' && (c != '\r' || *p == '\n'))
               {
                 if (ignore_eol_diff && (c=='\r' || c=='\n'))
                   continue;
                 h = HASH (h, c);
               }
+	    if (c == '\r' && !ignore_eol_diff)
+	      h = HASH(h, c);
+	  }
         }
 hashing_done:;
 
@@ -404,7 +422,7 @@ hashing_done:;
               ((char HUGE *)p)[-2] = 0;
               length -= 2;
             }
-          else if (p[-1] == '\n' || p[-1] == '\r')
+          else if (length>0 && p[-1] == '\n' || p[-1] == '\r')
             {
               if (p[-1] == '\n')
                 ++current->count_lfs;

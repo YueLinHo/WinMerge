@@ -30,14 +30,20 @@ class CCrystalTextView;
 
 class EDITPADC_CLASS CGotoDlg : public CDialog
   {
+	typedef void (*InitHandlerFnc)(CGotoDlg & dlg, LPVOID param);
 private :
     CCrystalTextView * m_pBuddy;
 
     // Construction
 public :
     CGotoDlg (CCrystalTextView * pBuddy);
+	void SetInitHandler(InitHandlerFnc handler, LPVOID param) { m_initHandler = handler; m_initHandlerParam = param; }
 
+  private:
     CPoint m_ptCurrentPos;
+	InitHandlerFnc m_initHandler;
+	LPVOID m_initHandlerParam;
+
     // Dialog Data
     //{{AFX_DATA(CGotoDlg)
 	enum { IDD = IDD_EDIT_GOTO };

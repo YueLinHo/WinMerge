@@ -56,6 +56,8 @@ CEditReplaceDlg::CEditReplaceDlg (CCrystalEditView * pBuddy)
 , m_nScope(-1)
 , m_bDontWrap(FALSE)
 , m_bEnableScopeSelection(TRUE)
+, m_initHandler(NULL)
+, m_initHandlerParam(NULL)
 {
   ASSERT (pBuddy != NULL);
 }
@@ -161,6 +163,9 @@ OnInitDialog ()
   GetDlgItem (IDC_EDIT_SCOPE_SELECTION)->EnableWindow (m_bEnableScopeSelection);
   m_bFound = FALSE;
 
+  if (m_initHandler)
+	  (*m_initHandler)(*this, m_initHandlerParam);
+
   return TRUE;
 }
 
@@ -215,7 +220,8 @@ DoHighlightText ( BOOL bNotifyIfNotFound )
     }
 
   m_pBuddy->HighlightText (m_ptFoundAt, m_pBuddy->m_nLastFindWhatLen);
-  return TRUE;
+
+return TRUE;
 }
 
 BOOL CEditReplaceDlg::

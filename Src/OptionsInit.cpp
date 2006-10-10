@@ -22,7 +22,7 @@
  */
 void CMainFrame::OptionsInit()
 {
-	m_options.SetRegRootKey(_T("Thingamahoochie\\WinMerge\\"));
+	m_options.SetRegRootKey(_T("WinMergeX\\WinMergeX\\"));
 
 	// Initialise options (name, default value)
 	m_options.InitOption(OPT_SHOW_UNIQUE_LEFT, true);
@@ -64,6 +64,7 @@ void CMainFrame::OptionsInit()
 	m_options.InitOption(OPT_BREAK_TYPE, 0);
 
 	m_options.InitOption(OPT_CLOSE_WITH_ESC, true);
+	m_options.InitOption(OPT_AUTOCLOSE_DIRCOMP_STATS, false);
 	m_options.InitOption(OPT_LOGGING, 0);
 	m_options.InitOption(OPT_IGNORE_SMALL_FILETIME, false);
 
@@ -76,6 +77,7 @@ void CMainFrame::OptionsInit()
 	m_options.InitOption(OPT_CMP_MOVED_BLOCKS, false);
 	m_options.InitOption(OPT_CMP_STOP_AFTER_FIRST, false);
 	m_options.InitOption(OPT_CMP_QUICK_LIMIT, 4 * 1024 * 1024); // 4 Megs
+	m_options.InitOption(OPT_CMP_SINGLETHREADED, false);
 
 	m_options.InitOption(OPT_CLR_DIFF, (int)RGB(239,203,5));
 	m_options.InitOption(OPT_CLR_SELECTED_DIFF, (int)RGB(239,119,116));

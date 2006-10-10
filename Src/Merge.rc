@@ -531,7 +531,9 @@ BEGIN
             MENUITEM "&Differences... (%1 of %2)",  ID_DIR_ZIP_BOTH_DIFFS_ONLY
         END
         MENUITEM SEPARATOR
-        MENUITEM "&Refresh",                        ID_DIR_RESCAN
+        MENUITEM "Properties",                  ID_DIR_ITEM_PROPERTIES
+        MENUITEM SEPARATOR
+        MENUITEM "&Refresh",                    ID_DIR_RESCAN
     END
     POPUP "_HDR_POPUP_"
     BEGIN
@@ -632,11 +634,11 @@ END
 IDD_ABOUTBOX DIALOGEX 0, 0, 223, 124
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
     WS_SYSMENU
-CAPTION "About WinMerge"
+CAPTION "About WinMergeX"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     ICON            IDR_MAINFRAME,IDC_STATIC,24,14,21,20
-    LTEXT           "WinMerge",IDC_STATIC,63,13,63,8,SS_NOPREFIX
+    LTEXT           "WinMergeX",IDC_STATIC,63,13,63,8,SS_NOPREFIX
     LTEXT           "Version 1.0",IDC_VERSION,63,23,153,8,SS_NOPREFIX
     LTEXT           "(Private Build)",IDC_PRIVATEBUILD,63,33,153,8
     LTEXT           "All rights reserved.",IDC_STATIC,7,60,170,8
@@ -753,6 +755,8 @@ BEGIN
                     IDC_STATIC,7,153,168,31
     PUSHBUTTON      "Reset",IDC_RESET_ALL_MESSAGE_BOXES,178,159,50,14,NOT
                     WS_TABSTOP
+    CONTROL         "AutoClose Dir Stats",IDC_AUTOCLOSE_DIRCOMP_STATS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,139,36,89,10
 END
 
 IDD_LANGUAGE_SELECT DIALOGEX 0, 0, 214, 142
@@ -1072,9 +1076,9 @@ BEGIN
                     ES_READONLY
 END
 
-IDD_DIRCOMP_PROGRESS DIALOGEX 0, 0, 256, 60
+IDD_DIRCOMP_PROGRESS DIALOGEX 0, 0, 330, 110
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_VISIBLE |
-    WS_CAPTION
+    WS_CAPTION | WS_SYSMENU
 EXSTYLE WS_EX_TOOLWINDOW
 CAPTION " Folder Compare Progress"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
@@ -1087,6 +1091,61 @@ BEGIN
     LTEXT           "Comparing items...",IDC_STATIC,7,7,150,8
     LTEXT           "Items compared:",IDC_STATIC,7,29,85,8
     LTEXT           "Items total:",IDC_STATIC,7,19,85,8
+    LTEXT           "",IDC_STATIC,3,64,51,17,SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "",IDC_STATIC,3,84,51,17,SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "",IDC_STATIC,56,64,51,17,SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "",IDC_STATIC,56,84,51,17,SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "",IDC_STATIC,109,64,51,17,SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "",IDC_STATIC,109,84,51,17,SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "",IDC_STATIC,162,64,51,17,SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "",IDC_STATIC,162,84,51,17,SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "",IDC_STATIC,215,64,51,17,SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "",IDC_STATIC,215,84,51,17,SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "",IDC_STATIC,268,64,51,17,SS_SUNKEN | NOT WS_GROUP
+    LTEXT           "",IDC_STATIC,268,84,51,17,SS_SUNKEN | NOT WS_GROUP
+    CONTROL         7410,IDC_STATIC,"Static",SS_BITMAP,7,68,12,11,
+                    WS_EX_STATICEDGE
+    CONTROL         7411,IDC_STATIC,"Static",SS_BITMAP,7,87,12,11,
+                    WS_EX_STATICEDGE
+    CONTROL         7412,IDC_STATIC,"Static",SS_BITMAP,60,68,12,11,
+                    WS_EX_STATICEDGE
+    CONTROL         7413,IDC_STATIC,"Static",SS_BITMAP,60,87,12,11,
+                    WS_EX_STATICEDGE
+    CONTROL         7414,IDC_STATIC,"Static",SS_BITMAP,113,68,12,11,
+                    WS_EX_STATICEDGE
+    CONTROL         7415,IDC_STATIC,"Static",SS_BITMAP,113,87,12,11,
+                    WS_EX_STATICEDGE
+    CONTROL         7416,IDC_STATIC,"Static",SS_BITMAP,165,68,12,11,
+                    WS_EX_STATICEDGE
+    CONTROL         7417,IDC_STATIC,"Static",SS_BITMAP,165,87,12,11,
+                    WS_EX_STATICEDGE
+    CONTROL         7418,IDC_STATIC,"Static",SS_BITMAP,218,68,12,11,
+                    WS_EX_STATICEDGE
+    CONTROL         7419,IDC_STATIC,"Static",SS_BITMAP,218,87,12,11,
+                    WS_EX_STATICEDGE
+    CONTROL         7420,IDC_STATIC,"Static",SS_BITMAP,271,68,12,11,
+                    WS_EX_STATICEDGE
+    CONTROL         7421,IDC_STATIC,"Static",SS_BITMAP,271,87,12,11,
+                    WS_EX_STATICEDGE
+    RTEXT           "",IDC_COUNT_FOLDER,24,70,26,8,SS_REALSIZEIMAGE | 0x2000
+    RTEXT           "",IDC_COUNT_ERROR,24,89,26,8,SS_REALSIZEIMAGE | 0x2000
+    RTEXT           "",IDC_COUNT_LFOLDER,76,70,26,8,SS_REALSIZEIMAGE | 
+                    0x2000
+    RTEXT           "",IDC_COUNT_RFOLDER,76,89,26,8,SS_REALSIZEIMAGE | 
+                    0x2000
+    RTEXT           "",IDC_COUNT_EQUAL,129,70,26,8,SS_REALSIZEIMAGE | 0x2000
+    RTEXT           "",IDC_COUNT_NOTEQUAL,129,89,26,8,SS_REALSIZEIMAGE | 
+                    0x2000
+    RTEXT           "",IDC_COUNT_BINARYSAME,182,70,26,8,SS_REALSIZEIMAGE | 
+                    0x2000
+    RTEXT           "",IDC_COUNT_BINARYDIFF,182,89,26,8,SS_REALSIZEIMAGE | 
+                    0x2000
+    RTEXT           "",IDC_COUNT_LFILE,235,70,26,8,SS_REALSIZEIMAGE | 0x2000
+    RTEXT           "",IDC_COUNT_RFILE,235,89,26,8,SS_REALSIZEIMAGE | 0x2000
+    RTEXT           "",IDC_COUNT_FOLDERSKIP,288,70,26,8,SS_REALSIZEIMAGE | 
+                    0x2000
+    RTEXT           "",IDC_COUNT_FILESKIP,288,89,26,8,SS_REALSIZEIMAGE | 
+                    0x2000
 END
 
 IDD_WMGOTO DIALOGEX 0, 0, 210, 70
@@ -1141,6 +1200,8 @@ BEGIN
     CONTROL         "Filter Comments",IDC_FILTERCOMMENTS_CHECK,"Button",
                     BS_AUTOCHECKBOX | WS_TABSTOP,15,147,205,10
     PUSHBUTTON      "Defaults",IDC_COMPARE_DEFAULTS,7,179,50,14
+    CONTROL         "SingleThreaded",IDC_SINGLETHREADED,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,128,177,82,9
 END
 
 IDD_PROPPAGE_EDITOR DIALOGEX 0, 0, 235, 186
@@ -1569,6 +1630,18 @@ BEGIN
     PUSHBUTTON      "Save...",IDC_PROJ_SAVE,265,103,50,14
 END
 
+IDD_PROPERTYDIALOG DIALOGEX 0, 0, 274, 126
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "Properties"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | 
+                    WS_BORDER | WS_TABSTOP,7,7,260,59
+    EDITTEXT        IDC_EDIT,7,70,260,49,ES_MULTILINE | ES_AUTOHSCROLL | 
+                    WS_VSCROLL
+END
+
 #ifndef _MAC
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -1576,8 +1649,8 @@ END
 //
 
 VS_VERSION_INFO VERSIONINFO
- FILEVERSION 0,0,0,0
- PRODUCTVERSION 0,0,0,0
+ FILEVERSION 1,0,0,16281
+ PRODUCTVERSION 1,0,0,16281
  FILEFLAGSMASK 0x3fL
 #ifdef _DEBUG
  FILEFLAGS 0x9L
@@ -1593,13 +1666,13 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "Comments", "English translation by developers"
-            VALUE "FileDescription", "WinMerge Application\0"
+            VALUE "FileDescription", "WinMergeX Application\0"
             VALUE "FileVersion", "000.000.000.000\0"
-            VALUE "InternalName", "WinMerge\0"
+            VALUE "InternalName", "WinMergeX\0"
             VALUE "LegalCopyright", "© 1996-2006 Dean P. Grimm / Thingamahoochie Software\0"
-            VALUE "OriginalFilename", "WinMerge.EXE\0"
+            VALUE "OriginalFilename", "WinMergeX.EXE\0"
             VALUE "PrivateBuild", ""
-            VALUE "ProductName", "WinMerge\0"
+            VALUE "ProductName", "WinMergeX\0"
             VALUE "ProductVersion", "000.000.000.000\0"
         END
     END
@@ -1691,7 +1764,18 @@ IDB_EDIT_TOGGLE_BOOKMARK BITMAP                 "res\\toggle_bookmark.bmp"
 IDB_EDIT_GOTO_NEXT_BOOKMARK BITMAP              "res\\next_bookmark.bmp"
 IDB_EDIT_GOTO_PREV_BOOKMARK BITMAP              "res\\prev_bookmark.bmp"
 IDB_EDIT_CLEAR_ALL_BOOKMARKS BITMAP             "res\\clear_bookmarks.bmp"
-
+IDB_FOLDER              BITMAP                  "res\\dirstat_folder.bmp"
+IDB_ERROR               BITMAP                  "res\\dirstat_error.bmp"
+IDB_LFOLDER             BITMAP                  "res\\dirstat_lfolder.bmp"
+IDB_RFOLDER             BITMAP                  "res\\dirstat_rfolder.bmp"
+IDB_EQUAL               BITMAP                  "res\\dirstat_equal.bmp"
+IDB_NOTEQUAL            BITMAP                  "res\\dirstat_notequal.bmp"
+IDB_BINARYSAME          BITMAP                  "res\\dirstat_binarysame.bmp"
+IDB_BINARYDIFF          BITMAP                  "res\\dirstat_binarydiff.bmp"
+IDB_LFILE               BITMAP                  "res\\dirstat_lfile.bmp"
+IDB_RFILE               BITMAP                  "res\\dirstat_rfile.bmp"
+IDB_FOLDERSKIP          BITMAP                  "res\\dirstat_folderskip.bmp"
+IDB_FILESKIP            BITMAP                  "res\\dirstat_fileskip.bmp"
 
 /////////////////////////////////////////////////////////////////////////////
 //
@@ -1708,7 +1792,7 @@ IDR_MERGEHAND           CURSOR                  "res\\hand.cur"
 
 STRINGTABLE
 BEGIN
-    AFX_IDS_APP_TITLE       "WinMerge"
+    AFX_IDS_APP_TITLE       "WinMergeX"
     AFX_IDS_IDLEMESSAGE     "Ready"
 END
 
@@ -1849,7 +1933,7 @@ END
 // WINMERGE INFORMATION
 STRINGTABLE
 BEGIN
-    IDR_MAINFRAME           "WinMerge"
+    IDR_MAINFRAME           "WinMergeX"
     IDR_MERGEDOCTYPE        "\nWinMerge\nWinMerge\n\n\nWinMerge.Document\nWinMerge Document"
 END
 
@@ -2279,7 +2363,8 @@ BEGIN
     IDS_ABORTED_ITEM        "Item aborted"
     IDS_FILE_SKIPPED        "File skipped"
     IDS_DIR_SKIPPED         "Folder skipped"
-    IDS_ONLY_IN_FMT         "Only in %1"
+    IDS_LEFT_ONLY_IN_FMT         "Left Only: %1"
+    IDS_RIGHT_ONLY_IN_FMT         "Right Only: %1"
     IDS_BIN_FILES_SAME      "Binary files are identical"
     IDS_IDENTICAL           "Identical"
     IDS_BIN_FILES_DIFF      "Binary files are different"
@@ -2919,6 +3004,17 @@ BEGIN
     IDS_AUTOCOMPLETE_DISABLED   "Disabled"
     IDS_AUTOCOMPLETE_FILE_SYS   "From file system"
     IDS_AUTOCOMPLETE_MRU        "From MRU list"
+END
+
+// Find/Replace customization
+STRINGTABLE
+BEGIN
+    IDS_FIND_IN_LEFT_FILE  "Find In Left File"
+    IDS_FIND_IN_RIGHT_FILE "Find In Right File"
+    IDS_REPLACE_IN_LEFT_FILE "Replace In Left File"
+    IDS_REPLACE_IN_RIGHT_FILE "Replace In Right File"
+    IDS_GOTO_IN_LEFT_FILE  "Goto (Left)"
+    IDS_GOTO_IN_RIGHT_FILE "Goto (Right)"
 END
 
 // END STRINGS SYNCHRO

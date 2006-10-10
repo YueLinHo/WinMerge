@@ -76,18 +76,34 @@ insame:
 		int i1 = (w1>0 ? m_words1[w1-1].end+1 : 0); // after end of word before w1
 		int i2 = (w2>0 ? m_words2[w2-1].end+1 : 0); // after end of word before w2
 		// Done, but handle trailing spaces
-		while (i1 < m_str1.GetLength() && i2 < m_str2.GetLength()
-			&& isSafeWhitespace(m_str1[i1]) && isSafeWhitespace(m_str2[i2]))
+		if (m_whitespace==0)
 		{
-			if (m_whitespace==0)
+			// Compare all whitespace
+			while (i1 < m_str1.GetLength() && i2 < m_str2.GetLength()
+				&& isSafeWhitespace(m_str1[i1]) && isSafeWhitespace(m_str2[i2]))
 			{
 				// Compare all whitespace
 				if (!caseMatch(m_str1[i1], m_str2[i2]))
 					break;
+				++i1;
+				++i2;
 			}
-			++i1;
-			++i2;
 		}
+		else if (m_whitespace==1)
+		{
+			// Compare whitespace changes and ignore whitespace
+			// both ignore all trailing whitespace
+			// Compare all whitespace
+			while (i1 < m_str1.GetLength() && isSafeWhitespace(m_str1[i1]))
+			{
+				++i1;
+			}
+			while (i2 < m_str2.GetLength() && isSafeWhitespace(m_str2[i2]))
+			{
+				++i2;
+			}
+		}
+
 		if (i1 != m_str1.GetLength() || i2 != m_str2.GetLength())
 		{
 			wdiff wdf(i1,  m_str1.GetLength()-1, i2, m_str2.GetLength()-1);
@@ -326,6 +342,14 @@ inword:
 			// e is first non-word character (space or at end)
 			int e = i-1;
 			word wd(begin, e, hash(str, begin, e));
+			static bool debugging = false;
+			if (debugging)
+			{
+				CString word;
+				for (int k=begin; k<=e; ++k)
+					word += str[k];
+				CString w2 = word; // just as a point to breakpoint to see the word
+			}
 			words->Add(wd);
 		}
 		if (i == str.GetLength())

@@ -44,7 +44,7 @@ static char THIS_FILE[] = __FILE__;
 #define CONTEXT_F_SUBFOLDERS 0x04
 
 // registry dir to WinMerge
-static LPCTSTR f_RegDir = _T("Software\\Thingamahoochie\\WinMerge");
+static LPCTSTR f_RegDir = _T("Software\\WinMergeX\\WinMergeX");
 
 // registry values
 static LPCTSTR f_RegValueEnabled = _T("ContextMenuEnabled");

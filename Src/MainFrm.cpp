@@ -402,7 +402,7 @@ static void FixupDebugMenu(BCMenu * menu)
 	// Finds debug menu by looking for a submenu which
 	//  starts with item ID_DEBUG_LOADCONFIG
 
-	for (int i=0; i< menu->GetMenuItemCount(); ++i)
+	for (UINT i=0; i< menu->GetMenuItemCount(); ++i)
 	{
 		if (menu->GetSubMenu(i)->GetMenuItemID(0) == ID_DEBUG_LOADCONFIG)
 		{
@@ -1232,7 +1232,7 @@ BOOL CMainFrame::CreateBackup(LPCTSTR pszPath)
 		// Add backup extension if pathlength allows it
 		BOOL success = TRUE;
 		CString s = pszPath;
-		if (s.GetLength() >= (MAX_PATH - _tcslen(BACKUP_FILE_EXT)))
+		if (s.GetLength() >= (MAX_PATH - (int)_tcslen(BACKUP_FILE_EXT)))
 			success = FALSE;
 		else
 			s += BACKUP_FILE_EXT;
