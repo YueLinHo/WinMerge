@@ -2011,7 +2011,7 @@ BEGIN
     IDS_COMPMETHOD_QUICK_CONTENTS "Contingut en un cop d'ull"
     IDS_COMPMETHOD_MODDATE  "Data de modificació"
     IDS_COMPMETHOD_DATESIZE "Data de modificació i mida"
-    IDS_COMPMETHOD_SIZE     "Mida
+    IDS_COMPMETHOD_SIZE     "Mida"
 END
 
 // FILTER OPTIONS
