@@ -1,3 +1,7 @@
+2006-10-12 Kimmo
+ Set version- and revision numbers for 2.6.0 release.
+  Manual: WinMerge_help.xml
+
 2006-10-11 Kimmo
  PATCH: [ 1574644 ] Manual: Fix cvs id-line in filters-doc
   Manual: Filters.xml
