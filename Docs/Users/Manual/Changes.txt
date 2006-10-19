@@ -1,3 +1,7 @@
+2006-10-19 Kimmo
+ PATCH: [ 1578456 ] Manual: Small tweaks for installing doc
+  Manual: Install.xml
+
 2006-10-12 Kimmo
  Set version- and revision numbers for 2.6.0 release.
   Manual: WinMerge_help.xml
