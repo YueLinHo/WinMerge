@@ -7,6 +7,8 @@ Add new items to top.
   Src: DirCmpReportDlg.cpp FileFiltersDlg.cpp MainFrm.cpp Merge.cpp Merge.h
    MergeDoc.cpp PatchDlg.cpp ProjectFilePathsDlg.cpp PropRegistry.cpp PropVss.cpp
   Src/Common: PreferencesDlg.cpp
+ PATCH: [ 1578494 ] 26Branch: Optimize binary files compare
+  Src: DiffFileData.cpp DiffItem.h
 
 2006-10-29 Kimmo
  PATCH: [ 1578419 ] Fix creating WinMerge folder to MyFolders always

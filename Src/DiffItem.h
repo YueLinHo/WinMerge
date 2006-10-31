@@ -54,7 +54,7 @@ struct DIFFCODE
 		// and each set of flags is in a different hex digit
 		// to make debugging easier
 		// These can always be packed down in the future
-		TEXTFLAGS=0x7, TEXT=0x1, BINSIDE1=0x2, BINSIDE2=0x3, BIN=0x4,
+		TEXTFLAGS=0x7, TEXT=0x1, BIN=0x2,
 		DIRFLAGS=0x30, FILE=0x10, DIR=0x20,
 		SIDEFLAGS=0x300, LEFT=0x100, RIGHT=0x200, BOTH=0x300,
 		COMPAREFLAGS=0x7000, NOCMP=0x0000, SAME=0x1000, DIFF=0x2000, CMPERR=0x3000, CMPABORT=0x4000,
@@ -99,9 +99,7 @@ public:
 	// filter status
 	bool isResultFiltered() const { return CheckFilter(diffcode, DIFFCODE::SKIPPED); }
 	// type
-	bool isBin() const { return Check(diffcode, DIFFCODE::TEXTFLAGS, DIFFCODE::BIN) ||
-			Check(diffcode, DIFFCODE::TEXTFLAGS, DIFFCODE::BINSIDE1) ||
-			Check(diffcode, DIFFCODE::TEXTFLAGS, DIFFCODE::BINSIDE2); }
+	bool isBin() const { return Check(diffcode, DIFFCODE::TEXTFLAGS, DIFFCODE::BIN); }
 	void setBin() { Set(DIFFCODE::TEXTFLAGS, DIFFCODE::BIN); }
 	// rescan
 	bool isScanNeeded() const { return ((diffcode & DIFFCODE::SCANFLAGS) == DIFFCODE::NEEDSCAN); }

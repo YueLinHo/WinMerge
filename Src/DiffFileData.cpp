@@ -209,11 +209,10 @@ void DiffFileData::GuessEncoding_from_FileLocation(FileLocation & fpenc)
 int DiffFileData::diffutils_compare_files(int depth)
 {
 	int bin_flag = 0;
-	int bin_file = 0; // bitmap for binary files
 
 	// Do the actual comparison (generating a change script)
 	struct change *script = NULL;
-	BOOL success = Diff2Files(&script, depth, &bin_flag, FALSE, &bin_file);
+	BOOL success = Diff2Files(&script, depth, &bin_flag, FALSE, NULL);
 	if (!success)
 	{
 		return DIFFCODE::FILE | DIFFCODE::TEXT | DIFFCODE::CMPERR;
@@ -250,18 +249,7 @@ int DiffFileData::diffutils_compare_files(int depth)
 		// Clear text-flag, set binary flag
 		// We don't know diff counts for binary files
 		code = code & ~DIFFCODE::TEXT;
-		switch (bin_file)
-		{
-		case BINFILE_SIDE1: code |= DIFFCODE::BINSIDE1;
-			break;
-		case BINFILE_SIDE2: code |= DIFFCODE::BINSIDE2;
-			break;
-		case BINFILE_SIDE1 | BINFILE_SIDE2: code |= DIFFCODE::BIN;
-			break;
-		default:
-			_RPTF1(_CRT_ERROR, "Invalid bin_file value: %d", bin_file);
-			break;
-		}
+		code |= DIFFCODE::BIN;
 		m_ndiffs = DiffFileData::DIFFS_UNKNOWN;
 	}
 
@@ -694,16 +682,11 @@ int DiffFileData::byte_compare_files(BOOL bStopAfterFirstDiff, const IAbortable 
 		// did we finish both files?
 		if (eof[0] && eof[1])
 		{
-
 			BOOL bBin0 = (m_textStats0.nzeros>0);
 			BOOL bBin1 = (m_textStats1.nzeros>0);
 
-			if (bBin0 && bBin1)
+			if (bBin0 || bBin1)
 				diffcode |= DIFFCODE::BIN;
-			else if (bBin0)
-				diffcode |= DIFFCODE::BINSIDE1;
-			else if (bBin1)
-				diffcode |= DIFFCODE::BINSIDE2;
 
 			// If either unfinished, they differ
 			if (ptr0 != end0 || ptr1 != end1)
