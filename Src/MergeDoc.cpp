@@ -2872,8 +2872,11 @@ OPENRESULTS_TYPE CMergeDoc::OpenDocs(FileLocation filelocLeft, FileLocation file
 
 		// Inform user that files are identical
 		// Don't show message if new buffers created
-		if (bIdentical && (m_nBufferType[0] == BUFFER_NORMAL ||
-			m_nBufferType[1] == BUFFER_NORMAL))
+		if ((TRUE == bIdentical) &&
+			((m_nBufferType[0] == BUFFER_NORMAL) ||
+			 (m_nBufferType[0] == BUFFER_NORMAL_NAMED) ||
+			 (m_nBufferType[1] == BUFFER_NORMAL) ||
+			 (m_nBufferType[1] == BUFFER_NORMAL_NAMED)))
 		{
 			ShowRescanError(nRescanResult, bBinary, bIdentical);
 		}
