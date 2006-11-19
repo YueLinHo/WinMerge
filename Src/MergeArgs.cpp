@@ -204,12 +204,6 @@ CMergeApp::ParseArgs(int argc, TCHAR *argv[], CMainFrame* pMainFrame, CStringArr
 		GetMainFrame()->ResetOptions();
 	}
 
-	if (cmdArgs.HasSwitch(_T("minimize")))
-	{
-		// /minimize means minimize the main window
-		m_nCmdShow = SW_MINIMIZE;
-	}
-
 	// Handle all switches in the f_ArgSettings table
 	// this are arguments mapped to WinMerge options
 	int i;

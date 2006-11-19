@@ -103,10 +103,12 @@ class CMergeCmdLineInfo : public CCommandLineInfo
 	public:
 
 		BOOL m_bSingleInstance; /**< Allow only one instance of WinMerge executable. */
+		int m_nCmdShow /**< Initial state of the application's window. */;
 };
 
 CMergeCmdLineInfo::CMergeCmdLineInfo() : CCommandLineInfo(),
-	m_bSingleInstance(FALSE)
+	m_bSingleInstance(FALSE),
+	m_nCmdShow(SW_SHOWNORMAL)
 {
 
 }
@@ -121,6 +123,11 @@ void CMergeCmdLineInfo::ParseParam(const TCHAR* pszParam, BOOL bFlag, BOOL bLast
 		if (pszParam[0] == _T('s'))
 		{
 			m_bSingleInstance = TRUE;
+		}
+		else if (!lstrcmpi(pszParam, _T("minimize")))
+		{
+			// /minimize means minimize the main window.
+			m_nCmdShow = SW_MINIMIZE;
 		}
 	}
 }
@@ -315,9 +322,8 @@ BOOL CMergeApp::InitInstance()
 	//Track it so any other instances can find it.
 	instanceChecker.TrackFirstInstanceRunning();
 
-	// The main window has been initialized, so show and update it.
-	//pMainFrame->ShowWindow(m_nCmdShow);
-	pMainFrame->ActivateFrame(m_nCmdShow);
+	// The main window has been initialized, so activate and update it.
+	pMainFrame->ActivateFrame(cmdInfo.m_nCmdShow);
 	pMainFrame->UpdateWindow();
 
 	// Since this function actually opens paths for compare it must be

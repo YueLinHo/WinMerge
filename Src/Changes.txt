@@ -2,6 +2,11 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2006-11-19 Gal
+ PATCH: [ 1590831 ] Handle minimize argument (Bug 1570351)
+  Src/Common: SplitterWndEx.cpp
+  Src: Merge.cpp MergeArgs.cpp MergeDiffDetailView.cpp
+
 2006-11-13 Gal
  BUG: [ 1594188 ] /x option does not work
   Src: MergeDoc.cpp
