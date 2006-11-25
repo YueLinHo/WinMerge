@@ -894,7 +894,6 @@ bool CMergeDoc::ListCopy(int srcPane, int dstPane, int nDiff /* = -1*/,
 		}
 
 		// if the current diff contains missing lines, remove them from both sides
-		int deleted_lines=0;
 		int limit = cd_dend;
 
 		// curView is the view which is changed, so the opposite of the source view
@@ -917,7 +916,6 @@ bool CMergeDoc::ListCopy(int srcPane, int dstPane, int nDiff /* = -1*/,
 				// https://sourceforge.net/tracker/index.php?func=detail&aid=1570173&group_id=13216&atid=113216
 				dbuf.DeleteText(dstView, cd_blank-1, dbuf.GetLineLength(cd_blank-1), cd_dend, dbuf.GetLineLength(cd_dend), CE_ACTION_MERGE);
 			}
-			deleted_lines=cd_dend-cd_blank+1;
 
 			limit=cd_blank-1;
 			dbuf.FlushUndoGroup(dstView);
@@ -1154,6 +1152,7 @@ BOOL CMergeDoc::DoSave(LPCTSTR szPath, BOOL &bSaveSuccess, int nBuffer)
 	// Saving succeeded with given/selected filename
 	if (nSaveErrorCode == SAVE_DONE)
 	{
+		m_ptBuf[nBuffer]->SetModified(FALSE);
 		m_pSaveFileInfo[nBuffer]->Update(strSavePath);
 		m_pRescanFileInfo[nBuffer]->Update(m_filePaths.GetPath(nBuffer));
 		m_filePaths.SetPath(nBuffer, strSavePath);
@@ -1258,31 +1257,41 @@ int CMergeDoc::LeftLineInMovedBlock(int apparentRightLine)
 		return -1;
 }
 
-BOOL CMergeDoc::CanCloseFrame(CFrameWnd* /*pFrame*/) 
+/**
+ * @brief Save modified documents.
+ * This function asks if user wants to save modified documents. We also
+ * allow user to cancel the closing.
+ *
+ * There is a special trick avoiding showing two save-dialogs, as MFC framework
+ * sometimes calls this function twice. We use static counter for these calls
+ * and if we already have saving in progress (counter == 1) we skip the new
+ * saving dialog.
+ *
+ * @return TRUE if docs are closed, FALSE if closing is cancelled.
+ */
+BOOL CMergeDoc::SaveModified()
 {
-	// Allow user to cancel closing
+	static int counter;
+	++counter;
+	if (counter > 1)
+		return FALSE;
+
 	if (PromptAndSaveIfNeeded(TRUE))
 	{
-		// Set modified status to false so that we are not asking
-		// about saving again in OnCloseDocument()
-		m_ptBuf[0]->SetModified(FALSE);
-		m_ptBuf[1]->SetModified(FALSE);
+		counter = 0;
 		return TRUE;
 	}
 	else
 	{
+		counter = 0;
 		return FALSE;
 	}
 }
 
-// If WinMerge is closed, CMainFrame::OnClose already takes
-// care of saving so this function just returns TRUE
-// to prevent further questions
-BOOL CMergeDoc::SaveModified()
-{
-	return TRUE;
-}
-
+/**
+ * @brief Sets the current difference.
+ * @param [in] nDiff Difference to set as current difference.
+ */
 void CMergeDoc::SetCurrentDiff(int nDiff)
 {
 	if (nDiff >= 0 && nDiff <= m_diffList.LastSignificantDiff())
@@ -1291,6 +1300,12 @@ void CMergeDoc::SetCurrentDiff(int nDiff)
 		m_nCurDiff = -1;
 }
 
+/**
+ * @brief Checks if a flag is set for line.
+ * @param [in] line Index (0-based) for line.
+ * @param [in] flag Flag to check.
+ * @return TRUE if flag is set, FALSE otherwise.
+ */
 BOOL CMergeDoc::CDiffTextBuffer::FlagIsSet(UINT line, DWORD flag)
 {
 	return ((m_aLines[line].m_dwFlags & flag) == flag);
@@ -2407,11 +2422,11 @@ BOOL CMergeDoc::PromptAndSaveIfNeeded(BOOL bAllowCancel)
 	BOOL result = TRUE;
 	BOOL bLSaveSuccess = FALSE;
 	BOOL bRSaveSuccess = FALSE;
-	SaveClosingDlg dlg;
 
 	if (!bLModified && !bRModified) //Both files unmodified
 		return TRUE;
 
+	SaveClosingDlg dlg;
 	dlg.DoAskFor(bLModified, bRModified);
 	if (!bAllowCancel)
 		dlg.m_bDisableCancel = TRUE;

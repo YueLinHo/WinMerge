@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2006-11-25 Kimmo
+ PATCH: [ 1596692 ] Change the way modified docs are saved to fix several issues
+  Src: MainFrm.cpp MergeDiffDetailView.cpp MergeDoc.cpp MergeDoc.h
+
 2006-11-21 Kimmo
  PATCH: [ 1589563 ] Fix crash with weird filetimes (and cleanup the code)
   Src: DiffFileInfo.cpp DiffFileInfo.h DirScan.cpp DirViewColHandler.cpp

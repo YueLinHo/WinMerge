@@ -609,7 +609,6 @@ CMainFrame::ShowMergeDoc(CDirDoc * pDirDoc,  const FileLocation & ifilelocLeft, 
 	PackingInfo * infoUnpacker /*= NULL*/)
 {
 	BOOL docNull;
-	BOOL bOpenSuccess = FALSE;
 	CMergeDoc * pMergeDoc = GetMergeDocToShow(pDirDoc, &docNull);
 
 	// Make local copies, so we can change encoding if we guess it below
@@ -949,8 +948,6 @@ void CMainFrame::OnOptions()
 		while (!docs.IsEmpty())
 		{
 			CMergeDoc * pMergeDoc = docs.RemoveHead();
-			CMergeEditView * pLeft = pMergeDoc->GetLeftView();
-			CMergeEditView * pRight = pMergeDoc->GetRightView();
 
 			// Re-read MergeDoc settings (also updates view settings)
 			// and rescan using new options
@@ -1237,15 +1234,6 @@ BOOL CMainFrame::CreateBackup(LPCTSTR pszPath)
 }
 
 /**
- * @brief Trim trailing line returns.
- */
-static void RemoveLineReturns(CString & str)
-{
-	str.Remove('\n');
-	str.Remove('\r');
-}
-
-/**
  * @brief Sync file to Version Control System
  * @param pszSrc [in] File to copy
  * @param pszDest [in] Where to copy (incl. filename)
@@ -1299,7 +1287,6 @@ void CMainFrame::OnViewSelectfont()
 	CString sFontPath = fileFontPath; // Default to change file compare font
 
 	CFrameWnd * pFrame = GetActiveFrame();
-	BOOL bMergeFrame = pFrame->IsKindOf(RUNTIME_CLASS(CChildFrame));
 	BOOL bDirFrame = pFrame->IsKindOf(RUNTIME_CLASS(CDirFrame));
 
 	if (bDirFrame)
@@ -1627,30 +1614,6 @@ void CMainFrame::ActivateFrame(int nCmdShow)
 
 void CMainFrame::OnClose() 
 {
-	// save any dirty edit views
-	MergeDocList mergedocs;
-	GetAllMergeDocs(&mergedocs);
-	for (POSITION pos = mergedocs.GetHeadPosition(); pos; mergedocs.GetNext(pos))
-	{
-		CMergeDoc * pMergeDoc = mergedocs.GetAt(pos);
-		CMergeEditView * pLeft = pMergeDoc->GetLeftView();
-		CMergeEditView * pRight = pMergeDoc->GetRightView();
-		if ((pLeft && pLeft->IsModified())
-			|| (pRight && pRight->IsModified()))
-		{
-			// Allow user to cancel closing
-			if (!pMergeDoc->PromptAndSaveIfNeeded(TRUE))
-				return;
-			else
-			{
-				// Set modified status to false so that we are not asking
-				// about saving again. 
-				pMergeDoc->m_ptBuf[0]->SetModified(FALSE);
-				pMergeDoc->m_ptBuf[1]->SetModified(FALSE);
-			}
-		}
-	}
-
 	// Save last selected filter
 	CString filter = theApp.m_globalFileFilter.GetFilterNameOrMask();
 	m_options.SaveOption(OPT_FILEFILTER_CURRENT, filter);
@@ -1711,7 +1674,6 @@ void CMainFrame::RebuildRegExpList(BOOL bShowError)
 	USES_CONVERSION;
 
 	TCHAR tmp[_MAX_PATH] = {0};
-	TCHAR tokenStr[_MAX_PATH] = {0};
 	TCHAR* token;
 	TCHAR sep[] = _T("\r\n");
 	BOOL valid = TRUE;
@@ -2018,7 +1980,7 @@ void CMainFrame::OnToolsGeneratePatch()
 	{
 		CMergeDoc * pMergeDoc = (CMergeDoc *) pFrame->GetActiveDocument();
 		// If there are changes in files, tell user to save them first
-		if (pMergeDoc->m_ptBuf[0]->IsModified() || pMergeDoc->m_ptBuf[0]->IsModified())
+		if (pMergeDoc->m_ptBuf[0]->IsModified() || pMergeDoc->m_ptBuf[1]->IsModified())
 		{
 			bOpenDialog = FALSE;
 			AfxMessageBox(IDS_SAVEFILES_FORPATCH, MB_ICONSTOP);
@@ -2592,7 +2554,7 @@ BOOL CMainFrame::PreTranslateMessage(MSG* pMsg)
 	{
 		if (m_bEscShutdown)
 		{
-			AfxGetMainWnd()->SendMessage(WM_COMMAND, ID_APP_EXIT);
+			AfxGetMainWnd()->PostMessage(WM_COMMAND, ID_APP_EXIT);
 			return TRUE;
 		}
 		else
@@ -2857,22 +2819,9 @@ void CMainFrame::OnWindowCloseAll()
 	for (POSITION pos = mergedocs.GetHeadPosition(); pos; mergedocs.GetNext(pos))
 	{
 		CMergeDoc * pMergeDoc = mergedocs.GetAt(pos);
-		CMergeEditView * pLeft = pMergeDoc->GetLeftView();
-		CMergeEditView * pRight = pMergeDoc->GetRightView();
-		if ((pLeft && pLeft->IsModified())
-			|| (pRight && pRight->IsModified()))
-		{
-			// Allow user to cancel closing
-			if (!pMergeDoc->PromptAndSaveIfNeeded(TRUE))
-				return;
-			else
-			{
-				// Set modified status to false so that we are not asking
-				// about saving again. 
-				pMergeDoc->m_ptBuf[0]->SetModified(FALSE);
-				pMergeDoc->m_ptBuf[1]->SetModified(FALSE);
-			}
-		}
+		// Allow user to cancel closing
+		if (!pMergeDoc->PromptAndSaveIfNeeded(TRUE))
+			return;
 	}
 
 	DirDocList dirdocs;
