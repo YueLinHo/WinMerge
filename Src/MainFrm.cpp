@@ -69,6 +69,7 @@
 #include "PreferencesDlg.h"
 #include "AppSerialize.h"
 #include "ProjectFilePathsDlg.h"
+#include "FileOrFolderSelect.h"
 
 /*
  One source file must compile the stubs for multimonitor
