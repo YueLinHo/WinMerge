@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2006-11-28 Kimmo
+ PATCH: [ 1603196 ] Allow Open-dialog kind of folder selection for project files
+  Src: FileOrFolderSelect.cpp FileOrFolderSelect.h OpenDlg.cpp OpenDlg.h
+
 2006-11-27 Gal
  BUG: [ 1603562 ] Location pane's bar outlines
   Src: LocationView.cpp
