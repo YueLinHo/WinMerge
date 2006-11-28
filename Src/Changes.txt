@@ -5,6 +5,8 @@ Add new items to top.
 2006-11-28 Kimmo
  PATCH: [ 1603196 ] Allow Open-dialog kind of folder selection for project files
   Src: FileOrFolderSelect.cpp FileOrFolderSelect.h OpenDlg.cpp OpenDlg.h
+ PATCH: [ 1604078 ] Hide skipped items by default
+  Src: OptionsInit.cpp
 
 2006-11-27 Gal
  BUG: [ 1603562 ] Location pane's bar outlines
