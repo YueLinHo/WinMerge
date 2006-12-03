@@ -27,6 +27,8 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
+static void FileFilterToUppercase(CString & filterStr);
+
 /**
  * @brief Deletes items from filter list.
  *
@@ -150,6 +152,41 @@ void FileFilterMgr::DeleteAllFilters()
 }
 
 /**
+ * @brief Convert filter string to uppercase.
+ * This function converts given filter string to upper case. The function
+ * does not convert regexp control chars (e.g. '\d') or chars after comment
+ * separator.
+ * @param [in,out] filterStr Filter string to convert.
+ */
+static void FileFilterToUppercase(CString & filterStr)
+{
+	int ind = 0;
+	const int len = filterStr.GetLength();
+	BOOL bContinue = TRUE;
+
+	while (ind < len && bContinue)
+	{
+		// Check if it is comment separator "[space]##"
+		if (ind > 2 && _istspace(ind - 2) && filterStr[ind - 1] == '#' &&
+				filterStr[ind] == '#')
+		{
+			bContinue = FALSE;
+		}
+		
+		// We make all other chars in regexp uppercase, except escaped
+		// regexp control chars, e.g. "\d".
+		TCHAR ch = filterStr[ind];
+		BOOL bAlpha = _istalpha(ch);
+		if (bContinue && bAlpha && (ind == 0 || filterStr[ind - 1] != '\\'))
+		{
+			ch = _totupper(ch);
+			filterStr.SetAt(ind, ch);
+		}
+		++ind;
+	}
+}
+
+/**
  * @brief Add a single pattern (if nonempty & valid) to a pattern list.
  *
  * @param [in] filterList List where pattern is added.
@@ -158,7 +195,7 @@ void FileFilterMgr::DeleteAllFilters()
 static void AddFilterPattern(FileFilterList & filterList, CString & str)
 {
 	LPCTSTR commentLeader = _T("##"); // Starts comment
-	str.MakeUpper();
+	FileFilterToUppercase(str);
 	str.TrimLeft();
 
 	// Ignore lines beginning with '##'
