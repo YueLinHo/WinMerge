@@ -204,6 +204,25 @@
   </sect2>
 
   <sect2>
+    <title>Installing</title>
+
+    <qandaset>
+      <qandaentry>
+        <question>
+          <para>WinMerge does not start and complains about missing DLL
+          files (mfc71.dll, mfc71u.dll, msvcr71.dll, msvcp71.dll)</para>
+        </question>
+
+        <answer>
+          <para>When installing from archive (zip, 7z) file you need also
+          Runtimes-package, which contains those files. See the <link
+          linkend="InstallFromArchive">Install instructions</link>.</para>
+        </answer>
+      </qandaentry>
+    </qandaset>
+  </sect2>
+
+  <sect2>
     <title>Questions about binary files</title>
 
     <qandaset>
