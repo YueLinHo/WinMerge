@@ -399,13 +399,19 @@ void CMergeApp::OnUpdateViewLanguage(CCmdUI* pCmdUI)
 	pCmdUI->Enable(bLangsInstalled);
 }
 
+/**
+ * @brief Called when application is about to exit.
+ * This functions is called when application is exiting, so this is
+ * good place to do cleanups.
+ * @return Application's exit value (returned from WinMain()).
+ */
 int CMergeApp::ExitInstance() 
 {
+	charsets_cleanup();
 	delete m_mainThreadScripts;
 	CWinApp::ExitInstance();
 	return m_nLastCompareResult;
 }
-
 
 static void AddEnglishResourceHook()
 {

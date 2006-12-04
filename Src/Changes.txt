@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2006-12-04 Kimmo
+ PATCH: [ 1512881 ] Fix memleak from charsets.c
+  Src: charsets.cp charsets.h Merge.cpp
+
 2006-12-03 Kimmo
  PATCH: [ 1607343 ] Fix filefilter regexp uppercasing for 2.6 branch
   Src: FileFilterMgr.cpp
