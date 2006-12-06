@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2006-12-04 Tim
+ PATCH: [ 1607193 ] INI Syntax Improvements
+  Src/editlib: ini.cpp
+
 2006-12-06 Kimmo
  Add missing include to fix ANSI build target
   Src: FileOrFolderSelect.cpp
