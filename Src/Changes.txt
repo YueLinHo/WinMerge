@@ -11,6 +11,8 @@ Add new items to top.
    xml.cpp
  PATCH: [ 1556688 ] Fix maketstring to check for zero-term by MultiByteToWideCha
   Src: Common/unicoder.cpp
+ PATCH: [ 1512881 ] Fix memleak from charsets.c (add missing include to Merge.cpp)
+  Src: Merge.cpp
 
 2006-12-04 Tim
  PATCH: [ 1607193 ] INI Syntax Improvements
