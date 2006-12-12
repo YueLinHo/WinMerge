@@ -12,6 +12,8 @@ Add new items to top.
    Filters new file: SourceControl.flt
  Add Peter Welter and Ivan Masár to contributors
   Docs/Users: Contributors.txt
+ Update shellextension version number to 1.9.1
+  ShellExtension: ShellExtension.rc
 
 2006-12-11 Kimmo
  PATCH: [ 1610442 ] Make time getting faster for files
