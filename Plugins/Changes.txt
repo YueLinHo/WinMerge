@@ -2,6 +2,10 @@ Plugins\Changes.txt
 Add new items to top
 (This summarizes all changes to all plugins.)
 
+2006-12-12 Tim
+ The file "readme_users.txt" is unnecessary after patch #1611595
+  Remove file Plugins\dlls: readme_users.txt
+
 2006-08-03 Kimmo
  Fix HideFirstLetter plugin compile with VS2003.Net. Bump version number to 1.0.1.
   Plugins\src_VCPP\HideFirstLetter:
