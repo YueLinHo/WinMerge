@@ -2,6 +2,12 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2006-12-12 Kimmo
+ PATCH: [ 1606496 ] Slovak translation
+  Submitted by Ivan Masár
+  ShellExtension/Languages: ShellExtensionSlovak.rc
+  Src/Languages/Slovak: MergeSlovak.rc
+
 2006-12-11 Kimmo
  PATCH: [ 1610442 ] Make time getting faster for files
   Src: DirScan.cpp FileInfo.cpp
