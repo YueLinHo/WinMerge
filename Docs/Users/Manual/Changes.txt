@@ -1,3 +1,7 @@
+2006-12-20 Kimmo
+ PATCH: [ 1618452 ] Manual: Add new FAQ item about all lines marked different
+  Manual: Faq.xml
+
 2006-12-12 Kimmo
  Update revision number to 1.2.9 for new release
   Manual: WinMerge_help.xml
