@@ -117,6 +117,7 @@ Other Contributors (code, ideas, testing..):
 * Tim Musschoot
 * Vincent Osele
 * Michael Richter
+* Fanny Ricour
 * Markus Rollmann
 * Philippe Verdy
 * Vikrant

@@ -155,7 +155,8 @@ BEGIN_MESSAGE_MAP(CMainFrame, CMDIFrameWnd)
 	ON_COMMAND(ID_FILE_SAVEPROJECT, OnSaveProject)
 	ON_WM_TIMER()
 	ON_WM_ACTIVATE()
-	//}}AFX_MSG_MAP
+	ON_WM_NCDESTROY()
+	//}}AFX_MSG_MAP	
 END_MESSAGE_MAP()
 
 /**
@@ -3087,6 +3088,15 @@ void CMainFrame::OnActivate(UINT nState, CWnd* pWndOther, BOOL bMinimized)
 			KillTimer(ID_TIMER_FLASH);
 		}
 	}
+}
+
+void CMainFrame::OnNcDestroy()
+{
+	CMDIFrameWnd::OnNcDestroy();
+
+	// A temporary patch which double-post the WM_QUIT message until we'll
+	// figure who is "eating" the first message.
+	AfxPostQuitMessage(0);
 }
 
 BOOL CMainFrame::CreateToobar()
