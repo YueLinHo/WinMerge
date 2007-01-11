@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-01-11 Kimmo
+ BUG: [ 1616838 ] Directory filter broken?
+  Src: FileFilterMgr.cpp
+
 2007-01-11 Gal
  BUG: [ 1602313 ] WinMerge stays in tasklist after closing
   Src: MainFrm.cpp MainFrm.h

@@ -27,8 +27,6 @@
 static char THIS_FILE[] = __FILE__;
 #endif
 
-static void FileFilterToUppercase(CString & filterStr);
-
 /**
  * @brief Deletes items from filter list.
  *
@@ -152,50 +150,17 @@ void FileFilterMgr::DeleteAllFilters()
 }
 
 /**
- * @brief Convert filter string to uppercase.
- * This function converts given filter string to upper case. The function
- * does not convert regexp control chars (e.g. '\d') or chars after comment
- * separator.
- * @param [in,out] filterStr Filter string to convert.
- */
-static void FileFilterToUppercase(CString & filterStr)
-{
-	int ind = 0;
-	const int len = filterStr.GetLength();
-	BOOL bContinue = TRUE;
-
-	while (ind < len && bContinue)
-	{
-		// Check if it is comment separator "[space]##"
-		if (ind > 2 && _istspace(ind - 2) && filterStr[ind - 1] == '#' &&
-				filterStr[ind] == '#')
-		{
-			bContinue = FALSE;
-		}
-		
-		// We make all other chars in regexp uppercase, except escaped
-		// regexp control chars, e.g. "\d".
-		TCHAR ch = filterStr[ind];
-		BOOL bAlpha = _istalpha(ch);
-		if (bContinue && bAlpha && (ind == 0 || filterStr[ind - 1] != '\\'))
-		{
-			ch = _totupper(ch);
-			filterStr.SetAt(ind, ch);
-		}
-		++ind;
-	}
-}
-
-/**
  * @brief Add a single pattern (if nonempty & valid) to a pattern list.
  *
  * @param [in] filterList List where pattern is added.
  * @param [in] str Temporary variable (ie, it may be altered)
+ * @note Regular expressions are converted to lower case. We do it so that
+ * we don't break them by uppercasing escaped control chars (e.g "\d").
  */
 static void AddFilterPattern(FileFilterList & filterList, CString & str)
 {
 	LPCTSTR commentLeader = _T("##"); // Starts comment
-	FileFilterToUppercase(str);
+	str.MakeLower();
 	str.TrimLeft();
 
 	// Ignore lines beginning with '##'
@@ -325,7 +290,7 @@ FileFilter * FileFilterMgr::GetFilterByPath(LPCTSTR szFilterPath)
 
 /**
  * @brief Test given string against given regexp list.
- *
+ * We store regular expression as lower case.
  * @param [in] filterList List of regexps to test against.
  * @param [in] szTest String to test against regexps.
  * @return TRUE if string passes
@@ -334,7 +299,7 @@ FileFilter * FileFilterMgr::GetFilterByPath(LPCTSTR szFilterPath)
 BOOL TestAgainstRegList(const FileFilterList & filterList, LPCTSTR szTest)
 {
 	CString str = szTest;
-	str.MakeUpper();
+	str.MakeLower(); // Make lower case as regexp was convereted also.
 	for (POSITION pos = filterList.GetHeadPosition(); pos; )
 	{
 		const FileFilterElement & elem = filterList.GetNext(pos);
