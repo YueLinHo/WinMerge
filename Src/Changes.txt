@@ -3,6 +3,10 @@ Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
 2007-01-12 Gal
+ BUG: [ 1597939 ] Rename Edits Wrong Field in Folder Compare List
+  Src: DirView.cpp
+
+2007-01-12 Gal
  PATCH: [ 1633194 ] Add editor tab setting to configuration log
   Src: ConfigLog.cpp ConfigLog.h MainFrm.cpp
 
