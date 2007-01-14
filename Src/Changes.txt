@@ -2,6 +2,11 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-01-14 Kimmo
+ Update manual URL point to 2.6 version manual in readme.txt
+  Docs/Users/ReadMe.txt
+  Docs/Users/Languages/ReadMe-*.txt
+
 2007-01-12 Takashi
  BUG: [ 1603061 ] "Copy Left/Right To .." doesn't work correctly(2)
   Src: FileActionScript.cpp DirActions.cpp
