@@ -1,3 +1,7 @@
+2007-01-15 Kimmo
+ Bump revision to 1.2.10 for new release
+  Manual: WinMerge_help.xml
+
 2007-01-14 Kimmo
  PATCH: [ 1633560 ] Manual: WinMerge minimizes time needed for ignored files
   Manual: Filters.xml
