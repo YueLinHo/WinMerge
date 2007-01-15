@@ -154,13 +154,11 @@ void FileFilterMgr::DeleteAllFilters()
  *
  * @param [in] filterList List where pattern is added.
  * @param [in] str Temporary variable (ie, it may be altered)
- * @note Regular expressions are converted to lower case. We do it so that
- * we don't break them by uppercasing escaped control chars (e.g "\d").
  */
 static void AddFilterPattern(FileFilterList & filterList, CString & str)
 {
 	LPCTSTR commentLeader = _T("##"); // Starts comment
-	str.MakeLower();
+	str.MakeUpper();
 	str.TrimLeft();
 
 	// Ignore lines beginning with '##'
@@ -290,7 +288,7 @@ FileFilter * FileFilterMgr::GetFilterByPath(LPCTSTR szFilterPath)
 
 /**
  * @brief Test given string against given regexp list.
- * We store regular expression as lower case.
+ *
  * @param [in] filterList List of regexps to test against.
  * @param [in] szTest String to test against regexps.
  * @return TRUE if string passes
@@ -299,7 +297,7 @@ FileFilter * FileFilterMgr::GetFilterByPath(LPCTSTR szFilterPath)
 BOOL TestAgainstRegList(const FileFilterList & filterList, LPCTSTR szTest)
 {
 	CString str = szTest;
-	str.MakeLower(); // Make lower case as regexp was convereted also.
+	str.MakeUpper();
 	for (POSITION pos = filterList.GetHeadPosition(); pos; )
 	{
 		const FileFilterElement & elem = filterList.GetNext(pos);

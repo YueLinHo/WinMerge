@@ -2,6 +2,11 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-01-15 Kimmo
+ Revert regexp uppercasing patches as they seem to cause different problems
+  Backs out patches: bug #1616838 Directory filter broken?
+   patch #1607343 Fix filefilter regexp uppercasing for 2.6 branch
+
 2007-01-14 Kimmo
  Update manual URL point to 2.6 version manual in readme.txt
   Docs/Users/ReadMe.txt
