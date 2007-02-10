@@ -2,6 +2,11 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-02-10 Kimmo
+ PATCH: [ 1650831 ] Polish translation update for WinMerge 2.6.4
+  Submitted by dr_prozac
+   Src/Languages/Polish: MergePolish.rc
+
 2007-01-30 Kimmo
  PATCH: [ 1639493 ] Updated Bulgarian language files
   Submitted by tigertron
