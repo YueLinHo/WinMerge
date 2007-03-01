@@ -376,7 +376,7 @@ BEGIN
         END
         POPUP "&Signets"
         BEGIN
-            MENUITEM "&Activer les signets\tCtrl+F2",  ID_EDIT_TOGGLE_BOOKMARK
+            MENUITEM "&Placer/retirer un signet\tCtrl+F2",  ID_EDIT_TOGGLE_BOOKMARK
             MENUITEM "Signet &suivant\tF2",            ID_EDIT_GOTO_NEXT_BOOKMARK
             MENUITEM "Signet &précédent\tShift+F2",    ID_EDIT_GOTO_PREV_BOOKMARK
             MENUITEM "&Effacer tous les signets",      ID_EDIT_CLEAR_ALL_BOOKMARKS
@@ -854,7 +854,7 @@ BEGIN
                     ES_AUTOHSCROLL | ES_WANTRETURN
 END
 
-IDD_PROPPAGE_COLORS DIALOGEX 0, 0, 235, 196
+IDD_PROPPAGE_COLORS_WINMERGE DIALOGEX 0, 0, 235, 196
 STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
 CAPTION "Couleurs"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
@@ -1034,8 +1034,8 @@ BEGIN
     GROUPBOX        "Montrer les colonnes",IDC_GROUP_SHOW,7,7,145,102
     LISTBOX         IDC_LIST_SHOW,52,18,92,83,LBS_NOINTEGRALHEIGHT |
                     LBS_EXTENDEDSEL | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
-    PUSHBUTTON      "&Monter",IDC_UP,15,45,30,14
-    PUSHBUTTON      "&Descendre",IDC_DOWN,15,63,30,14
+    PUSHBUTTON      "&Monter",IDC_UP,10,45,40,14
+    PUSHBUTTON      "&Descendre",IDC_DOWN,10,63,40,14
     GROUPBOX        "Cacher les colonnes",IDC_GROUP_HIDE,193,7,108,102
     LISTBOX         IDC_LIST_HIDE,201,18,92,83,LBS_NOINTEGRALHEIGHT |
                     LBS_EXTENDEDSEL | WS_VSCROLL | WS_HSCROLL | WS_TABSTOP
@@ -1160,7 +1160,7 @@ BEGIN
     CONTROL         "Insérer &espace",IDC_PROP_INSERT_SPACES,"Button",
                     BS_AUTORADIOBUTTON,120,62,97,10
     GROUPBOX        "Colorer les différences de ligne",IDC_LINE_COLORING_GROUP,7,87,
-                    221,41
+                    221,61
     CONTROL         "A&fficher les différences",IDC_VIEW_LINE_DIFFERENCES,"Button",
                     BS_AUTOCHECKBOX | WS_TABSTOP,14,98,100,8
     CONTROL         "Précision au &caractère",IDC_EDITOR_CHARLEVEL,"Button",
@@ -1285,7 +1285,7 @@ BEGIN
                     WS_HSCROLL | WS_GROUP | WS_TABSTOP
 END
 
-IDD_PREFERENCES DIALOGEX 0, 0, 367, 260
+IDD_PREFERENCES DIALOGEX 0, 0, 352, 260
 STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION |
     WS_SYSMENU
 CAPTION "Préférences"
@@ -1305,7 +1305,7 @@ BEGIN
     PUSHBUTTON      "Exporter...",IDC_TREEOPT_EXPORT,62,237,50,14
 END
 
-IDD_PROP_COLORSYNTAX DIALOGEX 0, 0, 235, 214
+IDD_PROPPAGE_COLORS_SYNTAX DIALOGEX 0, 0, 235, 214
 STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
 CAPTION "Couleurs de la syntaxe"
 FONT 8, "MS Shell Dlg", 0, 0, 0x1
@@ -2781,7 +2781,7 @@ BEGIN
     ID_REFRESH                  "Actualiser l'affichage\nActualiser (F5)"
     ID_EDIT_COPY_LINENUMBERS    "Copier les lignes sélectionnés vers le presse-papiers en les précédants d'un numéro de ligne"
     ID_DIR_RESCAN               "Actualiser les éléments sélectionnés"
-    ID_EDIT_TOGGLE_BOOKMARK     "Afficher ou masquer les signets"
+    ID_EDIT_TOGGLE_BOOKMARK     "Placer ou retirer un signet"
     ID_EDIT_GOTO_NEXT_BOOKMARK  "Atteindre le signet suivant"
     ID_EDIT_GOTO_PREV_BOOKMARK  "Atteindre le signet précédent"
     ID_EDIT_CLEAR_ALL_BOOKMARKS "Effacer tous les signets"
