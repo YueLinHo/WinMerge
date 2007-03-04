@@ -5,6 +5,8 @@ Add new items to top.
 2007-03-04 Kimmo
  BUG: [ 1664832 ] Typo Error in the Registry
   ShellExtension: WinMergeShell.rgs
+ Bump ShellExtension version to 1.9.2
+  ShellExtension: ShellExtension.rc
 
 2007-03-04 Tim
  BUG: [ 1668996 ] Two "Copy Right" buttons in Russian GUI.
