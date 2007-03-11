@@ -2,6 +2,12 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-03-11 Tim
+ PATCH: [ 1582537 ] CSS syntax highlighter
+  Src: Merge.dsp
+  editlib: ccrystaltextview.cpp ccrystaltextview.h
+  editlib new file: css.cpp
+
 2007-03-07 Takashi
  PATCH: [ 1675211 ] Fix crash when hiding parent folder item on folder view
   Src/DirView.cpp

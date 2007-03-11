@@ -1805,6 +1805,10 @@ SOURCE=.\editlib\csharp.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=.\editlib\css.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\editlib\dcl.cpp
 # End Source File
 # Begin Source File
