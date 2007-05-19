@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-05-19 Tim
+ Fix white space indenting in C# highlighter (included with PATCH #1556685).
+  Src/editlib: csharp.cpp
+
 2007-05-13 Takashi
  BUG: [ 1717814 ] Fix header drawing issue on WinXP with Luna Theme
   Src/Common/SortHeaderCtrl.cpp
