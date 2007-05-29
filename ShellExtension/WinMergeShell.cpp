@@ -133,6 +133,9 @@ HRESULT CWinMergeShell::Initialize(LPCITEMIDLIST pidlFolder,
 	HDROP hDropInfo;
 	USES_WINMERGELOCALE;
 
+	if (!pDataObj)
+		return E_INVALIDARG;
+
 	// Look for CF_HDROP data in the data object.
 	if (FAILED(pDataObj->GetData(&fmt, &stg)))
 		// Nope! Return an "invalid argument" error back to Explorer.
