@@ -7,6 +7,8 @@ Add new items to top.
   ShellExtension: ShellExtension.rc
  PATCH: [ 1735240 ] Copy new Delphi- and Symbian -file filters to 2.6 branch
   Filters new files: Delphi.flt Symbian.flt
+ PATCH: [ 1727878 ] 26Branch: Disable hiding folder compare confirmation dialogs
+  Src: DirActions.cpp
 
 2007-06-07 Kimmo
  PATCH: [ 1721815 ] Add CSharp file filter for 2.6.x
