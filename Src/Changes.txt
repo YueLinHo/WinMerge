@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-06-14 Kimmo
+ Bump ShellExtension version to 1.9.3
+  ShellExtension: ShellExtension.rc
+
 2007-06-07 Kimmo
  PATCH: [ 1721815 ] Add CSharp file filter for 2.6.x
   Filters new file: CSharp_loose.flt
