@@ -5,6 +5,8 @@ Add new items to top.
 2007-06-14 Kimmo
  Bump ShellExtension version to 1.9.3
   ShellExtension: ShellExtension.rc
+ PATCH: [ 1735240 ] Copy new Delphi- and Symbian -file filters to 2.6 branch
+  Filters new files: Delphi.flt Symbian.flt
 
 2007-06-07 Kimmo
  PATCH: [ 1721815 ] Add CSharp file filter for 2.6.x
