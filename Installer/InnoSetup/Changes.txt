@@ -1,3 +1,7 @@
+2007-06-14
+ PATCH: [ 1733032 ] Installer: need to uninstall filter files
+  InnoSetup: WinMerge.iss
+
 2007-01-08 Tim
  PATCH: [ 1630397 ] Remove "Plugins.txt" from installer
   InnoSetup: WinMerge.iss
