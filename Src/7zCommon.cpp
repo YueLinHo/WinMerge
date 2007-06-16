@@ -85,6 +85,7 @@ DATE:		BY:					DESCRIPTION:
 2005/08/20	Jochen Tucht		Option to guess archive format by signature
 								Map extensions through ExternalArchiveFormat.ini
 2005/08/23	Jochen Tucht		Option to entirely disable 7-Zip integration
+2007/06/16	Jochen Neubeck		FIX [1723263] "Zip --> Both" operation...
 */
 
 // RCS ID line follows -- this is updated by CVS
@@ -928,6 +929,8 @@ Merge7z::Envelope *CDirView::DirItemEnumerator::Enum(Item &item)
 		di.getRightFilepath(pDoc->GetRightBasePath()) :
 		di.getLeftFilepath(pDoc->GetLeftBasePath()));
 
+	UINT32 Recurse = item.Mask.Recurse;
+
 	if (m_nFlags & BalanceFolders)
 	{
 		if (m_bRight)
@@ -945,6 +948,7 @@ Merge7z::Envelope *CDirView::DirItemEnumerator::Enum(Item &item)
 					envelope->FullPath = di.getLeftFilepath(pDoc->GetLeftBasePath());
 					implied = PVOID(2); // Don't enumerate same folder twice!
 					isSideLeft = false;
+					Recurse = 0;
 				}
 			}
 		}
@@ -963,6 +967,7 @@ Merge7z::Envelope *CDirView::DirItemEnumerator::Enum(Item &item)
 					envelope->FullPath = di.getRightFilepath(pDoc->GetRightBasePath());
 					implied = PVOID(2); // Don't enumerate same folder twice!
 					isSideRight = false;
+					Recurse = 0;
 				}
 			}
 		}
@@ -975,11 +980,12 @@ Merge7z::Envelope *CDirView::DirItemEnumerator::Enum(Item &item)
 
 	if (m_strFolderPrefix.GetLength())
 	{
-		envelope->Name.Insert(0, '\\');
+		if (envelope->Name.GetLength())
+			envelope->Name.Insert(0, '\\');
 		envelope->Name.Insert(0, m_strFolderPrefix);
 	}
 
-	item.Mask.Item = item.Mask.Name|item.Mask.FullPath|item.Mask.CheckIfPresent|item.Mask.Recurse;
+	item.Mask.Item = item.Mask.Name|item.Mask.FullPath|item.Mask.CheckIfPresent|Recurse;
 	item.Name = envelope->Name;
 	item.FullPath = envelope->FullPath;
 	return envelope;
