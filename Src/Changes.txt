@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-06-17 Gal
+ BUG: [ 1705874 ] Hitting escape during listitem rename also exited winmerge
+  Src: DirView.cpp
+
 2007-06-16 Jochen
  PATCH: [ 1734439 ] Fix Bug #1723263 "Zip --> Both" operation give unwanted content in output
   Src: 7zCommon.cpp
