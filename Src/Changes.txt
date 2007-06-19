@@ -2,6 +2,8 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-06-19 2.6.8 Stable Release (R4343)
+
 2007-06-17 Tim
  PATCH: [ 1722213 ] Fix wrong </endtag> syntax color in HTML highlighters
   Src/editlib: asp.cpp html.cpp php.cpp
