@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-07-13 Kimmo
+ Add Alberto Kalb to contributors list
+  Docs/Users: Contributors.txt
+
 2007-06-19 2.6.8 Stable Release (R4343)
 
 2007-06-17 Tim

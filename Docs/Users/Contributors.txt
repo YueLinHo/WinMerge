@@ -108,6 +108,7 @@ Other Contributors (code, ideas, testing..):
 * Marvin Gouw
 * Jan Hryz
 * Ed_K
+* Alberto Kalb
 * Ferenc Kubatovics
 * René Leonhardt
 * Vladimir Lukianov
