@@ -23,6 +23,12 @@
       background-color: #EEEEEE;
       border: 1px solid black;
     }
+    p.important {
+      padding: 5px;
+      background-color: #FFDDDD;
+      border: 1px solid red;
+      font-weight: bold;
+    }
     p.note {
       padding: 5px;
       background-color: #DDDDFF;
@@ -97,7 +103,7 @@ Basically same components are needed for Windows 2003 SP1 PSDK, but with a diffe
   <li>Microsoft Windows Core SDK - obviously..</li>
   <li>Microsoft Data Access Services (MDAC) SDK - for some ODBC etc headers needed by other PSDK headers..</li>
   <li>Microsoft Web Workshop (IE) SDK - for IE/Shell headers</li>
-</ul></p>
+</ul>
 
 <h4>Project files</h4>
 <p>Project file for WinMerge executable (in <code>/Src</code>) and other projects like
@@ -371,7 +377,7 @@ any of the following three methods at least.
  manual, low-tech fashion).
  </li>
 </ol>
-Whatever method you use, please double-check the
+<p>Whatever method you use, please double-check the
 executable version numbers before uploading and releasing them.</p>
 
 <p>
@@ -476,6 +482,26 @@ to be stored in the <code>Languages/</code> directory, in the subdirectory creat
 The layout should be shared by all translations as much as possible, to make merging (and future translation changes) easier.
 You can of course make controls wider to fit longer texts, but you should not move buttons and other controls if not really necessary.<br /><br />
 If you want to improve dialog layout (we welcome UI improvements) you should submit it as src/Merge.rc patch so it will be merged to all translations.</p>
+
+<h4><code>CreateReviewPoFiles.vbs</code></h4>
+<p>With this VBScript file under the <code>Src\Languages\</code> folder you can create <a href="http://en.wikipedia.org/wiki/Gettext">gettext</a> PO files to review the translations.
+The script tries to collect all strings from the resource files and save the original and translated strings into PO files. For each language you will find the PO file under the language subfolder: <code>Src\Languages\<em>Language</em>\<em>Language</em>.po</code>.
+<strong>The script can take several minutes to finish!</strong></p>
+<p>If you have a PO file from your language, you could use a simple text editor or better <a href="http://www.poedit.net">poEdit</a> to review the file:</p>
+<pre>#: IDD_PROPPAGE_LARGE.IDC_SINGLE_INSTANCE
+msgid "All&amp;ow only one instance to run"
+msgstr "&amp;Nur eine Programm-Instanz zulassen"
+
+#: IDD_PROPPAGE_LARGE.IDC_ASK_MULTIWINDOW_CLOSE
+#, fuzzy
+msgid "As&amp;k when closing multiple windows"
+msgstr "As&amp;k when closing multiple windows"</pre>
+<p>All unsure strings are marked as <em>fuzzy</em> (if you use a text editor search for the <code>fuzzy</code> keyword).
+The <em>reference</em> (the text after <code>#:</code>) is a indication for the position in the resource file.
+Search for the keywords (separated by <code>.</code>) in the file <code>Merge<em>YourLanguage</em>.rc</code> and you should find the untranslated string.</p>
+<p class="important">Do not edit the PO files! PO files are only for translation <em>reviewing/checking</em> and changes done to them are not applied to resource files.</p>
+<p>The script should find most of the translations, but maybe not all.
+So you should better search the <code>.rc</code> file at the end by yourself for untranslated strings.</p>
 
 <h4>Compiling</h4>
 <p>We have a customised tool for compiling language files. Project for it is in SVN:</p>
@@ -596,7 +622,7 @@ ShellExtension does not care about another path value.</p>
 <h4>Compiling for 64-bit Windows</h4>
 <p>This is a bit tricky, and needs some patience to setup.</p>
 
-<p><strong>Needed tools</strong>
+<p><strong>Needed tools</strong></p>
 <ul>
   <li>Visual Studio 2003 or later (Might work for earlier, but I haven't tried it)</li>
   <li>Platform SDK (for Windows 2003 SP1) with at least following components installed:
@@ -608,11 +634,10 @@ ShellExtension does not care about another path value.</p>
     </ul>
   </li>
 </ul>
-</p>
 
 <p><strong>Starting Visual Studio and opening the project</strong><br>
 We need to start Visual Studio from Platform SDK's 64-bit environment so that we get all
-needed environment variables and paths correctly set. So:
+needed environment variables and paths correctly set. So:</p>
 <ol>
   <li>Start 64-bit Platform SDK environment:<br>
     From Start menu: Platform SDK --> Open Build Environment Window --> Windows XP/2003 64-bit
@@ -622,7 +647,7 @@ needed environment variables and paths correctly set. So:
     <code>devenv /USEENV (uses open environment)</code></li>
   <li>Open <code>ShellExtensionX64.vcproj</code> from <code>ShellExtension</code> project
     folder.</li>
-</ol></p>
+</ol>
 
 <p>Make sure you have 64-bit target selected in Project Settings. Then check that paths are OK.
 You <strong>MUST</strong> build to separate directory than 32-bit targets so that files don't
