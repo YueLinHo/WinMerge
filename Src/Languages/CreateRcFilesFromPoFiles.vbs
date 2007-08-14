@@ -91,17 +91,19 @@ Function GetTranslationsFromPoFile(ByVal sPoPath)
       sLine = Trim(oTextFile.ReadLine)
       
       If (sLine <> "") Then 'If NOT empty line...
-        If (FoundRegExpMatch(sLine, "^msgid ""(.*)""$", oMatch) = True) Then 'If "msgid"...
-          iMsgStarted = 1
-          sMsgId = oMatch.SubMatches(0)
-        ElseIf (FoundRegExpMatch(sLine, "^msgstr ""(.*)""$", oMatch) = True) Then 'If "msgstr"...
-          iMsgStarted = 2
-          sMsgStr = oMatch.SubMatches(0)
-        ElseIf (FoundRegExpMatch(sLine, "^""(.*)""$", oMatch) = True) Then 'If "msgid" or "msgstr" continued...
-          If (iMsgStarted = 1) Then
-            sMsgId = sMsgId & oMatch.SubMatches(0)
-          ElseIf (iMsgStarted = 2) Then
-            sMsgStr = sMsgStr & oMatch.SubMatches(0)
+        If (Left(sLine, 1) <> "#") Then 'If NOT comment line...
+          If (FoundRegExpMatch(sLine, "^msgid ""(.*)""$", oMatch) = True) Then 'If "msgid"...
+            iMsgStarted = 1
+            sMsgId = oMatch.SubMatches(0)
+          ElseIf (FoundRegExpMatch(sLine, "^msgstr ""(.*)""$", oMatch) = True) Then 'If "msgstr"...
+            iMsgStarted = 2
+            sMsgStr = oMatch.SubMatches(0)
+          ElseIf (FoundRegExpMatch(sLine, "^""(.*)""$", oMatch) = True) Then 'If "msgid" or "msgstr" continued...
+            If (iMsgStarted = 1) Then
+              sMsgId = sMsgId & oMatch.SubMatches(0)
+            ElseIf (iMsgStarted = 2) Then
+              sMsgStr = sMsgStr & oMatch.SubMatches(0)
+            End If
           End If
         End If
       Else 'If empty line
