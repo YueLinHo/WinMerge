@@ -39,9 +39,6 @@ Sub Main
   
   Wscript.Echo "Warning: " & Wscript.ScriptName & " can take several minutes to finish!"
   
-  'Set oLanguageTranslations = GetTranslationsFromPoFile("German\German.po")
-  'CreateRcFileWithTranslations "../Merge.rc", "German\MergeGermanTest.rc", oLanguageTranslations
-  
   Set oLanguages = GetLanguages
   For Each sLanguage In oLanguages.Keys 'For all languages...
     If (bRunFromCmd = True) Then 'If run from command line...
@@ -49,7 +46,7 @@ Sub Main
     End If
     Set oLanguageTranslations = GetTranslationsFromPoFile(oLanguages(sLanguage))
     If (oLanguageTranslations.Count > 0) Then 'If translations exists...
-      CreateRcFileWithTranslations "../Merge.rc", sLanguage & "\Merge" & sLanguage & "Test.rc", oLanguageTranslations
+      CreateRcFileWithTranslations "../Merge.rc", sLanguage & "\Merge" & sLanguage & ".rc", oLanguageTranslations
     End If
   Next
   
