@@ -55,12 +55,15 @@ Function GetStringsFromRcFile(ByVal sRcFilePath, ByRef oComments, ByRef sCodePag
   oBlacklist.Add "_HDR_POPUP_", True
   oBlacklist.Add "_ITEM_POPUP_", True
   oBlacklist.Add "_POPUP_", True
+  oBlacklist.Add "0", True
+  oBlacklist.Add "0.00", True
   oBlacklist.Add "Btn", True
   oBlacklist.Add "Button", True
   oBlacklist.Add "Button1", True
   oBlacklist.Add "Dif", True
   oBlacklist.Add "IDS_SAVEVSS_FMT", True
   oBlacklist.Add "List1", True
+  oBlacklist.Add "MS Shell Dlg", True
   oBlacklist.Add "msctls_progress32", True
   oBlacklist.Add "Static", True
   oBlacklist.Add "SysListView32", True
