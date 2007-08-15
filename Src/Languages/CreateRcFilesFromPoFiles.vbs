@@ -171,6 +171,8 @@ Sub CreateRcFileWithTranslations(ByVal sMasterRcPath, ByVal sLanguageRcPath, ByV
               End If
             ElseIf (InStr(sMasterLine, "#include ""resource.h""") > 0) Then '#include "resource.h"...
               sLanguageLine = Replace(sLanguageLine, "#include ""resource.h""", "#include ""..\..\resource.h""")
+            ElseIf (InStr(sMasterLine, "Merge.rc2") > 0) Then 'Merge.rc2...
+              sLanguageLine = ""
             End If
             
           Case MENU_BLOCK, DIALOGEX_BLOCK, STRINGTABLE_BLOCK:
