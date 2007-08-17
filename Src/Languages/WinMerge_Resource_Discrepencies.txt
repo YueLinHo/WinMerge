@@ -78,13 +78,6 @@ IDD_PROPPAGE_COLORS
  Norwegian widens Default 50-
  Catalan widens three differences labels 90->102
 
-IDD_PROPPAGE_CODEPAGE
-  Italian widens IDC_CP_CUSTOM (77->90) but does not need to
-  German widens IDC_CP_CUSTOM 77->117
- * I think the IDC_CP_CUSTOM should just be moved down (and shift stuff below it down)
-  Catalan widens detect codepage label 210->220
-    catalan widens IDC_CP_CUSTOM 77->120
-
 IDD_PREFERENCES
   widened in Swedish 352->376
     tree widened in Swedish 235->259
@@ -92,15 +85,6 @@ IDD_PREFERENCES
   Slovak 352->364 and tree 235->247
   Norwegian 352->358 and tree 235->243
   Dutch 352->367 and tree 235->250
-
-
-IDD_OPEN
-  Russian 364->370 and left & righth go 40->47
-  Japanese widens left and right 40->55
-    and widens OK & Cancel 50->60
-  Italian widens left & right 40->60
-  German widens left & right 40->47
-  Catalan widens left & right 40->60
 
 IDD_SELECTUNPACKER
   Russian widens checkbox IDC_UNPACKER_ALLOW_ALL 202->216
