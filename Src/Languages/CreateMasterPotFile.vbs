@@ -203,10 +203,12 @@ Sub CreateMasterPotFile(ByVal sPotPath, ByVal oStrings, ByVal oComments, ByVal s
   oPotFile.WriteLine """X-Generator: CreateMasterPotFile.vbs\n"""
   oPotFile.WriteLine
   For Each sMsgId In oStrings.Keys 'For all strings...
-    aComments = SplitByTab(oComments(sMsgId))
-    For i = LBound(aComments) To UBound(aComments) 'For all comments...
-      oPotFile.WriteLine "#. " & aComments(i)
-    Next
+    If (oComments(sMsgId) <> "") Then 'If comments exists...
+      aComments = SplitByTab(oComments(sMsgId))
+      For i = LBound(aComments) To UBound(aComments) 'For all comments...
+        oPotFile.WriteLine "#. " & aComments(i)
+      Next
+    End If
     aReferences = SplitByTab(oStrings(sMsgId))
     For i = LBound(aReferences) To UBound(aReferences) 'For all references...
       oPotFile.WriteLine "#: " & aReferences(i)
