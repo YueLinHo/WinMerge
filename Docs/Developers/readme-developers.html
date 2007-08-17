@@ -39,6 +39,10 @@
       background-color: #DDDDFF;
       border: 1px solid blue;
     }
+    acronym {
+      cursor: help;
+      border-bottom: 1px dotted black;
+    }
   -->
   </style>
 </head>
@@ -519,8 +523,15 @@ Custom languages are in separate dll files with extension <code>.lang</code>, to
 <code>Languages</code> subfolder in WinMerge folder. Language may be changed dynamically through the menu.</p>
 
 <p>WinMerge localization is achieved through localization of resources (files with extension <code>.rc</code>).
-Actually there is only one rc file in the project, <code>Merge.rc</code>. Localized versions for this file are
-to be stored in the <code>Languages/</code> directory, in the subdirectory created for that language.</p>
+Actually there is only one rc file in the project, <code>Merge.rc</code>. Localized versions of this file are
+generated from <a href="http://en.wikipedia.org/wiki/Gettext">gettext</a> <acronym title="Portable Object">PO</acronym> files
+and gets stored in the <code>Languages/</code> directory, in the subdirectory created for that language.</p>
+
+<p>So before you can compile the language files you must call the script <code>CreateRcFilesFromPoFiles.bat</code>
+from the <code>Tools/Scripts/</code> folder.</p>
+
+<p>If you done changes on the <code>Merge.rc</code> file you must call <code>CreateMasterPotFile.bat</code>
+to create the latest version from the file <code>English.pot</code>. This PO template is needed for our translators.</p>
 
 <p class="note">Besides the resources files you could also translate things like the
 <a href="http://svn.sourceforge.net/viewvc/winmerge/trunk/WinMerge/InnoSetup/Languages/">installer</a>
