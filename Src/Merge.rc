@@ -736,18 +736,18 @@ FONT 8, "MS Shell Dlg", 0, 0, 0x1
 BEGIN
     CONTROL         "Automatically &scroll to first difference",
                     IDC_SCROLL_CHECK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,
-                    7,206,10
+                    7,220,10
     CONTROL         "&Disable Splash Screen",IDC_DISABLE_SPLASH,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,7,17,206,10
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,17,220,10
     CONTROL         "Cl&ose windows with ESC",IDC_ESC_CLOSES_WINDOW,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,7,27,206,10
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,27,220,10
     CONTROL         "&Automatically verify paths in Open-dialog",
                     IDC_VERIFY_OPEN_PATHS,"Button",BS_AUTOCHECKBOX |
-                    WS_TABSTOP,7,37,206,10
+                    WS_TABSTOP,7,37,220,10
     CONTROL         "All&ow only one instance to run",IDC_SINGLE_INSTANCE,
-                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,47,206,10
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,47,220,10
     CONTROL         "As&k when closing multiple windows",IDC_ASK_MULTIWINDOW_CLOSE,
-                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,57,206,10
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,57,220,10
     LTEXT           "O&pen-dialog Auto-Completion:",IDC_STATIC,19,72,125,8
     COMBOBOX        IDC_AUTO_COMPLETE_SOURCE,20,81,147,41,CBS_DROPDOWNLIST | 
                     WS_VSCROLL | WS_TABSTOP

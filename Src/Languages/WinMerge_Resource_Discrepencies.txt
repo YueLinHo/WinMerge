@@ -70,10 +70,6 @@ IDD_PROPPAGE_COMPARE
 IDD_PROPPAGE_FILTER
  Russian widens Ignore lines... 221->224
 
-IDD_PROPPAGE_LARGE
- Spanish widened 235->254 but no controls
- German widens IDC_SCROLL_CHECK 206->210
-
 IDD_PROPPAGE_COLORS
  Russian widens Deleted header 38->39
    also heightened two boxes b/c Russian text wraps
