@@ -37,7 +37,7 @@ Sub Main
   
   StartTime = Time
   
-  Wscript.Echo "Warning: " & Wscript.ScriptName & " can take several minutes to finish!"
+  Wscript.Echo "Warning: " & Wscript.ScriptName & " can take several seconds to finish!"
   
   Set oLanguages = GetLanguages
   For Each sLanguage In oLanguages.Keys 'For all languages...
@@ -150,10 +150,14 @@ Sub CreateRcFileWithTranslations(ByVal sMasterRcPath, ByVal sLanguageRcPath, ByV
         iBlockType = VERSIONINFO_BLOCK
       ElseIf (InStr(sMasterLine, " ACCELERATORS") > 0) Then 'ACCELERATORS...
         iBlockType = ACCELERATORS_BLOCK
+      ElseIf (sMasterLine = "BEGIN") Then 'BEGIN...
+        'IGNORE FOR SPEEDUP!
       ElseIf (sMasterLine = "END") Then 'END...
         If (iBlockType = STRINGTABLE_BLOCK) Then 'If inside stringtable...
           iBlockType = NO_BLOCK
         End If
+      ElseIf (Left(sMasterLine, 2) = "//") Then 'If comment line...
+        'IGNORE FOR SPEEDUP!
       ElseIf (sMasterLine <> "") Then 'If NOT empty line...
         Select Case iBlockType
           Case NO_BLOCK:
@@ -176,14 +180,16 @@ Sub CreateRcFileWithTranslations(ByVal sMasterRcPath, ByVal sLanguageRcPath, ByV
             End If
             
           Case MENU_BLOCK, DIALOGEX_BLOCK, STRINGTABLE_BLOCK:
-            If (FoundRegExpMatches(sMasterLine, """(.*?)""", oMatches) = True) Then 'String...
-              For Each oMatch In oMatches 'For all strings...
-                sMsgId = oMatch.SubMatches(0)
-                If (sMsgId <> "") And (oTranslations.Exists(sMsgId) = True) Then 'If translation located...
-                  sMsgStr = oTranslations(sMsgId)
-                  sLanguageLine = Replace(sLanguageLine, """" & sMsgId & """", """" & sMsgStr & """")
-                End If
-              Next
+            If (InStr(sMasterLine, """") > 0) Then 'If quote found (for speedup)...
+              If (FoundRegExpMatches(sMasterLine, """(.*?)""", oMatches) = True) Then 'String...
+                For Each oMatch In oMatches 'For all strings...
+                  sMsgId = oMatch.SubMatches(0)
+                  If (sMsgId <> "") And (oTranslations.Exists(sMsgId) = True) Then 'If translation located...
+                    sMsgStr = oTranslations(sMsgId)
+                    sLanguageLine = Replace(sLanguageLine, """" & sMsgId & """", """" & sMsgStr & """")
+                  End If
+                Next
+              End If
             End If
             
           Case VERSIONINFO_BLOCK:
