@@ -92,12 +92,12 @@ Function GetTranslationsFromPoFile(ByVal sPoPath)
       
       If (sLine <> "") Then 'If NOT empty line...
         If (Left(sLine, 1) <> "#") Then 'If NOT comment line...
-          If (FoundRegExpMatch(sLine, "^msgid ""(.*)""$", oMatch) = True) Then 'If "msgid"...
+          If (Left(sLine, 7) = "msgid """) Then 'If "msgid"...
             iMsgStarted = 1
-            sMsgId = oMatch.SubMatches(0)
-          ElseIf (FoundRegExpMatch(sLine, "^msgstr ""(.*)""$", oMatch) = True) Then 'If "msgstr"...
+            sMsgId = GetRegExpSubMatch(sLine, "^msgid ""(.*)""$")
+          ElseIf (Left(sLine, 8) = "msgstr """) Then 'If "msgstr"...
             iMsgStarted = 2
-            sMsgStr = oMatch.SubMatches(0)
+            sMsgStr = GetRegExpSubMatch(sLine, "^msgstr ""(.*)""$")
           ElseIf (FoundRegExpMatch(sLine, "^""(.*)""$", oMatch) = True) Then 'If "msgid" or "msgstr" continued...
             If (iMsgStarted = 1) Then
               sMsgId = sMsgId & oMatch.SubMatches(0)
@@ -110,7 +110,7 @@ Function GetTranslationsFromPoFile(ByVal sPoPath)
         iMsgStarted = 0
       End If
       
-      If (iMsgStarted = 0) Then 'If not inside a translation...
+      If (iMsgStarted = 0) Then 'If NOT inside a translation...
         If (sMsgId <> "") And (sMsgStr <> "") And (sMsgId <> sMsgStr) Then 'If translated...
           oTranslations.Add sMsgId, sMsgStr
           iMsgStarted = 0
@@ -249,5 +249,16 @@ Function FoundRegExpMatches(ByVal sString, ByVal sPattern, ByRef oMatchesReturn)
   If (oRegExp.Test(sString) = True) Then
     Set oMatchesReturn = oRegExp.Execute(sString)
     FoundRegExpMatches = True
+  End If
+End Function
+
+''
+' ...
+Function GetRegExpSubMatch(ByVal sString, ByVal sPattern)
+  Dim oMatch
+  
+  GetRegExpSubMatch = ""
+  If (FoundRegExpMatch(sString, sPattern, oMatch)) Then 'If pattern found...
+    GetRegExpSubMatch = oMatch.SubMatches(0)
   End If
 End Function
