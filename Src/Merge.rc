@@ -1171,23 +1171,23 @@ BEGIN
                     BS_AUTOCHECKBOX | WS_TABSTOP,7,17,215,10
     CONTROL         "&Preserve original EOL chars",IDC_MIXED_EOL,"Button",
                     BS_AUTOCHECKBOX | WS_TABSTOP,7,27,215,10
-    GROUPBOX        "Tabs",IDC_STATIC,7,44,221,33,WS_GROUP
-    LTEXT           "&Tab size:",IDC_STATIC,14,58,42,8
-    EDITTEXT        IDC_TAB_EDIT,60,56,18,12,ES_AUTOHSCROLL | ES_NUMBER,
+    GROUPBOX        "Tabs",IDC_STATIC,7,44,221,60,WS_GROUP
+    LTEXT           "&Tab size:",IDC_STATIC,14,53,201,8
+    EDITTEXT        IDC_TAB_EDIT,24,64,18,12,ES_AUTOHSCROLL | ES_NUMBER,
                     WS_EX_RIGHT
     CONTROL         "&Insert Tabs",IDC_PROP_INSERT_TABS,"Button",
-                    BS_AUTORADIOBUTTON | WS_GROUP,85,53,137,10
+                    BS_AUTORADIOBUTTON | WS_GROUP,14,80,201,10
     CONTROL         "Insert &Spaces",IDC_PROP_INSERT_SPACES,"Button",
-                    BS_AUTORADIOBUTTON,85,62,137,10
-    GROUPBOX        "Line Difference Coloring",IDC_LINE_COLORING_GROUP,7,87,
+                    BS_AUTORADIOBUTTON,14,90,201,10
+    GROUPBOX        "Line Difference Coloring",IDC_LINE_COLORING_GROUP,7,114,
                     221,61
     CONTROL         "View line differences",IDC_VIEW_LINE_DIFFERENCES,"Button",
-                    BS_AUTOCHECKBOX | WS_TABSTOP,14,98,100,8
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,125,201,8
     CONTROL         "&Character level",IDC_EDITOR_CHARLEVEL,"Button",
-                    BS_AUTORADIOBUTTON | WS_GROUP,14,108,138,10
+                    BS_AUTORADIOBUTTON | WS_GROUP,24,135,194,10
     CONTROL         "&Word-level:",IDC_EDITOR_WORDLEVEL,"Button",
-                    BS_AUTORADIOBUTTON,14,118,122,10
-    COMBOBOX        IDC_BREAK_TYPE,24,130,143,34,CBS_DROPDOWNLIST |
+                    BS_AUTORADIOBUTTON,24,145,194,10
+    COMBOBOX        IDC_BREAK_TYPE,38,157,163,34,CBS_DROPDOWNLIST |
                     WS_VSCROLL | WS_GROUP | WS_TABSTOP
 END
 

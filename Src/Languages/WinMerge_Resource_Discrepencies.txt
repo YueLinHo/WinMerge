@@ -43,21 +43,6 @@ IDD_VSS
     Database 36->49
     buttons 50->62
 
-IDD_PROPPAGE_EDITOR
- Need to look at Swedish Tabs/Tabulator box, and line
-   also line difference coloring wider 95->97 ("Radskillnadskul÷rer")
- Spanish also varies may be out-of-date
- Slovak widens tabs
- Russian also widens tabs
- Norwegian also widens tabs 42->61
- German widens tabs 42->54
- Danish widens tabs 42->61
- Czech widens tabs 42->80
- ChineseTraditional widens tabs by left-5
- ChineseSimplified widens tabs by 42->43
- Catalan widens tabs 42->88
- Brazilian widens tabs 42->76
-
 IDD_PROPPAGE_COMPARE
   IDC_WHITE_CHANGE ("&Ignore change")
     Brazilian makes it multiline
