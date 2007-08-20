@@ -17,10 +17,8 @@ IDD_EDIT_FIND
 IDD_GENERATE_PATCH
   IDC_DIFF_CASESENSITIVE ("Case sensi&tive")
     Catalan makes it multiline
- Norwegian widens Defaults 50->70
  Korean widens Browse & Swap buttons 50->52
  Catalan makes IDC_DIFF_CASESENSITIVE multiline
-  Catalan widens Defaults 50->62
 
 IDD_CLEARCASE
   "Comments" static 18,7,60,10
@@ -63,20 +61,9 @@ IDD_PROPPAGE_EDITOR
 IDD_PROPPAGE_COMPARE
   IDC_WHITE_CHANGE ("&Ignore change")
     Brazilian makes it multiline
-  Russian widens default 50->61
-  Norwegian widens default 50->70
-  Catalan widens defaults 50->63
 
 IDD_PROPPAGE_FILTER
  Russian widens Ignore lines... 221->224
-
-IDD_PROPPAGE_COLORS
- Russian widens Deleted header 38->39
-   also heightened two boxes b/c Russian text wraps
-    "Selected Moved:" & "Selected Word Diff:" 8->16 hght
-   also widened defaults button 50->54
- Norwegian widens Default 50-
- Catalan widens three differences labels 90->102
 
 IDD_PREFERENCES
   widened in Swedish 352->376
