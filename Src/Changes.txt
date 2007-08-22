@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-08-22 Tim
+ PATCH: [ 1743623 ] ChineseSimplified language .rc file for trunk rev.4317
+  Src/Languages/ChineseSimplified: MergeChineseSimplified.rc
+
 2007-08-22 Takashi
  BUG: [ 1759793 ] Filter test dialog problem with directory filters
   Src: TestFilterDlg.cpp
