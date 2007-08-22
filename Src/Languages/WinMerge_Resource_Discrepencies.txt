@@ -1,18 +1,5 @@
 IDD_EDIT_REPLACE
- Russian makes multiline IDC_EDIT_SCOPE_DONT_WRAP ("&Don't wrap end of file")
-
-IDD_EDIT_REPLACE
- Slovak widens dialog 304->306 and buttons 50->52
- Russian widens 304->311 and buttons 50-57
- Korean widens buttons 50->57
- Japanese widens buttons 50->55
- Italian widens buttons 50->60
- Catalan makes replacewith two line (ht 8->17)
- Catalan IDC_EDIT_MATCH_CASE 135->140
  Catalan widens buttons 50->63
-
-IDD_EDIT_FIND
- Catalan IDC_EDIT_MATCH_CASE 135->140
 
 IDD_GENERATE_PATCH
   IDC_DIFF_CASESENSITIVE ("Case sensi&tive")
