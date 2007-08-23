@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WinMerge\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=13216&atid=113216\n"
-"POT-Creation-Date: 2007-08-18 00:28+0000\n"
+"PO-Revision-Date: 2007-08-24 00:29+0100\n"
 "PO-Revision-Date: \n"
 "Last-Translator: wck3 <wck3 at users.sourceforge.net>\n"
 "Language-Team: ChineseTraditional <winmerge-translate@lists.sourceforge.net>\n"
@@ -1238,7 +1238,7 @@ msgstr "ESC 則關閉視窗(&O)"
 #: Merge.rc:743
 #, c-format
 msgid "&Automatically verify paths in Open-dialog"
-msgstr ""
+msgstr "於「開啟」對話方塊自動驗證路徑(&A)"
 
 #: Merge.rc:746
 #, c-format
@@ -1253,12 +1253,12 @@ msgstr ""
 #: Merge.rc:750
 #, c-format
 msgid "O&pen-dialog Auto-Completion:"
-msgstr ""
+msgstr "「開啟」對話方塊之自動完成(&P)："
 
 #: Merge.rc:753
 #, c-format
 msgid "Enable multiple compare windows for"
-msgstr ""
+msgstr "啟用多重比較視窗"
 
 #: Merge.rc:755
 #: Merge.rc:1594
