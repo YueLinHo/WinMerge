@@ -1,6 +1,10 @@
 # This file is part from WinMerge <http://winmerge.org/>
 # Released under the "GNU General Public License"
 #
+# Translators:
+# * Göran Håkansson <goran.x.hakansson at telia.com>
+# * Hans Eriksson <hans.ericson at bredband.net>
+#
 # ID line follows -- this is updated by SVN
 # $Id$
 #
@@ -192,7 +196,7 @@ msgstr "&Redigera"
 #: Merge.rc:383
 #, c-format
 msgid "&Options..."
-msgstr "E&genskaper..."
+msgstr "&Inställningar..."
 
 #. 
 #: Merge.rc:136
@@ -304,7 +308,7 @@ msgstr "&Skapa patch..."
 #: Merge.rc:441
 #, c-format
 msgid "&Plugins"
-msgstr "&Prediffer"
+msgstr "&Plugins"
 
 #. 
 #: Merge.rc:159
@@ -376,7 +380,7 @@ msgstr "F&önster"
 #: Merge.rc:462
 #, c-format
 msgid "Cl&ose"
-msgstr "Stäng"
+msgstr "&Stäng"
 
 #. 
 #: Merge.rc:174
@@ -441,7 +445,7 @@ msgstr "&Innehåll...\tF1"
 #: Merge.rc:474
 #, c-format
 msgid "&Index..."
-msgstr ""
+msgstr "&Index..."
 
 #. 
 #: Merge.rc:186
@@ -938,7 +942,7 @@ msgstr "Kopiera allt t&ill vänster"
 #: Merge.rc:448
 #, c-format
 msgid "&Prediffer"
-msgstr "&Felsökning"
+msgstr "&Prediffer"
 
 #. 
 #: Merge.rc:489
@@ -1074,7 +1078,7 @@ msgstr "Kopiera &Filnamn"
 #: Merge.rc:533
 #, c-format
 msgid "&Zip"
-msgstr ""
+msgstr "&Zip"
 
 #. 
 #: Merge.rc:535
@@ -1122,7 +1126,7 @@ msgstr "Kopiera Filnamn"
 #: Merge.rc:560
 #, c-format
 msgid "Prediffer Settings"
-msgstr "Prediffer Inställningar"
+msgstr "Prediffer-inställningar"
 
 #. 
 #: Merge.rc:562
@@ -1176,19 +1180,19 @@ msgstr "Om WinMerge"
 #: Merge.rc:1934
 #, c-format
 msgid "WinMerge"
-msgstr ""
+msgstr "WinMerge"
 
 #. 
 #: Merge.rc:647
 #, c-format
 msgid "Version 1.0"
-msgstr ""
+msgstr "Version 1.0"
 
 #. 
 #: Merge.rc:648
 #, c-format
 msgid "(Private Build)"
-msgstr ""
+msgstr "(Private Build)"
 
 #. 
 #: Merge.rc:649
@@ -1223,13 +1227,13 @@ msgstr "[VERSION COPYRIGHT FINNS HÄR]"
 #: Merge.rc:1420
 #, c-format
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #. 
 #: Merge.rc:654
 #, c-format
 msgid "Contributors"
-msgstr ""
+msgstr "Medarbetare"
 
 #. 
 #: Merge.rc:660
@@ -1272,7 +1276,7 @@ msgstr "B&läddra..."
 #: Merge.rc:1579
 #, c-format
 msgid "&Filter:"
-msgstr ""
+msgstr "&Filter:"
 
 #. 
 #: Merge.rc:676
@@ -1304,7 +1308,7 @@ msgstr "&Inkludera Underkataloger"
 #: Merge.rc:683
 #, c-format
 msgid "Status:"
-msgstr ""
+msgstr "Status:"
 
 #. 
 #: Merge.rc:685
@@ -1342,7 +1346,7 @@ msgstr "Filer eller kataloger som skall jämföras"
 #: Merge.rc:694
 #, c-format
 msgid "Visual SourceSafe"
-msgstr ""
+msgstr "Visual SourceSafe"
 
 #. 
 #: Merge.rc:699
@@ -1372,7 +1376,7 @@ msgstr "Lösenord:"
 #: Merge.rc:709
 #, c-format
 msgid "Link to Destination VSS project"
-msgstr "Länk till Destination VSS-projekt"
+msgstr "Länka till valt VSS-projekt"
 
 #. 
 #: Merge.rc:711
@@ -1453,7 +1457,7 @@ msgstr "&Tillåt bara en upplaga att köra"
 #: Merge.rc:748
 #, c-format
 msgid "As&k when closing multiple windows"
-msgstr "Frå&ga när stänger flera fönster"
+msgstr "Frå&ga när flera fönster stängs"
 
 #. 
 #: Merge.rc:750
@@ -1485,7 +1489,7 @@ msgstr "Jäm&för filer"
 #: Merge.rc:759
 #, c-format
 msgid "WinMerge allows hiding some common messageboxes. Press the Reset button to make all messageboxes visible again."
-msgstr "WinMerge tillåter döljande av några meddelanderutor. Klicka på Återställ-knappen för att göra alla meddelanderutor synliga igen."
+msgstr "WinMerge tillåter att vissa meddelanderutor döljs. Klicka på Återställ-knappen för att göra alla meddelanderutor synliga igen."
 
 #. 
 #: Merge.rc:761
@@ -1625,13 +1629,13 @@ msgstr "Ersätt &alla"
 #: Merge.rc:2101
 #, c-format
 msgid "Rational ClearCase"
-msgstr ""
+msgstr "Rational ClearCase"
 
 #. 
 #: Merge.rc:841
 #, c-format
 msgid "CheckOut"
-msgstr "Verkställ"
+msgstr "Checka ut"
 
 #. 
 #: Merge.rc:846
@@ -1726,7 +1730,7 @@ msgstr "Borttaget"
 #: Merge.rc:1547
 #, c-format
 msgid "Text"
-msgstr ""
+msgstr "Text"
 
 #. 
 #: Merge.rc:905
@@ -1774,20 +1778,20 @@ msgstr "Standard"
 #: Merge.rc:1535
 #, c-format
 msgid "Dialog"
-msgstr ""
+msgstr "Dialog"
 
 #. 
 #: Merge.rc:962
 #: Merge.rc:1891
 #, c-format
 msgid "System"
-msgstr ""
+msgstr "System"
 
 #. 
 #: Merge.rc:965
 #, c-format
 msgid "&Send deleted files to Recycle Bin"
-msgstr "&Spara borttagna filer i Papperskorgen"
+msgstr "&Skicka borttagna filer till papperskorgen"
 
 #. 
 #: Merge.rc:967
@@ -1799,7 +1803,7 @@ msgstr "Ignorera tidsskillnad mindre än 3 sekunder"
 #: Merge.rc:970
 #, c-format
 msgid "Integration"
-msgstr ""
+msgstr "Integration"
 
 #. 
 #: Merge.rc:971
@@ -1851,13 +1855,13 @@ msgstr "Patchgenerator"
 #: Merge.rc:991
 #, c-format
 msgid "File&1:"
-msgstr "Fil 1:"
+msgstr "Fil &1:"
 
 #. 
 #: Merge.rc:995
 #, c-format
 msgid "File&2:"
-msgstr "Fil 2:"
+msgstr "Fil &2:"
 
 #. 
 #: Merge.rc:998
@@ -1875,43 +1879,43 @@ msgstr "Byt"
 #: Merge.rc:1000
 #, c-format
 msgid "&Append to existing file"
-msgstr "Lägg till i existerande fil"
+msgstr "Lägg till i befintlig fil"
 
 #. 
 #: Merge.rc:1002
 #, c-format
 msgid "&Result:"
-msgstr "Resultat:"
+msgstr "&Resultat:"
 
 #. 
 #: Merge.rc:1006
 #, c-format
 msgid "&Format"
-msgstr "Format"
+msgstr "&Format"
 
 #. 
 #: Merge.rc:1007
 #, c-format
 msgid "St&yle:"
-msgstr "Typ:"
+msgstr "T&yp:"
 
 #. 
 #: Merge.rc:1010
 #, c-format
 msgid "&Context:"
-msgstr "Omgivande:"
+msgstr "Samman&hang:"
 
 #. 
 #: Merge.rc:1013
 #, c-format
 msgid "W&hitespaces"
-msgstr "Mellanslag"
+msgstr "&Mellanslag"
 
 #. 
 #: Merge.rc:1014
 #, c-format
 msgid "Com&pare"
-msgstr "Jämför"
+msgstr "&Jämför"
 
 #. 
 #: Merge.rc:1016
@@ -1947,7 +1951,7 @@ msgstr "Inklu&dera kommandorad"
 #: Merge.rc:1026
 #, c-format
 msgid "Open to e&xternal editor"
-msgstr "Öppna till extern editor"
+msgstr "Öppna i Extern editor"
 
 #. 
 #: Merge.rc:1048
@@ -1971,13 +1975,13 @@ msgstr "Göm kolumner"
 #: Merge.rc:1059
 #, c-format
 msgid "<<"
-msgstr ""
+msgstr "<<"
 
 #. 
 #: Merge.rc:1060
 #, c-format
 msgid ">>"
-msgstr ""
+msgstr ">>"
 
 #. 
 #: Merge.rc:1070
@@ -2032,7 +2036,7 @@ msgstr "Jämför objekt..."
 #: Merge.rc:1102
 #, c-format
 msgid "Items compared:"
-msgstr "Objekt jämförda:"
+msgstr "Jämförda objekt:"
 
 #. 
 #: Merge.rc:1103
@@ -2105,7 +2109,7 @@ msgstr "Jämför &mellanslag"
 #: Merge.rc:1136
 #, c-format
 msgid "&Ignore change"
-msgstr "Ignorera mellanslagsä&ndringar"
+msgstr "&Ignorera mellanslagsskillnader "
 
 #. 
 #: Merge.rc:1138
@@ -2166,13 +2170,13 @@ msgstr "Filterkommentarer"
 #: Merge.rc:1887
 #, c-format
 msgid "Editor"
-msgstr ""
+msgstr "Editor"
 
 #. 
 #: Merge.rc:1167
 #, c-format
 msgid "&Highlight syntax"
-msgstr "Framhäv syntaxen"
+msgstr "&Markera syntaxen"
 
 #. 
 #: Merge.rc:1169
@@ -2184,7 +2188,7 @@ msgstr "Automatisk &uppdatering"
 #: Merge.rc:1171
 #, c-format
 msgid "&Preserve original EOL chars"
-msgstr "Tillåt blandade radslutstyper"
+msgstr "Bevara ursprungliga radslutstecken"
 
 #. 
 #: Merge.rc:1173
@@ -2262,7 +2266,7 @@ msgstr "Ny..."
 #: Merge.rc:1211
 #, c-format
 msgid "Edit..."
-msgstr "Editera..."
+msgstr "Redigera..."
 
 #. 
 #: Merge.rc:1212
@@ -2316,7 +2320,7 @@ msgstr "Ign&orera ändringar"
 #: Merge.rc:1235
 #, c-format
 msgid "Discard All"
-msgstr "Ignorera ändringar"
+msgstr "Ignorera alla ändringar"
 
 #. 
 #: Merge.rc:1242
@@ -2324,7 +2328,7 @@ msgstr "Ignorera ändringar"
 #: Merge.rc:1893
 #, c-format
 msgid "Codepage"
-msgstr ""
+msgstr "Codepage"
 
 #. 
 #: Merge.rc:1245
@@ -2336,7 +2340,7 @@ msgstr "Standard Codepage"
 #: Merge.rc:1246
 #, c-format
 msgid "Select the default codepage assumed when loading non-Unicode files:"
-msgstr "Välj den Codepage som används som standard när icke-Unicode filer öppnas:"
+msgstr "Välj den Codepage som används som standard när icke-Unicodefiler öppnas:"
 
 #. 
 #: Merge.rc:1248
@@ -2372,7 +2376,7 @@ msgstr "WinMerge - Arkivstöd är avstängt"
 #: Merge.rc:1266
 #, c-format
 msgid "Unable to detect 7-Zip version (not installed?)"
-msgstr "Kan inte detektera version av 7-Zip (är det inte installerat?)"
+msgstr "Kan inte detektera 7-Zip-version (är 7-zip inte installerat?)"
 
 #. 
 #: Merge.rc:1269
@@ -2384,19 +2388,19 @@ msgstr "Arkivstöd kräver antingen att version 3.11 eller högre av 7-Zip är insta
 #: Merge.rc:1271
 #, c-format
 msgid "There must also be an appropriate interface plugin (Merge7z*.dll) on the path."
-msgstr "Det måste också finnas ett lämpligt gränssnitts-plugin (Merge7z*.dll) i sökvägen."
+msgstr "Det måste också finnas ett lämpligt gränssnittsplugin (Merge7z*.dll) i sökvägen."
 
 #. 
 #: Merge.rc:1273
 #, c-format
 msgid "Please use the version of 7-Zip recommended below until interface plugins for later\nversions become available."
-msgstr "Var god och använd den version av 7-Zip som rekommenderas nedanför tills gränssnitts-plugins för senare\nversioner blir tillgängliga."
+msgstr "Var god och använd den version av 7-Zip som rekommenderas nedanför tills gränssnittsplugins för senare\nversioner blir tillgängliga."
 
 #. 
 #: Merge.rc:1275
 #, c-format
 msgid "Version"
-msgstr ""
+msgstr "Version"
 
 #. 
 #: Merge.rc:1277
@@ -2408,7 +2412,7 @@ msgstr "Plugin krävd\n(dllbuild %04u)"
 #: Merge.rc:1279
 #, c-format
 msgid "Recommended version of 7-Zip:"
-msgstr "Rekommenderad version av 7-Zip:"
+msgstr "Rekommenderad 7-Zip-version:"
 
 #. 
 #: Merge.rc:1282
@@ -2421,7 +2425,7 @@ msgstr "finns"
 #: Merge.rc:1283
 #, c-format
 msgid "Merge7z000U.dll"
-msgstr ""
+msgstr "Merge7z000U.dll"
 
 #. 
 #: Merge.rc:1286
@@ -2452,13 +2456,13 @@ msgstr "7-Zip komponenter för fristående användning:"
 #: Merge.rc:1295
 #, c-format
 msgid "outdated"
-msgstr "utdaterade"
+msgstr "utdaterad"
 
 #. 
 #: Merge.rc:1296
 #, c-format
 msgid "Plugins on path:"
-msgstr "Plugins på sökväg:"
+msgstr "Plugins i sökväg:"
 
 #. 
 #: Merge.rc:1297
@@ -2536,7 +2540,7 @@ msgstr "Strängar:"
 #: Merge.rc:1338
 #, c-format
 msgid "Preprocessor:"
-msgstr ""
+msgstr "Preprocessor:"
 
 #. 
 #: Merge.rc:1339
@@ -2623,13 +2627,13 @@ msgstr "Arkivstöd"
 #: Merge.rc:1429
 #, c-format
 msgid "Archive support requires 7-Zip plugin installed:"
-msgstr "Arkivstöd kräver att 7-Zip plugin är installerat:"
+msgstr "Arkivstödet kräver att 7-Zip-plugin är installerad:"
 
 #. 
 #: Merge.rc:1431
 #, c-format
 msgid "Download 7-zip Plugin"
-msgstr "Ladda ner 7-zip Plugin"
+msgstr "Ladda ner 7-zip-plugin"
 
 #. 
 #: Merge.rc:1432
@@ -2659,7 +2663,7 @@ msgstr "&Detektera arkivtyp från filsignatur"
 #: Merge.rc:1447
 #, c-format
 msgid "Compare Statistics"
-msgstr "Jämförstatistik"
+msgstr "Jämförelsestatistik"
 
 #. 
 #: Merge.rc:1450
@@ -2684,7 +2688,7 @@ msgstr "Olika"
 #: Merge.rc:1453
 #, c-format
 msgid "Text:"
-msgstr ""
+msgstr "Text:"
 
 #. 
 #: Merge.rc:1456
@@ -2760,7 +2764,7 @@ msgstr "&Filöppnande:"
 #: Merge.rc:1506
 #, c-format
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #. 
 #: Merge.rc:1504
@@ -2791,7 +2795,7 @@ msgstr "&Avbryt"
 #: Merge.rc:1516
 #, c-format
 msgid "Test Filter"
-msgstr ""
+msgstr "Testa Filter"
 
 #. 
 #: Merge.rc:1519
@@ -2936,7 +2940,7 @@ msgstr "Backupfilnamn:"
 #: Merge.rc:1606
 #, c-format
 msgid "&Append .bak -extension"
-msgstr "&Lägg till .bak -suffix"
+msgstr "&Lägg till filsuffixet .bak"
 
 #. 
 #: Merge.rc:1608
@@ -3002,13 +3006,13 @@ msgstr "WinMerge Applikation"
 #: Merge.rc:1659
 #, c-format
 msgid "(c) 1996-2007 Dean P. Grimm / Thingamahoochie Software"
-msgstr ""
+msgstr "(c) 1996-2007 Dean P. Grimm / Thingamahoochie Software"
 
 #. StringFileInfo.OriginalFilename
 #: Merge.rc:1660
 #, c-format
 msgid "WinMerge.EXE"
-msgstr ""
+msgstr "WinMerge.EXE"
 
 #. VarFileInfo.Translation
 #: Merge.rc:1668
@@ -3026,37 +3030,37 @@ msgstr "Klar"
 #: Merge.rc:1689
 #, c-format
 msgid "EXT"
-msgstr ""
+msgstr "EXT"
 
 #. 
 #: Merge.rc:1690
 #, c-format
 msgid "CAP"
-msgstr ""
+msgstr "CAP"
 
 #. 
 #: Merge.rc:1691
 #, c-format
 msgid "NUM"
-msgstr ""
+msgstr "NUM"
 
 #. 
 #: Merge.rc:1692
 #, c-format
 msgid "SCRL"
-msgstr ""
+msgstr "SCRL"
 
 #. 
 #: Merge.rc:1693
 #, c-format
 msgid "OVR"
-msgstr ""
+msgstr "OVR"
 
 #. 
 #: Merge.rc:1694
 #, c-format
 msgid "REC"
-msgstr ""
+msgstr "REC"
 
 #. 
 #: Merge.rc:1700
@@ -3068,7 +3072,7 @@ msgstr "Skapar nya dokument\nNya Dokument (Ctrl+N)"
 #: Merge.rc:1701
 #, c-format
 msgid "Open an existing document\nOpen (Ctrl+O)"
-msgstr "Öppnar befintliga dokument\nÖppna (Ctrl+O)"
+msgstr "Öppnar ett befintligt dokument\nÖppna (Ctrl+O)"
 
 #. 
 #: Merge.rc:1702
@@ -3098,7 +3102,7 @@ msgstr "Ändrar utskriftsinställningar\nSidinställningar"
 #: Merge.rc:1706
 #, c-format
 msgid "Change the printer and printing options\nPrint Setup"
-msgstr "Ändrar skrivare och skrivarens inställningar\nSkrivarinställningar"
+msgstr "Ändrar skrivare och skrivarinställningar\nSkrivarinställningar"
 
 #. 
 #: Merge.rc:1707
@@ -3110,7 +3114,7 @@ msgstr "Skriver ut det aktiva dokumentet\nSkriv ut"
 #: Merge.rc:1708
 #, c-format
 msgid "Display full pages\nPrint Preview"
-msgstr "Visar helsida\nFörhandsgranska"
+msgstr "Visar helsidor\nFörhandsgranska"
 
 #. 
 #: Merge.rc:1713
@@ -3384,25 +3388,25 @@ msgstr "Aktiverar det här fönstret"
 #: Merge.rc:1818
 #, c-format
 msgid "Close print preview mode\nCancel Preview"
-msgstr "Aktiverar det här fönstret"
+msgstr "Stänger Förhandsgranskning\nStäng Förhandsgranskning"
 
 #. 
 #: Merge.rc:1825
 #, c-format
 msgid "\nWinMerge\nWinMerge\n\n\nWinMerge.Document\nWinMerge Document"
-msgstr ""
+msgstr "\nWinMerge\nWinMerge\n\n\nWinMerge.Dokument\nWinMerge Dokument"
 
 #. 
 #: Merge.rc:1832
 #, c-format
 msgid "Preserve original EOL chars"
-msgstr "Tillåt blandade radslutstyper"
+msgstr "Bevara ursprungliga radslutstecken"
 
 #. 
 #: Merge.rc:1839
 #, c-format
 msgid "Press any key"
-msgstr "Tryck en tangent"
+msgstr "Tryck på en valfri tangent"
 
 #. 
 #: Merge.rc:1845
@@ -3427,7 +3431,7 @@ msgstr "WinMerge kommer med ABSOLUT INGA GARANTIER. Detta är fri programvara och
 #: Merge.rc:1859
 #, c-format
 msgid "&Ok"
-msgstr ""
+msgstr "&OK"
 
 #. 
 #: Merge.rc:1861
@@ -3559,13 +3563,13 @@ msgstr "Till höger:"
 #: Merge.rc:1912
 #, c-format
 msgid "Version %1"
-msgstr ""
+msgstr "Version %1"
 
 #. 
 #: Merge.rc:1913
 #, c-format
 msgid "Unicode"
-msgstr ""
+msgstr "Unicode"
 
 #. 
 #: Merge.rc:1919
@@ -3589,7 +3593,7 @@ msgstr "Ändringar har gjorts i den aktuella filjämförelsesessionen. Vissa instäl
 #: Merge.rc:1922
 #, c-format
 msgid "The selected font change will not be applied to any currently visible difference windows."
-msgstr "Ändringen av teckensnitt kommer inte att synas i redan öppna fönster."
+msgstr "Ändringen av typsnitt kommer inte att synas i redan öppna fönster."
 
 #. 
 #: Merge.rc:1923
@@ -3703,7 +3707,7 @@ msgstr "Filter"
 #: Merge.rc:1962
 #, c-format
 msgid "[F] "
-msgstr ""
+msgstr "[F] "
 
 #. 
 #: Merge.rc:1963
@@ -3739,7 +3743,7 @@ msgstr "Kan inte kopiera filterfilen till filterkatalogen:\n%1\n\nVar god och ve
 #: Merge.rc:1968
 #, c-format
 msgid "User's filter file folder is not defined!\n\nPlease select filter folder in options/System."
-msgstr "Användarens filterfilkatalog är inte definierad!\n\nVar god och välj filterkatalog i Egenskaper/System."
+msgstr "Användarens filterfilkatalog är inte definierad!\n\nVar god och välj filterkatalog i Inställningar/System."
 
 #. 
 #: Merge.rc:1969
@@ -3913,7 +3917,7 @@ msgstr "1 skillnad funnen"
 #: Merge.rc:2022
 #, c-format
 msgid "RO"
-msgstr ""
+msgstr "RO"
 
 #. 
 #: Merge.rc:2022
@@ -4197,14 +4201,14 @@ msgstr "Radbryt på mellanslag eller punkt"
 #: Merge.rc:2111
 #, c-format
 msgid "Copy selected item to named directory"
-msgstr "Kopiera valt objekt till namngiven katalog"
+msgstr "Kopiera valt objekt till angiven katalog"
 
 #. 
 #: Merge.rc:2110
 #: Merge.rc:2112
 #, c-format
 msgid "Copy selected item to custom directory"
-msgstr "Kopiera valt objekt till angiven katalog"
+msgstr "Kopiera valt objekt till anpassad katalog"
 
 #. 
 #: Merge.rc:2113
@@ -4454,7 +4458,7 @@ msgstr "Öppna den högra filen med ..."
 #: Merge.rc:2172
 #, c-format
 msgid "Failed to execute external editor: %1"
-msgstr "Kan inte starta %1"
+msgstr "Kunde inte starta den externa editorn %1"
 
 #. 
 #: Merge.rc:2173
@@ -4905,13 +4909,13 @@ msgstr "Höger sidas kodning."
 #: Merge.rc:2294
 #, c-format
 msgid "Number of ignored differences in file. These differences are ignored by WinMerge and cannot be merged."
-msgstr "Antal ignorerade skillnader på raden. Dessa skillnader är ignorerade av WinMerge och kan inte läggas samman."
+msgstr "Antal ignorerade skillnader i filen. Dessa skillnader ignorerades av WinMerge och kan inte läggas samman."
 
 #. 
 #: Merge.rc:2295
 #, c-format
 msgid "Number of differences in file. This number does not include ignored differences."
-msgstr "Antal skillnader på raden. Detta antal inkluderar inte ignorerade skillnader."
+msgstr "Antal skillnader i filen. Detta antal inkluderar inte ignorerade skillnader."
 
 #. 
 #: Merge.rc:2296
@@ -5013,7 +5017,7 @@ msgstr "Kataloger kan inte jämföras visuellt."
 #: Merge.rc:2322
 #, c-format
 msgid "These files use different carriage return types.\n\nDo you want to treat all carriage return types as equivalent for this comparison?\n\nNote: If you always want to treat all carriage return types as equivalent, set the option 'Ignore carriage return differences..' in the Compare tab of the options dialog (available under Edit/Options)."
-msgstr "Dessa filer har olika radslutstyper.\n\nVill du betrakta alla radslutstyper som likvärdiga för denna jämförelse?\n\nOBS: Om du alltid vill betrakta alla radslutstyper som likvärdiga, markera alternativet 'Ignorera radsluts- skillnader..' i Jämför-fliken i Egenskaper-dialogen (finns under Redigera/Egenskaper)."
+msgstr "Dessa filer har olika radslutstyper.\n\nVill du betrakta alla radslutstyper som likvärdiga för denna jämförelse?\n\nOBS: Om du alltid vill betrakta alla radslutstyper som likvärdiga, markera alternativet 'Ignorera skillnader i radslut (DOS,UNIX,MAC)' i Jämför-fliken i Inställningar-dialogen (finns under Redigera/Inställningar)."
 
 #. 
 #: Merge.rc:2323
@@ -5091,13 +5095,13 @@ msgstr "Ersatt %1 sträng(ar)."
 #: Merge.rc:2350
 #, c-format
 msgid "Cannot find string"
-msgstr ""
+msgstr "Kan inte hitta strängen"
 
 #. 
 #: Merge.rc:2350
 #, c-format
 msgid "%s"
-msgstr ""
+msgstr "%s"
 
 #. 
 #: Merge.rc:2356
@@ -5157,13 +5161,13 @@ msgstr "[%1 fil(er) valda]"
 #: Merge.rc:2375
 #, c-format
 msgid "Normal"
-msgstr ""
+msgstr "Normal"
 
 #. 
 #: Merge.rc:2376
 #, c-format
 msgid "Context"
-msgstr "Omgivande"
+msgstr "Sammanhang"
 
 #. 
 #: Merge.rc:2377
@@ -5175,7 +5179,7 @@ msgstr "Förenad"
 #: Merge.rc:2378
 #, c-format
 msgid "Could not write to file %1."
-msgstr "Kunde inte spara filen: %1."
+msgstr "Kunde inte spara filen %1."
 
 #. 
 #: Merge.rc:2379
@@ -5283,7 +5287,7 @@ msgstr "Du är på väg att stänga flera jämförfönster.\n\nVill du göra detta?"
 #: Merge.rc:2405
 #, c-format
 msgid "Regular expression error"
-msgstr "Fel på reguljärt uttryck"
+msgstr "Fel i reguljärt uttryck"
 
 #. 
 #: Merge.rc:2406
@@ -5319,7 +5323,7 @@ msgstr "Bakåtlutat snedstreck sist på en rad"
 #: Merge.rc:2411
 #, c-format
 msgid "Invalid back reference"
-msgstr "Felaktig tillbakareferens"
+msgstr "Felaktig bakåtreferens"
 
 #. 
 #: Merge.rc:2412
@@ -5385,7 +5389,7 @@ msgstr "Inte matchande ) eller \\)"
 #: Merge.rc:2431
 #, c-format
 msgid "Afrikaans"
-msgstr ""
+msgstr "Afrikaans"
 
 #. 
 #: Merge.rc:2432
@@ -5781,7 +5785,7 @@ msgstr "Hebriska"
 #: Merge.rc:2517
 #, c-format
 msgid "Hindi"
-msgstr ""
+msgstr "Hindi"
 
 #. 
 #: Merge.rc:2518
@@ -5871,7 +5875,7 @@ msgstr "Malajiska (Brunei Darussalam)"
 #: Merge.rc:2537
 #, c-format
 msgid "Manipuri"
-msgstr ""
+msgstr "Manipuri"
 
 #. 
 #: Merge.rc:2538
@@ -5919,7 +5923,7 @@ msgstr "Ryska"
 #: Merge.rc:2545
 #, c-format
 msgid "Sanskrit"
-msgstr ""
+msgstr "Sanskrit"
 
 #. 
 #: Merge.rc:2546
@@ -5937,7 +5941,7 @@ msgstr "Serbiska (Kyrillisk)"
 #: Merge.rc:2548
 #, c-format
 msgid "Sindhi"
-msgstr ""
+msgstr "Sindhi"
 
 #. 
 #: Merge.rc:2554
@@ -6075,7 +6079,7 @@ msgstr "Spanska (Puerto Rico)"
 #: Merge.rc:2581
 #, c-format
 msgid "Swahili (Kenya)"
-msgstr ""
+msgstr "Swahili (Kenya)"
 
 #. 
 #: Merge.rc:2582
@@ -6123,7 +6127,7 @@ msgstr "Ukraniska"
 #: Merge.rc:2589
 #, c-format
 msgid "Urdu (Pakistan)"
-msgstr ""
+msgstr "Urdu (Pakistan)"
 
 #. 
 #: Merge.rc:2590
@@ -6171,7 +6175,7 @@ msgstr "Östasisk"
 #: Merge.rc:2607
 #, c-format
 msgid "SE & SW Asian"
-msgstr "Sydöst- och sydväst- asisk"
+msgstr "Sydöst- och sydvästasiatisk"
 
 #. 
 #: Merge.rc:2608
@@ -6190,31 +6194,31 @@ msgstr "Inte tillämplig"
 #: Merge.rc:2615
 #, c-format
 msgid "MS-Windows"
-msgstr ""
+msgstr "MS-Windows"
 
 #. 
 #: Merge.rc:2616
 #, c-format
 msgid "MS-DOS"
-msgstr ""
+msgstr "MS-DOS"
 
 #. 
 #: Merge.rc:2617
 #, c-format
 msgid "Macintosh"
-msgstr ""
+msgstr "Macintosh"
 
 #. 
 #: Merge.rc:2618
 #, c-format
 msgid "IBM"
-msgstr ""
+msgstr "IBM"
 
 #. 
 #: Merge.rc:2625
 #, c-format
 msgid "EBCDIC"
-msgstr ""
+msgstr "EBCDIC"
 
 #. 
 #: Merge.rc:2626
@@ -6226,7 +6230,7 @@ msgstr "IBM EBCDIC Kyrillisk"
 #: Merge.rc:2632
 #, c-format
 msgid "MS-DOS Latin US"
-msgstr ""
+msgstr "MS-DOS Latin US"
 
 #. 
 #: Merge.rc:2633
@@ -6250,7 +6254,7 @@ msgstr "MS-DOS Baltisk utkant"
 #: Merge.rc:2636
 #, c-format
 msgid "MS-DOS Latin 1"
-msgstr ""
+msgstr "MS-DOS Latin 1"
 
 #. 
 #: Merge.rc:2637
@@ -6262,7 +6266,7 @@ msgstr "MS-DOS Grekisk 1"
 #: Merge.rc:2638
 #, c-format
 msgid "MS-DOS Latin 2"
-msgstr ""
+msgstr "MS-DOS Latin 2"
 
 #. 
 #: Merge.rc:2639
@@ -6352,7 +6356,7 @@ msgstr "Windows Traditionell Kinesiska"
 #: Merge.rc:2663
 #, c-format
 msgid "Windows Latin 2"
-msgstr ""
+msgstr "Windows Latin 2"
 
 #. 
 #: Merge.rc:2664
@@ -6364,7 +6368,7 @@ msgstr "Windows Kyrillisk (Slavisk)"
 #: Merge.rc:2665
 #, c-format
 msgid "Windows Latin 1"
-msgstr ""
+msgstr "Windows Latin 1"
 
 #. 
 #: Merge.rc:2666
@@ -6496,37 +6500,37 @@ msgstr "Blandad"
 #: Merge.rc:2713
 #, c-format
 msgid " B"
-msgstr ""
+msgstr " B"
 
 #. 
 #: Merge.rc:2714
 #, c-format
 msgid " KB"
-msgstr ""
+msgstr " KB"
 
 #. 
 #: Merge.rc:2715
 #, c-format
 msgid " MB"
-msgstr ""
+msgstr " MB"
 
 #. 
 #: Merge.rc:2716
 #, c-format
 msgid " GB"
-msgstr ""
+msgstr " GB"
 
 #. 
 #: Merge.rc:2717
 #, c-format
 msgid " TB"
-msgstr ""
+msgstr " TB"
 
 #. 
 #: Merge.rc:2718
 #, c-format
 msgid " PB"
-msgstr ""
+msgstr " PB"
 
 #. 
 #: Merge.rc:2725
@@ -6610,7 +6614,7 @@ msgstr "Går till rad eller skillnad\nGå till (Ctrl+G)"
 #: Merge.rc:2743
 #, c-format
 msgid "Set program options\nOptions"
-msgstr "Ändrar programinställningar\nEgenskaper"
+msgstr "Ändrar programinställningar\nInställningar"
 
 #. 
 #: Merge.rc:2744
@@ -6622,7 +6626,7 @@ msgstr "Uppdaterar innehållet\nUppdatera (F5)"
 #: Merge.rc:2745
 #, c-format
 msgid "Copy selected lines to clipboard adding linenumbers to line begin"
-msgstr "Kopierar valda rader till klippboken och adderar radnummer till radernas start"
+msgstr "Kopierar valda rader till klippboken och lägger till radnummer i början på raderna"
 
 #. 
 #: Merge.rc:2746
@@ -6694,13 +6698,13 @@ msgstr "Visar överhoppade objekt\nVisa överhoppade objekt"
 #: Merge.rc:2767
 #, c-format
 msgid "Select the font for the view\nSelect View Font"
-msgstr "Väljer teckensnitt för fönstren\nVälj teckensnitt"
+msgstr "Väljer typsnitt för fönstren\nVälj typsnitt"
 
 #. 
 #: Merge.rc:2768
 #, c-format
 msgid "Revert to using the default system font for view\nDefault Font"
-msgstr "Väljer standardteckensnitt för fönstren\nVälj standardteckensnitt"
+msgstr "Väljer standardtypsnitt för fönstren\nVälj standardtypsnitt"
 
 #. 
 #: Merge.rc:2769
@@ -6712,7 +6716,7 @@ msgstr "Visar ett tecken för mellanslag"
 #: Merge.rc:2770
 #, c-format
 msgid "Toggle Diff Pane"
-msgstr "Visar eller gömmer skillnadsfältet\nVäxla skillnadsfältet"
+msgstr "Växla skillnadsbilden"
 
 #. 
 #: Merge.rc:2771
@@ -6766,13 +6770,13 @@ msgstr "Visar marginaler för båda filerna\nVisa filmarginaler"
 #: Merge.rc:2784
 #, c-format
 msgid "Scroll to the previous difference\nPrev Diff (Alt+Up)"
-msgstr "Går till föregående skillnad\nFöregående skillnad (Alt Upp)"
+msgstr "Går till föregående skillnad\nFöregående skillnad (Alt+Upp)"
 
 #. 
 #: Merge.rc:2785
 #, c-format
 msgid "Scroll to the next difference\nNext Diff (Alt+Down)"
-msgstr "Går till nästa skillnad\nNästa skillnad (Alt Ner)"
+msgstr "Går till nästa skillnad\nNästa skillnad (Alt+Ner)"
 
 #. 
 #: Merge.rc:2786
@@ -6796,25 +6800,25 @@ msgstr "Går till sista skillnaden\nSista skillnad (Alt+End)"
 #: Merge.rc:2789
 #, c-format
 msgid "Copy the selected text to the right file\nCopy Right (Alt+Right)"
-msgstr "Kopierar den valda texten till den högra filen\nKopiera höger (Alt Höger)"
+msgstr "Kopierar den valda texten till den högra filen\nKopiera höger (Alt+Höger)"
 
 #. 
 #: Merge.rc:2790
 #, c-format
 msgid "Copy the selected text to the left file\nCopy Left (Alt+Left)"
-msgstr "Kopierar den valda texten till den vänstra filen\nKopiera vänster (Alt Vänster)"
+msgstr "Kopierar den valda texten till den vänstra filen\nKopiera vänster (Alt+Vänster)"
 
 #. 
 #: Merge.rc:2791
 #, c-format
 msgid "Copy difference to right and advance to next\nCopy Right and Advance (Ctrl+Alt+Right)"
-msgstr "Kopierar skillnad till höger och går fram till nästa\nKopiera höger och gå framåt (Ctrl Alt Höger)"
+msgstr "Kopierar skillnad till höger och går fram till nästa\nKopiera höger och gå framåt (Ctrl+Alt+Höger)"
 
 #. 
 #: Merge.rc:2792
 #, c-format
 msgid "Copy difference to left and advance to next\nCopy Left and Advance (Ctrl+Alt+Left)"
-msgstr "Kopierar skillnad till vänster och går fram till nästa\nKopiera vänster och gå framåt (Ctrl Alt Vänster)"
+msgstr "Kopierar skillnad till vänster och går fram till nästa\nKopiera vänster och gå framåt (Ctrl+Alt+Vänster)"
 
 #. 
 #: Merge.rc:2793
@@ -6844,7 +6848,7 @@ msgstr "Jämför valt objekt (jämför första objektet om flera objekt är valda)"
 #: Merge.rc:2802
 #, c-format
 msgid "Select and reorder directory compare columns"
-msgstr "Anpassar vilka kolumner som visas"
+msgstr "Välj och sortera om kolumnerna för katalogjämförelse"
 
 #. 
 #: Merge.rc:2803
@@ -7066,175 +7070,175 @@ msgstr "Från Senast Använda filer"
 #: Merge.rc:2881
 #, c-format
 msgid "ASP"
-msgstr ""
+msgstr "ASP"
 
 #. 
 #: Merge.rc:2882
 #, c-format
 msgid "Basic"
-msgstr ""
+msgstr "Basic"
 
 #. 
 #: Merge.rc:2883
 #, c-format
 msgid "Batch"
-msgstr ""
+msgstr "Batch"
 
 #. 
 #: Merge.rc:2884
 #, c-format
 msgid "C/C++"
-msgstr ""
+msgstr "C/C++"
 
 #. 
 #: Merge.rc:2885
 #, c-format
 msgid "C#"
-msgstr ""
+msgstr "C#"
 
 #. 
 #: Merge.rc:2886
 #, c-format
 msgid "CSS"
-msgstr ""
+msgstr "CSS"
 
 #. 
 #: Merge.rc:2887
 #, c-format
 msgid "DCL"
-msgstr ""
+msgstr "DCL"
 
 #. 
 #: Merge.rc:2888
 #, c-format
 msgid "Fortran"
-msgstr ""
+msgstr "Fortran"
 
 #. 
 #: Merge.rc:2889
 #, c-format
 msgid "HTML"
-msgstr ""
+msgstr "HTML"
 
 #. 
 #: Merge.rc:2890
 #, c-format
 msgid "INI"
-msgstr ""
+msgstr "INI"
 
 #. 
 #: Merge.rc:2891
 #, c-format
 msgid "InnoSetup"
-msgstr ""
+msgstr "InnoSetup"
 
 #. 
 #: Merge.rc:2892
 #, c-format
 msgid "InstallShield"
-msgstr ""
+msgstr "InstallShield"
 
 #. 
 #: Merge.rc:2893
 #, c-format
 msgid "Java"
-msgstr ""
+msgstr "Java"
 
 #. 
 #: Merge.rc:2894
 #, c-format
 msgid "AutoLISP"
-msgstr ""
+msgstr "AutoLISP"
 
 #. 
 #: Merge.rc:2895
 #, c-format
 msgid "NSIS"
-msgstr ""
+msgstr "NSIS"
 
 #. 
 #: Merge.rc:2896
 #, c-format
 msgid "Pascal"
-msgstr ""
+msgstr "Pascal"
 
 #. 
 #: Merge.rc:2897
 #, c-format
 msgid "Perl"
-msgstr ""
+msgstr "Perl"
 
 #. 
 #: Merge.rc:2898
 #, c-format
 msgid "PHP"
-msgstr ""
+msgstr "PHP"
 
 #. 
 #: Merge.rc:2899
 #, c-format
 msgid "Python"
-msgstr ""
+msgstr "Python"
 
 #. 
 #: Merge.rc:2900
 #, c-format
 msgid "REXX"
-msgstr ""
+msgstr "REXX"
 
 #. 
 #: Merge.rc:2901
 #, c-format
 msgid "Resources"
-msgstr ""
+msgstr "Resurser"
 
 #. 
 #: Merge.rc:2902
 #, c-format
 msgid "Ruby"
-msgstr ""
+msgstr "Ruby"
 
 #. 
 #: Merge.rc:2903
 #, c-format
 msgid "SGML"
-msgstr ""
+msgstr "SGML"
 
 #. 
 #: Merge.rc:2904
 #, c-format
 msgid "Shell"
-msgstr ""
+msgstr "Shell"
 
 #. 
 #: Merge.rc:2905
 #, c-format
 msgid "SIOD"
-msgstr ""
+msgstr "SIOD"
 
 #. 
 #: Merge.rc:2906
 #, c-format
 msgid "SQL"
-msgstr ""
+msgstr "SQL"
 
 #. 
 #: Merge.rc:2907
 #, c-format
 msgid "TCL"
-msgstr ""
+msgstr "TCL"
 
 #. 
 #: Merge.rc:2908
 #, c-format
 msgid "TEX"
-msgstr ""
+msgstr "TEX"
 
 #. 
 #: Merge.rc:2909
 #, c-format
 msgid "XML"
-msgstr ""
+msgstr "XML"
 
 #. 
 #: Merge.rc:2914
