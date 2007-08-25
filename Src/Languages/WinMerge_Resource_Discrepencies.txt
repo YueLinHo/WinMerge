@@ -1,12 +1,6 @@
 IDD_EDIT_REPLACE
  Catalan widens buttons 50->63
 
-IDD_GENERATE_PATCH
-  IDC_DIFF_CASESENSITIVE ("Case sensi&tive")
-    Catalan makes it multiline
- Korean widens Browse & Swap buttons 50->52
- Catalan makes IDC_DIFF_CASESENSITIVE multiline
-
 IDD_CLEARCASE
   "Comments" static 18,7,60,10
     Swedish, Spanish, Slovak, Russian, Polish make it 80 wide
@@ -30,13 +24,6 @@ IDD_VSS
     Database 36->49
     buttons 50->62
 
-IDD_PROPPAGE_COMPARE
-  IDC_WHITE_CHANGE ("&Ignore change")
-    Brazilian makes it multiline
-
-IDD_PROPPAGE_FILTER
- Russian widens Ignore lines... 221->224
-
 IDD_PREFERENCES
   widened in Swedish 352->376
     tree widened in Swedish 235->259
@@ -49,16 +36,3 @@ IDD_SELECTUNPACKER
   Russian widens checkbox IDC_UNPACKER_ALLOW_ALL 202->216
   Italian widens it 202->218
   Catalan widens it 202->218
-
-IDD_DIRCMP_REPORT
-  Japanese widens style 35->38
-  Danish widens style 35->53
-
-IDD_SHARED_FILTER
-  German widens "Which type o..." 141->181 
- * may as well for all languages
-
-IDD_MERGE7ZMISMATCH
- Catalan moves and widens button "Plugin Download"
-   236,160,62,10 -> 218,160,80,10
-
