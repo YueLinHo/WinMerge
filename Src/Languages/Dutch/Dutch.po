@@ -3913,13 +3913,13 @@ msgstr "Eén verschil gevonden"
 #: Merge.rc:2022
 #, c-format
 msgid "RO"
-msgstr ""
+msgstr "AL"
 
 #. 
 #: Merge.rc:2022
 #, c-format
 msgid "Read Only"
-msgstr "?"
+msgstr ""
 
 #. 
 #: Merge.rc:2028

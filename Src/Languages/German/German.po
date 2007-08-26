@@ -1279,7 +1279,7 @@ msgstr ""
 #: Merge.rc:1581
 #, c-format
 msgid "Select..."
-msgstr "Suchen..."
+msgstr "Auswählen..."
 
 #. 
 #: Merge.rc:677
@@ -1556,14 +1556,14 @@ msgstr "Richtung"
 #: Merge.rc:1054
 #, c-format
 msgid "&Up"
-msgstr "nach &oben"
+msgstr "&Hoch"
 
 #. 
 #: Merge.rc:798
 #: Merge.rc:1055
 #, c-format
 msgid "&Down"
-msgstr "nach &unten"
+msgstr "&Runter"
 
 #. 
 #: Merge.rc:800
@@ -1638,7 +1638,7 @@ msgstr "Auschecken"
 #: Merge.rc:1156
 #, c-format
 msgid "Comments"
-msgstr "Kommentar"
+msgstr "Kommentare"
 
 #. 
 #: Merge.rc:849
@@ -6934,7 +6934,7 @@ msgstr "Ausgeben der aktuellen WinMerge Versionsinformationen und Konfiguration 
 #: Merge.rc:2832
 #, c-format
 msgid "Display the GNU public license"
-msgstr " an."
+msgstr "Zeigt die GNU Public Lizenz an."
 
 #. 
 #: Merge.rc:2833

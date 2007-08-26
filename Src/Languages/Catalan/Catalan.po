@@ -1176,7 +1176,7 @@ msgstr "Quant al WinMerge"
 #: Merge.rc:1934
 #, c-format
 msgid "WinMerge"
-msgstr "MergeCatalan"
+msgstr "WinMerge"
 
 #. 
 #: Merge.rc:647
@@ -3008,7 +3008,7 @@ msgstr ""
 #: Merge.rc:1660
 #, c-format
 msgid "WinMerge.EXE"
-msgstr "MergeCatalan.lang"
+msgstr "WinMerge.EXE"
 
 #. VarFileInfo.Translation
 #: Merge.rc:1668

@@ -3913,7 +3913,7 @@ msgstr "找到 1 处不同"
 #: Merge.rc:2022
 #, c-format
 msgid "RO"
-msgstr ""
+msgstr "只读"
 
 #. 
 #: Merge.rc:2022
@@ -4252,13 +4252,13 @@ msgstr "左侧到右侧 (%1)"
 #: Merge.rc:2120
 #, c-format
 msgid "Right to Left (%1 of %2)"
-msgstr "右侧到左侧 (%1 of %2)"
+msgstr "右侧到左侧 (%1 共%2)"
 
 #. 
 #: Merge.rc:2121
 #, c-format
 msgid "Left to Right (%1 of %2)"
-msgstr "左侧到右侧 (%1 of %2)"
+msgstr "左侧到右侧 (%1 共%2)"
 
 #. 
 #: Merge.rc:2122
@@ -4279,14 +4279,14 @@ msgstr "右侧到... (%1)"
 #: Merge.rc:2140
 #, c-format
 msgid "Left to... (%1 of %2)"
-msgstr "左侧到... (%1 of %2)"
+msgstr "左侧到... (%1 共%2)"
 
 #. 
 #: Merge.rc:2125
 #: Merge.rc:2141
 #, c-format
 msgid "Right to... (%1 of %2)"
-msgstr "右侧到... (%1 of %2)"
+msgstr "右侧到... (%1 共%2)"
 
 #. 
 #: Merge.rc:2131

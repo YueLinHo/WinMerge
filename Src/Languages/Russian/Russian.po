@@ -4033,7 +4033,7 @@ msgstr "Сохранить изменения в %1?"
 #: Merge.rc:2061
 #, c-format
 msgid "%1 is marked read-only. Would you like to override the read-only file ? (No to save as new filename.)"
-msgstr " позволяет задать новое имя файла)"
+msgstr "%1 помечен как только для чтения. Согласны ли вы заменить этот файл ? (Нет позволяет задать новое имя файла)"
 
 #. 
 #: Merge.rc:2062
@@ -4057,7 +4057,7 @@ msgstr "Невозможно создать копию оригинала:\n%1\n\nПродолжить в любом случае?"
 #: Merge.rc:2065
 #, c-format
 msgid "Saving file failed.\n%1\n%2\nDo you want to:\n\t-use a different filename (Press Ok)\n\t-abort the current operation (Press Cancel)?"
-msgstr ")?"
+msgstr "Файл не сохранен.\n%1\n%2\nХотите ли:\n\t-использовать другое имя файла (Нажмите Ok)\n\t-отменить текущую операцию (Нажмите Отмена)?"
 
 #. 
 #: Merge.rc:2066
@@ -4081,7 +4081,7 @@ msgstr "Другое приложение изменило файл\n%1\nуже загруженный в WinMerge .\n\nПер
 #: Merge.rc:2069
 #, c-format
 msgid "%1\nis marked read-only. Would you like to override the read-only item?"
-msgstr ". Согласны ли вы заменить этот файл ? "
+msgstr "%1 помечен как только для чтения. Согласны ли вы заменить этот файл?"
 
 #. 
 #: Merge.rc:2070

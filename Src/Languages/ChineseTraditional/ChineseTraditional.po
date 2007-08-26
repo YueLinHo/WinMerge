@@ -2545,7 +2545,7 @@ msgstr "2.2由 koko 翻譯。2.7.4由龔維正修正、翻譯"
 #: Merge.rc:1656
 #, c-format
 msgid "WinMerge Application"
-msgstr ""
+msgstr "WinMerge 應用程式\0"
 
 #. StringFileInfo.LegalCopyright
 #: Merge.rc:1659
@@ -3025,7 +3025,7 @@ msgstr "版本 %1"
 #: Merge.rc:1913
 #, c-format
 msgid "Unicode"
-msgstr ""
+msgstr "萬國碼"
 
 #: Merge.rc:1919
 #, c-format
@@ -4783,22 +4783,22 @@ msgstr "English (Philippines) 英語 (菲律賓)"
 #: Merge.rc:2494
 #, c-format
 msgid "Eesti"
-msgstr ""
+msgstr "Eesti 愛沙尼亞語"
 
 #: Merge.rc:2495
 #, c-format
 msgid "Faeroese"
-msgstr ""
+msgstr "Faeroese 丹麥之 Faeroese 語"
 
 #: Merge.rc:2496
 #, c-format
 msgid "Farsi"
-msgstr ""
+msgstr "Farsi 波斯語"
 
 #: Merge.rc:2497
 #, c-format
 msgid "Suomi"
-msgstr ""
+msgstr "Suomi 芬蘭語"
 
 #: Merge.rc:2498
 #, c-format
@@ -4833,7 +4833,7 @@ msgstr "French (Monaco) 法語 (摩納哥)"
 #: Merge.rc:2504
 #, c-format
 msgid "Georgian"
-msgstr ""
+msgstr "Georgian 喬治亞語"
 
 #: Merge.rc:2505
 #, c-format

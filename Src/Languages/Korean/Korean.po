@@ -4520,13 +4520,13 @@ msgstr "다른 파일 압축파일에 더하기 (양쪽)"
 #: Merge.rc:2188
 #, c-format
 msgid "Move selected file on left to custom directory"
-msgstr ""
+msgstr "왼쪽 선택파일 위치지정 이동"
 
 #. 
 #: Merge.rc:2189
 #, c-format
 msgid "Move selected file on right to custom directory"
-msgstr ""
+msgstr "오른쪽 선택파일 위치지정 이동"
 
 #. 
 #: Merge.rc:2195

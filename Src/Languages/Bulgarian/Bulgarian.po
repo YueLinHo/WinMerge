@@ -2990,7 +2990,7 @@ msgstr "040204e3"
 #: Merge.rc:1655
 #, c-format
 msgid "English translation by developers"
-msgstr ""
+msgstr "Translated by sld & Tigertron"
 
 #. StringFileInfo.FileDescription
 #: Merge.rc:1656

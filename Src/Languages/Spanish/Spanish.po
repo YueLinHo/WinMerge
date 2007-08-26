@@ -3913,7 +3913,7 @@ msgstr "1 Diferencia encontrada"
 #: Merge.rc:2022
 #, c-format
 msgid "RO"
-msgstr ""
+msgstr "SL"
 
 #. 
 #: Merge.rc:2022

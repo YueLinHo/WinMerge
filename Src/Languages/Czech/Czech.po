@@ -3913,7 +3913,7 @@ msgstr "Nalezen 1 rozdíl"
 #: Merge.rc:2022
 #, c-format
 msgid "RO"
-msgstr ""
+msgstr "Pro ètení"
 
 #. 
 #: Merge.rc:2022

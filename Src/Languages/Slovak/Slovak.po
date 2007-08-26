@@ -1176,7 +1176,7 @@ msgstr "O aplikácii"
 #: Merge.rc:1934
 #, c-format
 msgid "WinMerge"
-msgstr "MergeSlovak"
+msgstr "WinMerge"
 
 #. 
 #: Merge.rc:647
@@ -3913,7 +3913,7 @@ msgstr "nájdený jeden rozdiel"
 #: Merge.rc:2022
 #, c-format
 msgid "RO"
-msgstr ""
+msgstr "na èítanie"
 
 #. 
 #: Merge.rc:2022

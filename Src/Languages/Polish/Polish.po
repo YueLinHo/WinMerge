@@ -2990,7 +2990,7 @@ msgstr "041504e2"
 #: Merge.rc:1655
 #, c-format
 msgid "English translation by developers"
-msgstr ""
+msgstr "T³umaczenie: Mateo Gola"
 
 #. StringFileInfo.FileDescription
 #: Merge.rc:1656
