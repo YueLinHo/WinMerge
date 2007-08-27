@@ -52,6 +52,7 @@ Function GetStringsFromRcFile(ByVal sRcFilePath, ByRef oComments, ByRef sCodePag
   ' Blacklist...
   '--------------------------------------------------------------------------------
   Set oBlacklist = CreateObject("Scripting.Dictionary")
+  oBlacklist.Add "[VERSION COPYRIGHT GOES HERE]", True
   oBlacklist.Add "_HDR_POPUP_", True
   oBlacklist.Add "_ITEM_POPUP_", True
   oBlacklist.Add "_POPUP_", True
@@ -69,6 +70,7 @@ Function GetStringsFromRcFile(ByVal sRcFilePath, ByRef oComments, ByRef sCodePag
   oBlacklist.Add "SysListView32", True
   oBlacklist.Add "SysTreeView32", True
   oBlacklist.Add "Tree1", True
+  oBlacklist.Add "Version 1.0", True
   '--------------------------------------------------------------------------------
   
   Set oStrings = CreateObject("Scripting.Dictionary")
