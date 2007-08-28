@@ -4541,7 +4541,7 @@ msgstr "Substituindo %1 texto(s)."
 #: Merge.rc:2365
 #, c-format
 msgid "Cannot find string\"%s\""
-msgstr ""
+msgstr "Não foi possível localizar \"%s\""
 
 #: Merge.rc:2371
 #, c-format

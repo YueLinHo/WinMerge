@@ -4625,7 +4625,7 @@ msgstr "Cserélve lett %1 sztring."
 #: Merge.rc:2365
 #, c-format
 msgid "Cannot find string\"%s\""
-msgstr ""
+msgstr "Nem található ez: \"%s\""
 
 #: Merge.rc:2371
 #, c-format

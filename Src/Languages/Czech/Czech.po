@@ -4651,7 +4651,7 @@ msgstr "Nahrazeno %1 øetìzcù."
 #: Merge.rc:2365
 #, c-format
 msgid "Cannot find string\"%s\""
-msgstr ""
+msgstr "Nelze najít øetìzec \"%s\""
 
 #: Merge.rc:2371
 #, c-format
