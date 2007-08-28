@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WinMerge\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=13216&atid=113216\n"
-"POT-Creation-Date: 2007-08-27 23:48+0000\n"
+"POT-Creation-Date: 2007-08-28 21:41+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: English <winmerge-translate@lists.sourceforge.net>\n"
@@ -736,12 +736,6 @@ msgstr ""
 #: Merge.rc:390
 #, c-format
 msgid "Syntax Highlight"
-msgstr ""
-
-#: Merge.rc:392
-#: Merge.rc:451
-#, c-format
-msgid "<PlaceHolder>"
 msgstr ""
 
 #: Merge.rc:395
@@ -2363,11 +2357,6 @@ msgstr ""
 #: Merge.rc:1522
 #, c-format
 msgid "Testing filter ..."
-msgstr ""
-
-#: Merge.rc:1523
-#, c-format
-msgid "(filter name)"
 msgstr ""
 
 #: Merge.rc:1524

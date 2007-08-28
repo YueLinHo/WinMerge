@@ -52,10 +52,12 @@ Function GetStringsFromRcFile(ByVal sRcFilePath, ByRef oComments, ByRef sCodePag
   ' Blacklist...
   '--------------------------------------------------------------------------------
   Set oBlacklist = CreateObject("Scripting.Dictionary")
+  oBlacklist.Add "(filter name)", True
   oBlacklist.Add "[VERSION COPYRIGHT GOES HERE]", True
   oBlacklist.Add "_HDR_POPUP_", True
   oBlacklist.Add "_ITEM_POPUP_", True
   oBlacklist.Add "_POPUP_", True
+  oBlacklist.Add "<PlaceHolder>", True
   oBlacklist.Add "0", True
   oBlacklist.Add "0.00", True
   oBlacklist.Add "Btn", True
