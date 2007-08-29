@@ -3338,7 +3338,7 @@ msgstr ""
 msgid ""
 "User's filter file folder is not defined!\n"
 "\n"
-"Please select filter folder in options/System."
+"Please select filter folder in Options/System."
 msgstr ""
 "ユーザーフィルタファイルフォルダが定義されていません。\n"
 "\n"
@@ -4652,7 +4652,7 @@ msgstr "%1個の文字列を置換しました"
 
 #: Merge.rc:2365
 #, c-format
-msgid "Cannot find string\"%s\""
+msgid "Cannot find string \"%s\""
 msgstr "文字列\"%s\"が検索できません"
 
 #: Merge.rc:2371
@@ -6292,12 +6292,12 @@ msgstr "関連するプラグイン"
 
 #: Merge.rc:2831
 #, c-format
-msgid "Others plugins"
+msgid "Other plugins"
 msgstr "その他のプラグイン"
 
 #: Merge.rc:2832
 #, c-format
-msgid "Unload all plugins and reload them (for developpers)"
+msgid "Unload all plugins and reload them (for developers)"
 msgstr "全てのプラグインを再読込みします (開発者用)"
 
 #: Merge.rc:2838

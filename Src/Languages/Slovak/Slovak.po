@@ -3354,7 +3354,7 @@ msgstr ""
 msgid ""
 "User's filter file folder is not defined!\n"
 "\n"
-"Please select filter folder in options/System."
+"Please select filter folder in Options/System."
 msgstr ""
 "Pouívate¾skı adresár so súbormi filtrov nie je definovanı!\n"
 "\n"
@@ -4666,7 +4666,7 @@ msgstr "Nahradenıch %1 reazcov."
 
 #: Merge.rc:2365
 #, c-format
-msgid "Cannot find string\"%s\""
+msgid "Cannot find string \"%s\""
 msgstr "Nemôem nájs reazec \"%s\""
 
 #: Merge.rc:2371
@@ -6309,12 +6309,12 @@ msgstr "Odporúèané zásuvné moduly"
 
 #: Merge.rc:2831
 #, c-format
-msgid "Others plugins"
+msgid "Other plugins"
 msgstr "Iné zásuvné moduly"
 
 #: Merge.rc:2832
 #, c-format
-msgid "Unload all plugins and reload them (for developpers)"
+msgid "Unload all plugins and reload them (for developers)"
 msgstr "Odoberie z pamäte všetky zásuvné moduly a znovu ich naèíta (pre vıvojárov)"
 
 #: Merge.rc:2838

@@ -3334,7 +3334,7 @@ msgstr ""
 msgid ""
 "User's filter file folder is not defined!\n"
 "\n"
-"Please select filter folder in options/System."
+"Please select filter folder in Options/System."
 msgstr ""
 
 #: Merge.rc:1978
@@ -4624,7 +4624,7 @@ msgstr "Cserélve lett %1 sztring."
 
 #: Merge.rc:2365
 #, c-format
-msgid "Cannot find string\"%s\""
+msgid "Cannot find string \"%s\""
 msgstr "Nem található ez: \"%s\""
 
 #: Merge.rc:2371
@@ -6238,12 +6238,12 @@ msgstr "Javasolt bõvítmények"
 
 #: Merge.rc:2831
 #, c-format
-msgid "Others plugins"
+msgid "Other plugins"
 msgstr "Egyéb bõvítmények"
 
 #: Merge.rc:2832
 #, c-format
-msgid "Unload all plugins and reload them (for developpers)"
+msgid "Unload all plugins and reload them (for developers)"
 msgstr "Az összes bõvítmény betöltése újra (fejlesztõknek)"
 
 #: Merge.rc:2838

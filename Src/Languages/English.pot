@@ -3145,7 +3145,7 @@ msgstr ""
 
 #: Merge.rc:1976
 #, c-format
-msgid "User's filter file folder is not defined!\n\nPlease select filter folder in options/System."
+msgid "User's filter file folder is not defined!\n\nPlease select filter folder in Options/System."
 msgstr ""
 
 #: Merge.rc:1978
@@ -4268,7 +4268,7 @@ msgstr ""
 
 #: Merge.rc:2365
 #, c-format
-msgid "Cannot find string\"%s\""
+msgid "Cannot find string \"%s\""
 msgstr ""
 
 #: Merge.rc:2371
@@ -5769,12 +5769,12 @@ msgstr ""
 
 #: Merge.rc:2831
 #, c-format
-msgid "Others plugins"
+msgid "Other plugins"
 msgstr ""
 
 #: Merge.rc:2832
 #, c-format
-msgid "Unload all plugins and reload them (for developpers)"
+msgid "Unload all plugins and reload them (for developers)"
 msgstr ""
 
 #: Merge.rc:2838

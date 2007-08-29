@@ -3338,7 +3338,7 @@ msgstr ""
 msgid ""
 "User's filter file folder is not defined!\n"
 "\n"
-"Please select filter folder in options/System."
+"Please select filter folder in Options/System."
 msgstr ""
 "El directorio de filtos de usurio no está definido!\n"
 "\n"
@@ -4643,7 +4643,7 @@ msgstr "Reemplazada(s) %1 cadena(s)."
 
 #: Merge.rc:2365
 #, c-format
-msgid "Cannot find string\"%s\""
+msgid "Cannot find string \"%s\""
 msgstr "Imposible encontrar la cadena \"%s\""
 
 #: Merge.rc:2371
@@ -6281,12 +6281,12 @@ msgstr "Complementos sugeridos"
 
 #: Merge.rc:2831
 #, c-format
-msgid "Others plugins"
+msgid "Other plugins"
 msgstr "Otros complementos"
 
 #: Merge.rc:2832
 #, c-format
-msgid "Unload all plugins and reload them (for developpers)"
+msgid "Unload all plugins and reload them (for developers)"
 msgstr "Descargar todos los complementos y recargarlos (para desarrolladores)"
 
 #: Merge.rc:2838

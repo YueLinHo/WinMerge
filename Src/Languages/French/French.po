@@ -3355,7 +3355,7 @@ msgstr ""
 msgid ""
 "User's filter file folder is not defined!\n"
 "\n"
-"Please select filter folder in options/System."
+"Please select filter folder in Options/System."
 msgstr ""
 "Répertoire de filtre de l'utilisateur est indéfini!\n"
 "\n"
@@ -4667,7 +4667,7 @@ msgstr "%1 remplacement(s) effectué(s)."
 
 #: Merge.rc:2365
 #, c-format
-msgid "Cannot find string\"%s\""
+msgid "Cannot find string \"%s\""
 msgstr "texte non trouvé \"%s\""
 
 #: Merge.rc:2371
@@ -6307,12 +6307,12 @@ msgstr "Plugiciels suggérés"
 
 #: Merge.rc:2831
 #, c-format
-msgid "Others plugins"
+msgid "Other plugins"
 msgstr "Plugiciels autres"
 
 #: Merge.rc:2832
 #, c-format
-msgid "Unload all plugins and reload them (for developpers)"
+msgid "Unload all plugins and reload them (for developers)"
 msgstr "Recharger tous les plugiciels (pour les développeurs)"
 
 #: Merge.rc:2838

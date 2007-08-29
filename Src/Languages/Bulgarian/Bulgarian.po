@@ -3345,7 +3345,7 @@ msgstr ""
 msgid ""
 "User's filter file folder is not defined!\n"
 "\n"
-"Please select filter folder in options/System."
+"Please select filter folder in Options/System."
 msgstr ""
 "Не е зададена папка за потребителски шаблони!\n"
 "\n"
@@ -4650,7 +4650,7 @@ msgstr "Заменени %1 низ(а)."
 
 #: Merge.rc:2365
 #, c-format
-msgid "Cannot find string\"%s\""
+msgid "Cannot find string \"%s\""
 msgstr "Не може да се намери низа \"%s\""
 
 #: Merge.rc:2371
@@ -6288,12 +6288,12 @@ msgstr "Предложена добавка"
 
 #: Merge.rc:2831
 #, c-format
-msgid "Others plugins"
+msgid "Other plugins"
 msgstr "Други добавки"
 
 #: Merge.rc:2832
 #, c-format
-msgid "Unload all plugins and reload them (for developpers)"
+msgid "Unload all plugins and reload them (for developers)"
 msgstr "Затваря всички добавки и ги зарежда отново (за разработчици)"
 
 #: Merge.rc:2838

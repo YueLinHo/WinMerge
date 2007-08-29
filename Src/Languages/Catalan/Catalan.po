@@ -3355,7 +3355,7 @@ msgstr ""
 msgid ""
 "User's filter file folder is not defined!\n"
 "\n"
-"Please select filter folder in options/System."
+"Please select filter folder in Options/System."
 msgstr ""
 "La carpeta de fitxers de filtre d'usuari no està definida!\n"
 "\n"
@@ -4667,7 +4667,7 @@ msgstr "S'ha(n) substituït %1 cadena(s)."
 
 #: Merge.rc:2365
 #, c-format
-msgid "Cannot find string\"%s\""
+msgid "Cannot find string \"%s\""
 msgstr "No s'ha trobat la cadena \"%s\""
 
 #: Merge.rc:2371
@@ -6307,12 +6307,12 @@ msgstr "Connectors suggerits"
 
 #: Merge.rc:2831
 #, c-format
-msgid "Others plugins"
+msgid "Other plugins"
 msgstr "Altres connectors"
 
 #: Merge.rc:2832
 #, c-format
-msgid "Unload all plugins and reload them (for developpers)"
+msgid "Unload all plugins and reload them (for developers)"
 msgstr "Descarrega el connectoris i els torna a carregar (per a desenvolupadors)"
 
 #: Merge.rc:2838
