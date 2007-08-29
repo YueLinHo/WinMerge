@@ -48,32 +48,7 @@ Function GetStringsFromRcFile(ByVal sRcFilePath, ByRef oComments, ByRef sCodePag
   Dim oBlacklist, oStrings, oRcFile, sLine, iLine
   Dim sRcFileName, iBlockType, sReference, sString, sComment, oMatches, oMatch, sTemp
   
-  '--------------------------------------------------------------------------------
-  ' Blacklist...
-  '--------------------------------------------------------------------------------
-  Set oBlacklist = CreateObject("Scripting.Dictionary")
-  oBlacklist.Add "(filter name)", True
-  oBlacklist.Add "[VERSION COPYRIGHT GOES HERE]", True
-  oBlacklist.Add "_HDR_POPUP_", True
-  oBlacklist.Add "_ITEM_POPUP_", True
-  oBlacklist.Add "_POPUP_", True
-  oBlacklist.Add "<PlaceHolder>", True
-  oBlacklist.Add "0", True
-  oBlacklist.Add "0.00", True
-  oBlacklist.Add "Btn", True
-  oBlacklist.Add "Button", True
-  oBlacklist.Add "Button1", True
-  oBlacklist.Add "Dif", True
-  oBlacklist.Add "IDS_SAVEVSS_FMT", True
-  oBlacklist.Add "List1", True
-  oBlacklist.Add "MS Shell Dlg", True
-  oBlacklist.Add "msctls_progress32", True
-  oBlacklist.Add "Static", True
-  oBlacklist.Add "SysListView32", True
-  oBlacklist.Add "SysTreeView32", True
-  oBlacklist.Add "Tree1", True
-  oBlacklist.Add "Version 1.0", True
-  '--------------------------------------------------------------------------------
+  Set oBlacklist = GetStringBlacklist("StringBlacklist.txt")
   
   Set oStrings = CreateObject("Scripting.Dictionary")
   Set oComments = CreateObject("Scripting.Dictionary")
@@ -179,6 +154,29 @@ Function GetStringsFromRcFile(ByVal sRcFilePath, ByRef oComments, ByRef sCodePag
     oRcFile.Close
   End If
   Set GetStringsFromRcFile = oStrings
+End Function
+
+''
+' ...
+Function GetStringBlacklist(ByVal sTxtFilePath)
+  Dim oBlacklist, oTxtFile, sLine
+  
+  Set oBlacklist = CreateObject("Scripting.Dictionary")
+  
+  If (oFSO.FileExists(sTxtFilePath) = True) Then 'If the blacklist file exists...
+    Set oTxtFile = oFSO.OpenTextFile(sTxtFilePath, ForReading)
+    Do Until oTxtFile.AtEndOfStream = True 'For all lines...
+      sLine = Trim(oTxtFile.ReadLine)
+      
+      If (sLine <> "") Then
+        If (oBlacklist.Exists(sLine) = False) Then 'If the key is NOT already used...
+          oBlacklist.Add sLine, True
+        End If
+      End If
+    Loop
+    oTxtFile.Close
+  End If
+  Set GetStringBlacklist = oBlacklist
 End Function
 
 ''
