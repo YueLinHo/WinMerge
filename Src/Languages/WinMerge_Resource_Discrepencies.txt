@@ -12,18 +12,6 @@ IDD_CLEARCASE
    German widens SaveAs 50->64
    Catalan widens buttons 50->67
 
-IDD_VSS
-  Russian "Database" 36 -> 52
-     "User" 36->51
-     "Check Out" 50->74
-     "Save As" 50->63
-    and some others
-  Japanese, I think CheckOut button is pushed up higher
-    because Check Out text is too long
-  Catalan
-    Database 36->49
-    buttons 50->62
-
 IDD_PREFERENCES
   widened in Swedish 352->376
     tree widened in Swedish 235->259
