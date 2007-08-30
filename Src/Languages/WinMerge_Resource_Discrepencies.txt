@@ -19,8 +19,3 @@ IDD_PREFERENCES
   Slovak 352->364 and tree 235->247
   Norwegian 352->358 and tree 235->243
   Dutch 352->367 and tree 235->250
-
-IDD_SELECTUNPACKER
-  Russian widens checkbox IDC_UNPACKER_ALLOW_ALL 202->216
-  Italian widens it 202->218
-  Catalan widens it 202->218
