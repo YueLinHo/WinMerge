@@ -2,6 +2,12 @@ This file summarizes changes in WinMerge releases.
 Numbers in parentheses refer to SourceForge.net tracker item numbers (#XXXXX) or
 to Subversion revision numbers (rXXXXX).
 
+WinMerge 2.7.5.2
+  Translation updates:
+  - Traditional Chinese (r4462)
+  - French (r4502)
+  - Swedish (r4472)
+
 WinMerge 2.7.5.1 (r4440)
   HTML reports for file compare (#1739209)
   Ask confirmation when exiting with multiple windows open (#1757800)
