@@ -1,17 +1,6 @@
 IDD_EDIT_REPLACE
  Catalan widens buttons 50->63
 
-IDD_CLEARCASE
-  "Comments" static 18,7,60,10
-    Swedish, Spanish, Slovak, Russian, Polish make it 80 wide
-      , Norwegian, Korean, Japanese, Italian, Hungarian
-      , German, Dutch, Danish, ChineseTraditional
-      , ChineseSimplified, Catalan, Bulgarian, Brazilian
-   Russian widens Save As 50->62
-   Korean widens SaveAs 50->84
-   German widens SaveAs 50->64
-   Catalan widens buttons 50->67
-
 IDD_PREFERENCES
   widened in Swedish 352->376
     tree widened in Swedish 235->259
