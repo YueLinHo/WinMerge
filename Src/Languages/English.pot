@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WinMerge\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=13216&atid=113216\n"
-"POT-Creation-Date: 2007-08-28 21:41+0000\n"
+"POT-Creation-Date: 2007-09-04 22:28+0000\n"
 "PO-Revision-Date: \n"
 "Last-Translator: \n"
 "Language-Team: English <winmerge-translate@lists.sourceforge.net>\n"
@@ -2717,9 +2717,13 @@ msgid "Arrange windows so they overlap\nCascade Windows"
 msgstr ""
 
 #: Merge.rc:1770
+#, c-format
+msgid "Arrange windows as non-overlapping tiles horizontally\nTile Windows Horizontally"
+msgstr ""
+
 #: Merge.rc:1771
 #, c-format
-msgid "Arrange windows as non-overlapping tiles\nTile Windows"
+msgid "Arrange windows as non-overlapping tiles vertically\nTile Windows Vertically"
 msgstr ""
 
 #: Merge.rc:1772

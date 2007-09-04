@@ -2813,14 +2813,22 @@ msgstr ""
 "Överlappande fönster"
 
 #: Merge.rc:1770
-#: Merge.rc:1771
 #, c-format
 msgid ""
-"Arrange windows as non-overlapping tiles\n"
-"Tile Windows"
+"Arrange windows as non-overlapping tiles horizontally\n"
+"Tile Windows Horizontally"
 msgstr ""
 "Ordnar fönstren icke-överlappande horisontellt\n"
 "Ordna horisontellt"
+
+#: Merge.rc:1771
+#, c-format
+msgid ""
+"Arrange windows as non-overlapping tiles vertically\n"
+"Tile Windows Vertically"
+msgstr ""
+"Ordnar fönstren icke-överlappande vertikalt\n"
+"Ordna vertikalt"
 
 #: Merge.rc:1772
 #, c-format

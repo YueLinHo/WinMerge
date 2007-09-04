@@ -2805,13 +2805,21 @@ msgstr ""
 "Cascade Windows"
 
 #: Merge.rc:1770
-#: Merge.rc:1771
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Arrange windows as non-overlapping tiles\n"
-"Tile Windows"
+"Arrange windows as non-overlapping tiles horizontally\n"
+"Tile Windows Horizontally"
 msgstr ""
 "Расположить окна неперекрывающейся горизонтальной черепицей\n"
+"Tile Windows"
+
+#: Merge.rc:1771
+#, fuzzy, c-format
+msgid ""
+"Arrange windows as non-overlapping tiles vertically\n"
+"Tile Windows Vertically"
+msgstr ""
+"Расположить окна неперекрывающейся вертикальной черепицей\n"
 "Tile Windows"
 
 #: Merge.rc:1772

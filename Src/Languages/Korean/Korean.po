@@ -2807,14 +2807,22 @@ msgstr ""
 "계단식 배열"
 
 #: Merge.rc:1770
-#: Merge.rc:1771
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Arrange windows as non-overlapping tiles\n"
-"Tile Windows"
+"Arrange windows as non-overlapping tiles horizontally\n"
+"Tile Windows Horizontally"
 msgstr ""
 "창들을 수평으로 배열합니다.\n"
 "수평 배열"
+
+#: Merge.rc:1771
+#, fuzzy, c-format
+msgid ""
+"Arrange windows as non-overlapping tiles vertically\n"
+"Tile Windows Vertically"
+msgstr ""
+"창들을 수직으로 배열합니다.\n"
+"수직 배열"
 
 #: Merge.rc:1772
 #, c-format

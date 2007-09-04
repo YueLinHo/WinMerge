@@ -2809,13 +2809,21 @@ msgstr ""
 "Kaskáda"
 
 #: Merge.rc:1770
-#: Merge.rc:1771
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Arrange windows as non-overlapping tiles\n"
-"Tile Windows"
+"Arrange windows as non-overlapping tiles horizontally\n"
+"Tile Windows Horizontally"
 msgstr ""
 "Dlaždice vodorovne\n"
+"Dlaždice"
+
+#: Merge.rc:1771
+#, fuzzy, c-format
+msgid ""
+"Arrange windows as non-overlapping tiles vertically\n"
+"Tile Windows Vertically"
+msgstr ""
+"Dlaždice zvisle\n"
 "Dlaždice"
 
 #: Merge.rc:1772

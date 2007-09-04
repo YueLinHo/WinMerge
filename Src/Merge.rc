@@ -1767,8 +1767,8 @@ BEGIN
     ID_WINDOW_NEW           "Open another window for the active document\nNew Window"
     ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window\nArrange Icons"
     ID_WINDOW_CASCADE       "Arrange windows so they overlap\nCascade Windows"
-    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles\nTile Windows"
-    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles\nTile Windows"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles horizontally\nTile Windows Horizontally"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles vertically\nTile Windows Vertically"
     ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
 END
 

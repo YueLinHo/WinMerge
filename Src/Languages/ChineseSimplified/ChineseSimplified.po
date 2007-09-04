@@ -2805,11 +2805,19 @@ msgid ""
 msgstr "排列窗口让它们彼此覆盖n重叠窗口"
 
 #: Merge.rc:1770
-#: Merge.rc:1771
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Arrange windows as non-overlapping tiles\n"
-"Tile Windows"
+"Arrange windows as non-overlapping tiles horizontally\n"
+"Tile Windows Horizontally"
+msgstr ""
+"非覆盖的排列窗口\n"
+"并列窗口"
+
+#: Merge.rc:1771
+#, fuzzy, c-format
+msgid ""
+"Arrange windows as non-overlapping tiles vertically\n"
+"Tile Windows Vertically"
 msgstr ""
 "非覆盖的排列窗口\n"
 "并列窗口"

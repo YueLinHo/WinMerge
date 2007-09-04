@@ -2809,13 +2809,21 @@ msgstr ""
 "Superponer"
 
 #: Merge.rc:1770
-#: Merge.rc:1771
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Arrange windows as non-overlapping tiles\n"
-"Tile Windows"
+"Arrange windows as non-overlapping tiles horizontally\n"
+"Tile Windows Horizontally"
 msgstr ""
 "Ordenar a las ventanas horizontalmente\n"
+"Ordenar"
+
+#: Merge.rc:1771
+#, fuzzy, c-format
+msgid ""
+"Arrange windows as non-overlapping tiles vertically\n"
+"Tile Windows Vertically"
+msgstr ""
+"Ordenar a las ventanas verticalmente\n"
 "Ordenar"
 
 #: Merge.rc:1772

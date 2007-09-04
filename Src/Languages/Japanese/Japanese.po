@@ -2807,13 +2807,21 @@ msgstr ""
 "重ねて表示"
 
 #: Merge.rc:1770
-#: Merge.rc:1771
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Arrange windows as non-overlapping tiles\n"
-"Tile Windows"
+"Arrange windows as non-overlapping tiles horizontally\n"
+"Tile Windows Horizontally"
 msgstr ""
 "ウィンドウを上下に並べて表示します\n"
+"並べて表示"
+
+#: Merge.rc:1771
+#, fuzzy, c-format
+msgid ""
+"Arrange windows as non-overlapping tiles vertically\n"
+"Tile Windows Vertically"
+msgstr ""
+"ウィンドウを左右に並べて表示します\n"
 "並べて表示"
 
 #: Merge.rc:1772

@@ -2793,14 +2793,22 @@ msgstr ""
 "Organiza em Cascata"
 
 #: Merge.rc:1770
-#: Merge.rc:1771
-#, c-format
+#, fuzzy, c-format
 msgid ""
-"Arrange windows as non-overlapping tiles\n"
-"Tile Windows"
+"Arrange windows as non-overlapping tiles horizontally\n"
+"Tile Windows Horizontally"
 msgstr ""
 "Organiza as janelas de modo que elas não se sobreponham\n"
 "Organiza Horizontalmente"
+
+#: Merge.rc:1771
+#, fuzzy, c-format
+msgid ""
+"Arrange windows as non-overlapping tiles vertically\n"
+"Tile Windows Vertically"
+msgstr ""
+"Organiza as janelas de modo que elas não se sobreponham\n"
+"Organiza Verticalmente"
 
 #: Merge.rc:1772
 #, c-format
