@@ -14,7 +14,7 @@ msgstr ""
 "Project-Id-Version: WinMerge\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=13216&atid=113216\n"
 "POT-Creation-Date: 2007-08-14 22:11+0000\n"
-"PO-Revision-Date: 2007-08-28 23:15+0100\n"
+"PO-Revision-Date: 2007-09-05 23:56-0500\n"
 "Last-Translator: Jean-F Jolin <jean-f-j at users.sourceforge.net>\n"
 "Language-Team: French <winmerge-translate@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -741,7 +741,7 @@ msgstr "&Atteindre...\tCtrl+G"
 #: Merge.rc:390
 #, c-format
 msgid "Syntax Highlight"
-msgstr "Appliquer une surbrillance à la syntaxe"
+msgstr "Coloration de la syntaxe"
 
 #: Merge.rc:395
 #, c-format
@@ -2964,8 +2964,8 @@ msgid ""
 "Show or hide the tab bar\n"
 "Toggle TabBar"
 msgstr ""
-"Affiche ou masque la barre de localisation\n"
-"Barre de localisation"
+"Affiche ou masque la barre d'onglet\n"
+"Barre d'onglet"
 
 #: Merge.rc:1802
 #, c-format
