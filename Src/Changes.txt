@@ -7,6 +7,8 @@ Add new items to top.
   Src: MergeEditView.cpp MergeEditView.h
  BUG: [ 1787816 ] Bug in File Rename
   Src: DirActions.cpp
+ BUG: [ 1776487 ] REPLACE dialog, copy highlighted text to FIND fileld
+  Src/editlib: ccrystaleditview.cpp
 
 2007-08-22 Tim
  PATCH: [ 1743623 ] ChineseSimplified language .rc file for trunk rev.4317
