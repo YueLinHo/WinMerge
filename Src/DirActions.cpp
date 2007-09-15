@@ -1182,14 +1182,18 @@ BOOL CDirView::DoItemRename(LPCTSTR szNewItemName)
 	ASSERT(-1 != nSelItem);
 	GetItemFileNames(nSelItem, sLeftFile, sRightFile);
 
-	BOOL bRenameLeft = RenameOnSameDir(sLeftFile, szNewItemName);
-	BOOL bRenameRight = RenameOnSameDir(sRightFile, szNewItemName);
-
 	POSITION key = GetItemKey(nSelItem);
 	ASSERT(key != (POSITION)SPECIAL_ITEM_POS);
 	DIFFITEM& di = GetDocument()->GetDiffRefByKey(key);
 
-	if ((TRUE == bRenameLeft)  && (TRUE == bRenameRight))
+	BOOL bRenameLeft = FALSE;
+	BOOL bRenameRight = FALSE;
+	if (di.isSideLeftOrBoth())
+		bRenameLeft = RenameOnSameDir(sLeftFile, szNewItemName);
+	if (di.isSideRightOrBoth())
+		bRenameRight = RenameOnSameDir(sRightFile, szNewItemName);
+
+	if ((TRUE == bRenameLeft) && (TRUE == bRenameRight))
 	{
 		di.sLeftFilename = szNewItemName;
 		di.sRightFilename = szNewItemName;

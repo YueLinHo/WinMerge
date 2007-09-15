@@ -5,6 +5,8 @@ Add new items to top.
 2007-09-15 Kimmo
  BUG: [ 1777054 ] Next difference sometimes not seen with Wrap Lines enabled
   Src: MergeEditView.cpp MergeEditView.h
+ BUG: [ 1787816 ] Bug in File Rename
+  Src: DirActions.cpp
 
 2007-08-22 Tim
  PATCH: [ 1743623 ] ChineseSimplified language .rc file for trunk rev.4317
