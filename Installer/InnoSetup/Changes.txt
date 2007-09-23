@@ -1,3 +1,8 @@
+
+2007-09-23
+ BUG: [ 1633199 ] Clearcase integration while uninstalling
+  InnoSetup: WinMerge.iss
+
 2007-06-14
  PATCH: [ 1733032 ] Installer: need to uninstall filter files
   InnoSetup: WinMerge.iss
