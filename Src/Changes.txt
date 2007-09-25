@@ -2,6 +2,8 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-09-25 2.6.10 Stable Release (R4561)
+
 2007-09-18 Kimmo
  BUG: [ 1791351 ] Go To Line Number does not change pane focus.
   Src: MergeEditView.cpp
