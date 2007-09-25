@@ -1,4 +1,8 @@
 
+2007-09-25
+ BUG: [ 1802179 ] Runtime error on uninstalling 2.6.10
+  InnoSetup: WinMerge.iss
+
 2007-09-23
  BUG: [ 1633199 ] Clearcase integration while uninstalling
   InnoSetup: WinMerge.iss
