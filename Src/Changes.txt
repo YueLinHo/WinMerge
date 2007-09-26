@@ -2,6 +2,11 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-09-26 2.6.12 Stable Release (R4567)
+
+ Fixed uninstalling bug (BUG: [ 1802179 ] Runtime error on uninstalling 2.6.10)
+ Withdrawn 2.6.10 release due to above bug
+
 2007-09-25 2.6.10 Stable Release (R4561)
 
 2007-09-18 Kimmo
