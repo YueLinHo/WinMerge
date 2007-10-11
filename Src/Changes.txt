@@ -6,6 +6,9 @@ Add new items to top.
  PATCH: [ 1810171 ] MergeChineseTraditional.rc of 2.6.12 updated
   Submitted by Wei-cheng
   Src/Languages/ChineseTraditional: MergeChineseTraditional.rc
+ PATCH: [ 1810539 ] ShellExtensionChineseTraditional.rc for 2.6.12 updated
+  Submitted by Wei-cheng
+  ShellExtension/Languages: ShellExtensionChineseTraditional.rc
 
 2007-09-26 2.6.12 Stable Release (R4567)
 
