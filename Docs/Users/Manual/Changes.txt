@@ -1,3 +1,7 @@
+2007-10-11 Kimmo
+ Bump manual version to 1.2.11 and update copyright year
+  Manual: WinMerge_help.xml
+
 2007-10-11 Tim
  BUG: [ 1807542 ] Manual: few typos
   Manual: Faq.xml Whatsnew.xml
