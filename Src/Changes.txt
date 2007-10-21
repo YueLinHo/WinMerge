@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-10-21 Kimmo
+ BUG: [ 1815859 ] Still considers Vista as Longhorn
+  Src: ConfigLog.cpp
+
 2007-10-11 Kimmo
  PATCH: [ 1810171 ] MergeChineseTraditional.rc of 2.6.12 updated
   Submitted by Wei-cheng
