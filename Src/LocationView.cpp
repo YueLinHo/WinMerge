@@ -9,6 +9,8 @@
 //////////////////////////////////////////////////////////////////////
 
 #include "stdafx.h"
+#include <stdlib.h>
+
 #include "merge.h"
 #include "OptionsMgr.h"
 #include "MergeEditView.h"
@@ -42,6 +44,9 @@ static const int DIFFMARKER_BOTTOM = 3;
 /** @brief Width of difference marker. */
 static const int DIFFMARKER_WIDTH = 6;
 
+static int getColorBrightness(DWORD c1);
+static DWORD getColorDistance(DWORD c1, DWORD c2);
+static DWORD getContrastColor(DWORD areaColor, DWORD bkColor, int amount);
 /** 
  * @brief Bars in location pane
  */
@@ -667,6 +672,89 @@ int CLocationView::IsInsideBar(CRect rc, POINT pt)
 	return retVal;
 }
 
+
+
+/** 
+ * @brief Adds color components (rgb) for calculating brightness.
+ * @note used in getContrastColor()
+ *
+ * @param [in] c1 color
+ * @return sum of color components
+ */
+static int getColorBrightness(DWORD c1)
+{
+	int c1_b=(c1&0xff0000)>>16;
+	int c1_g=(c1&0xff00)>>8;
+	int c1_r=(c1&0xff);
+	return c1_b + c1_g + c1_r;
+}
+
+/** 
+ * @brief Distance between 2 colors.
+ * @note used in getContrastColor()
+ *
+ * @param [in] c1 color 1
+ * @param [in] c2 color 2
+ * @return absolute sum of differences of color components
+ */
+static DWORD getColorDistance(DWORD c1, DWORD c2)
+{
+	int c1_b=(c1&0xff0000)>>16;
+	int c1_g=(c1&0xff00)>>8;
+	int c1_r=(c1&0xff);
+	int c2_b=(c2&0xff0000)>>16;
+	int c2_g=(c2&0xff00)>>8;
+	int c2_r=(c2&0xff);
+	return abs(c2_b-c1_b) + abs(c2_g-c1_g) + abs(c2_r-c1_r);
+}
+
+/** 
+ * @brief Correct Color to be different than background.
+ *
+ * Correct areaColor if it is too similar to bkColor 
+ * (e.g. both are WHITE).
+ * For example:
+ *  amount=30 corrects to 255-30=225 (if bkColor==WHITE), 
+ *  for rgb each
+ *
+ * @note (DWORD=)COLORREF=0x00bbggrr used for parameters.
+ *
+ * @param [in] areaColor drawing (foreground) color
+ * @param [in] bkColor background color
+ * @param [in] amount amount to correct (for one component)
+ *
+ * @return corrected (or uncorrected) areaColor
+ */
+static DWORD getContrastColor(DWORD areaColor, DWORD bkColor, int amount)
+{
+	amount=abs(amount);
+	int add=1;
+	if (getColorBrightness(bkColor) > 127*3) add=-1; // make darker
+	
+	// decode
+	int bk_b=(bkColor&0xff0000)>>16;
+	int bk_g=(bkColor&0xff00)>>8;
+	int bk_r=(bkColor&0xff);
+	int ar_b=(areaColor&0xff0000)>>16;
+	int ar_g=(areaColor&0xff00)>>8;
+	int ar_r=(areaColor&0xff);
+	
+	// correct color
+	int dist_pre=getColorDistance(areaColor, bkColor);
+	if (dist_pre>=amount*3) return areaColor; // color ok
+	int corr_add=add*(amount*3-dist_pre)/3;
+	ar_b+=corr_add;
+	ar_g+=corr_add;
+	ar_r+=corr_add;
+	if (ar_b<0) ar_b=0;
+	if (ar_b>255) ar_b=255;
+	if (ar_g<0) ar_g=0;
+	if (ar_g>255) ar_g=255;
+	if (ar_r<0) ar_r=0;
+	if (ar_r>255) ar_r=255;
+	return (ar_b<<16)|(ar_g<<8)|ar_r;
+}
+
 /** 
  * @brief Draws rect indicating visible area in file views.
  *
@@ -677,8 +765,10 @@ int CLocationView::IsInsideBar(CRect rc, POINT pt)
 void CLocationView::DrawVisibleAreaRect(int nTopLine, int nBottomLine)
 {
 	CMergeDoc* pDoc = GetDocument();
-	const DWORD areaColor = GetSysColor(COLOR_3DFACE);
-	const DWORD bkColor = GetSysColor(COLOR_WINDOW);
+	DWORD areaColor = GetSysColor(COLOR_3DFACE);
+	DWORD bkColor   = GetSysColor(COLOR_WINDOW);
+	//Bugfix: make areaColor darker if both colors are WHITE
+	areaColor=getContrastColor(areaColor, bkColor, 50); 
 	const int nScreenLines = pDoc->GetRightView()->GetScreenLines();
 	if (nTopLine == -1)
 		nTopLine = pDoc->GetRightView()->GetTopLine();
