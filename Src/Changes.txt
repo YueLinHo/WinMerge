@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-11-01 Tim
+ BUG: [ 1807897 ] Button to small in Dutch version
+  Src/Languages/Dutch: MergeDutch.rc
+
 2007-10-24 Kimmo
  PATCH: [ 1816220 ] Bugfix: current position in LocationBar "invisible"
   Submitted by xurux at sourceforge.net
