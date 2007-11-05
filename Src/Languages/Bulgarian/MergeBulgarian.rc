@@ -1596,7 +1596,7 @@ BEGIN
             VALUE "Описание", "WinMerge Bulgarian resources\0"
             VALUE "Версия", "000.000.000.000\0"
             VALUE "Име", "MergeBulgarian\0"
-            VALUE "Авторско право", "© 1996-2006 Dean P. Grimm / Thingamahoochie Software\0"
+            VALUE "Авторско право", "© 1996-2007 Dean P. Grimm / Thingamahoochie Software\0"
             VALUE "Запазена марка", "\0"
             VALUE "Оригинално име", "MergeBulgarian.lang\0"
             VALUE "Вътреен билд", "\0"
