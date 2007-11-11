@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-11-11 Kimmo
+ PATCH: [ 1811745 ] Do not merge ignored differences (with multi selection)
+  Src: MergeDoc.cpp
+
 2007-11-11 Takashi
  BUG: [ 1829572 ] Visible area rect on location bar shakes
   Src: MergeEditView.cpp
