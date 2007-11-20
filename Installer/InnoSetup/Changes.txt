@@ -1,3 +1,6 @@
+2007-11-21 Tim
+ Translate "Integrate with TortoiseSVN" and "Integrate with Rational ClearCase" to German.
+  InnoSetup/Languages: German.isl
 
 2007-09-25
  BUG: [ 1802179 ] Runtime error on uninstalling 2.6.10
