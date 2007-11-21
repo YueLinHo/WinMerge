@@ -143,7 +143,7 @@ int FileActionScript::CreateOperationsScripts()
 		const FileActionItem act = m_actions.GetNext(pos);
 		if (act.atype == FileAction::ACT_COPY && !act.dirflag)
 		{
-			int retVal = VCSCheckOut(act.src, bApplyToAll);
+			int retVal = VCSCheckOut(act.dest, bApplyToAll);
 			if (retVal == SCRIPT_USERCANCEL)
 				bContinue = FALSE;
 			else if (retVal == SCRIPT_USERSKIP)

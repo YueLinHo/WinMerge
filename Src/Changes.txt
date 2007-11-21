@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-11-21 Kimmo
+ BUG: [ 1828930 ] Copy Left To Right with VCS
+  Src: FileActionScript.cpp
+
 2007-11-21 Tim
  BUG: [ 1817626 ] Menu item "Help->GPL" links to GPLv3
   Src: MainFrm.cpp
