@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2007-11-21 Tim
+ BUG: [ 1817626 ] Menu item "Help->GPL" links to GPLv3
+  Src: MainFrm.cpp
+
 2007-11-11 Kimmo
  PATCH: [ 1811745 ] Do not merge ignored differences (with multi selection)
   Src: MergeDoc.cpp

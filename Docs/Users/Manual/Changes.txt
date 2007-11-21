@@ -1,3 +1,7 @@
+2007-11-21 Tim
+ BUG: [ 1817626 ] Menu item "Help->GPL" links to GPLv3
+  Manual: Introduction.xml
+
 2007-10-11 Kimmo
  Bump manual version to 1.2.11 and update copyright year
   Manual: WinMerge_help.xml

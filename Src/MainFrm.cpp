@@ -808,7 +808,7 @@ void CMainFrame::OnUpdateOptionsShowSkipped(CCmdUI* pCmdUI)
 void CMainFrame::OnHelpGnulicense() 
 {
 	CString spath = GetModulePath() + _T("\\Copying");
-	CString url = _T("http://www.gnu.org/copyleft/gpl.html");
+	CString url = _T("http://www.gnu.org/licenses/gpl-2.0.html");
 	
 	OpenFileOrUrl(spath, url);
 }
