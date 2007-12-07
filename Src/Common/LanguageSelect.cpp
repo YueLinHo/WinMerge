@@ -265,11 +265,6 @@ BOOL  CLanguageSelect::SetLanguage(WORD wLangId, bool override)
 		SetThreadLocale(MAKELCID(m_wCurLanguage, SORT_DEFAULT));
 
 		int idx = GetLanguageArrayIndex(m_wCurLanguage);
-		if (idx != -1
-			&& *lang_map[idx].pszLocale != _T('\0'))
-		{
-			_tsetlocale(LC_ALL, lang_map[idx].pszLocale);
-		}
 	}
 	
 	return result;

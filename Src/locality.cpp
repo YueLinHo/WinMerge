@@ -105,9 +105,12 @@ CString GetLocaleStr(const CString & str, int decimalDigits)
 	NumFormat.NumDigits = decimalDigits; // LOCALE_IDIGITS
 	NumFormat.LeadingZero = getLocaleUint(LOCALE_ILZERO, 0);
 	NumFormat.Grouping = GetLocaleGrouping(3);
-	NumFormat.lpDecimalSep = _T("."); // should not be used
-	CString sep = getLocaleStr(LOCALE_STHOUSAND, _T(","));
-	NumFormat.lpThousandSep = (LPTSTR)(LPCTSTR)sep;
+	TCHAR DecimalSep[8];
+	TCHAR ThousandSep[8];
+	NumFormat.lpDecimalSep = GetLocaleInfo(LOCALE_USER_DEFAULT,
+	LOCALE_SDECIMAL, DecimalSep, 8) ? DecimalSep : _T(".");
+	NumFormat.lpThousandSep = GetLocaleInfo(LOCALE_USER_DEFAULT,
+	LOCALE_STHOUSAND, ThousandSep, 8) ? ThousandSep : _T(",");
 	NumFormat.NegativeOrder = getLocaleUint(LOCALE_INEGNUMBER , 0);
 
 	CString out;

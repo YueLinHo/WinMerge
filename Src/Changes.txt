@@ -5,6 +5,10 @@ Add new items to top.
 2007-12-07 Tim
  BUG: [ 1831512 ] Left Date column of CSV Report from "Generate Report.." menu
   Src: DirCmpReport.cpp
+ BUG: [ 1834284 ] "Short Size" columns not rounded in translations
+  Submitted by Jochen Tucht
+  Src: locality.cpp
+  Src/Common: LanguageSelect.cpp
 
 2007-11-21 Kimmo
  BUG: [ 1828930 ] Copy Left To Right with VCS
