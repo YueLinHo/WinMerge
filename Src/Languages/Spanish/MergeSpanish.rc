@@ -1726,9 +1726,9 @@ END
 STRINGTABLE
 BEGIN
     ID_FILE_NEW             "Crear documentos vacios\nNuevo Documento (Ctrl+N)"
-    ID_FILE_OPEN            "Comparar ficheros o directorios\nComparar"
+    ID_FILE_OPEN            "Comparar ficheros o directorios\nComparar (Ctrl+O)"
     ID_FILE_CLOSE           "Cerrar ventana\nCerrar"
-    ID_FILE_SAVE            "Guardar los documentos abiertos\nGuardar"
+    ID_FILE_SAVE            "Guardar los documentos abiertos\nGuardar (Ctrl+S)"
     ID_FILE_SAVE_AS         "Guardar el documento activo con otro nombre\nGuardar como"
     ID_FILE_PAGE_SETUP      "Cambiar las opciones de impresión\nConfigurar página"
     ID_FILE_PRINT_SETUP     "Cambiar la impresora y las opciones de impresión\nConfigurar impresora"
@@ -1809,8 +1809,8 @@ BEGIN
     ID_EDIT_REPEAT          "Repetir la última acción\nRepetir"
     ID_EDIT_REPLACE         "Reemplazar un texto especificado con otro\nReemplazar"
     ID_EDIT_SELECT_ALL      "Seleccionar el documento completo\nSeleccionar todo"
-    ID_EDIT_UNDO            "Deshacer el último cambio\nDeshacer"
-    ID_EDIT_REDO            "Rehacer\nRehacer"
+    ID_EDIT_UNDO            "Deshacer el último cambio\nDeshacer (Ctrl+Z)"
+    ID_EDIT_REDO            "Rehacer\nRehacer (Ctrl+Y)"
 END
 
 // View bar commands
@@ -2827,13 +2827,13 @@ END
 // MERGE MENU
 STRINGTABLE
 BEGIN
-    ID_PREVDIFF             "Ir a la diferencia anterior\nDif. anterior (Alt Up)"
-    ID_NEXTDIFF             "Ir al la siguiente diferencia\nDif. siguiente (Alt Down)"
+    ID_PREVDIFF             "Ir a la diferencia anterior\nDif. anterior (Alt+Up)"
+    ID_NEXTDIFF             "Ir al la siguiente diferencia\nDif. siguiente (Alt+Down)"
     ID_FIRSTDIFF            "Ir al la primera diferencia\nPrimera dif. (Alt+Home)"
     ID_CURDIFF              "Ir a la diferencia actual\nDif. actual (Alt+Enter)"
     ID_LASTDIFF             "Ir a la última diferencia\nÚltima dif. (Alt+End)"
-    ID_L2R                  "Copiar el texto seleccionado al lado derecho\nCopiar a la derecha (Flecha Derecha)"
-    ID_R2L                  "Copiar el texto seleccionado al lado izquierdo\nCopiar a la izquierda (Flecha Izquierda)"
+    ID_L2R                  "Copiar el texto seleccionado al lado derecho\nCopiar a la derecha (Alt+Right)"
+    ID_R2L                  "Copiar el texto seleccionado al lado izquierdo\nCopiar a la izquierda (Alt+Left)"
     ID_L2RNEXT              "Copiar diferencia al lado derecho e ir a la siguiente\nCopiar a la derecha y avanzar (Ctrl+Alt+Right)"
     ID_R2LNEXT              "Copiar diferencia al lado izquierdo e ir a la siguiente\nCopiar a la izquierda y avanzar (Ctrl+Alt+Left)"
     ID_ALL_RIGHT            "Copiar todas las diferencias al lado derecho\nTodas a la derecha"
