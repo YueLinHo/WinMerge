@@ -642,6 +642,7 @@ public :
     DWORD ParseLinePascal (DWORD dwCookie, int nLineIndex, TEXTBLOCK * pBuf, int &nActualItems);
     DWORD ParseLinePerl (DWORD dwCookie, int nLineIndex, TEXTBLOCK * pBuf, int &nActualItems);
     DWORD ParseLinePhp (DWORD dwCookie, int nLineIndex, TEXTBLOCK * pBuf, int &nActualItems);
+    DWORD ParseLinePowerShell (DWORD dwCookie, int nLineIndex, TEXTBLOCK * pBuf, int &nActualItems);
     DWORD ParseLinePython (DWORD dwCookie, int nLineIndex, TEXTBLOCK * pBuf, int &nActualItems);
     DWORD ParseLineRexx (DWORD dwCookie, int nLineIndex, TEXTBLOCK * pBuf, int &nActualItems);
     DWORD ParseLineRsrc (DWORD dwCookie, int nLineIndex, TEXTBLOCK * pBuf, int &nActualItems);
@@ -721,6 +722,7 @@ public :
       SRC_PASCAL,
       SRC_PERL,
       SRC_PHP,
+      SRC_POWERSHELL,
       SRC_PYTHON,
       SRC_REXX,
       SRC_RSRC,
