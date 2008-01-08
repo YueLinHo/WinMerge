@@ -1,3 +1,7 @@
+2008-01-09 Takashi
+ BUG: [ 1865168 ] "Integrate w/ Tortoise*"checkboxes in installer aren't shown
+  InnoSetup: WinMerge.iss
+
 2007-11-21 Tim
  Translate "Integrate with TortoiseSVN" and "Integrate with Rational ClearCase" to German.
   InnoSetup/Languages: German.isl
