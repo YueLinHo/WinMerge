@@ -1909,6 +1909,10 @@ SOURCE=.\editlib\php.cpp
 # End Source File
 # Begin Source File
 
+SOURCE=.\editlib\po.cpp
+# End Source File
+# Begin Source File
+
 SOURCE=.\editlib\powershell.cpp
 # End Source File
 # Begin Source File

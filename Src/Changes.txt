@@ -2,6 +2,12 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2008-01-08 Tim
+ PATCH: [ 1866221 ] PO(T) syntax highlighter
+  Src: Merge.dsp
+  editlib: ccrystaltextview.cpp ccrystaltextview.h
+  editlib new file: po.cpp
+
 2008-01-05 Takashi
  BUG: [ 1864040 ] Crash when using TrackPoint middle-button scrolling
   Src/Common: SplitterWndEx.cpp
