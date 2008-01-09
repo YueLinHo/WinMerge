@@ -1593,13 +1593,13 @@ BEGIN
         BEGIN
             VALUE "Komentarze", "T³umaczenie: Mateo Gola\0"
             VALUE "FileDescription", "Aplikacja WinMerge\0"
-            VALUE "FileVersion", "2.0.0.1\0"
+            VALUE "FileVersion", "000.000.000.000\0"
             VALUE "InternalName", "WinMerge\0"
-            VALUE "LegalCopyright", "© 1996-2007 Dean P. Grimm / Thingamahoochie Software\0"
+            VALUE "LegalCopyright", "© 1996-2008 Dean P. Grimm / Thingamahoochie Software\0"
             VALUE "OriginalFilename", "WinMerge.EXE\0"
             VALUE "PrivateBuild", ""
             VALUE "ProductName", "WinMerge\0"
-            VALUE "ProductVersion", "2.6.4\0"
+            VALUE "ProductVersion", "000.000.000.000\0"
         END
     END
     BLOCK "VarFileInfo"

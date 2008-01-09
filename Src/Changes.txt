@@ -2,6 +2,11 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2008-01-09 Kimmo
+ Update copyright year for 2008
+  Src: Merge.rc
+  Src/Languages/*: Merge*.rc
+
 2008-01-08 Tim
  PATCH: [ 1866221 ] PO(T) syntax highlighter
   Src: Merge.dsp
