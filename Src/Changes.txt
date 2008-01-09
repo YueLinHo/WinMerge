@@ -6,6 +6,8 @@ Add new items to top.
  Update copyright year for 2008
   Src: Merge.rc
   Src/Languages/*: Merge*.rc
+ PATCH: [ 1864556 ] Update Manual URL for Merge7z
+  ArchiveSupport/Merge7z: readme.txt
 
 2008-01-08 Tim
  PATCH: [ 1866221 ] PO(T) syntax highlighter
