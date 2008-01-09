@@ -2,6 +2,12 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2008-01-10 Tim
+ Fix spelling error "succesfully".
+  Src: Merge.rc MergeDoc.cpp
+  Src/Languages/Brazilian: MergeBrazilian.rc
+  Src/Languages/Turkish: MergeTurkish.rc
+
 2008-01-09 Kimmo
  Update copyright year for 2008
   Src: Merge.rc
