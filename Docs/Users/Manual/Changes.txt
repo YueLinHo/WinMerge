@@ -1,3 +1,7 @@
+2008-01-10 Kimmo
+ PATCH: [ 1867212 ] Manual: clarify file filter's folder name matching
+  Manual: Filters.xml
+
 2007-12-08 Kimmo
  BUG: [ 1846375 ] Error in Manual
   Manual: Configuration.xml
