@@ -7,6 +7,9 @@ Add new items to top.
   Src: Merge.rc MergeDoc.cpp
   Src/Languages/Brazilian: MergeBrazilian.rc
   Src/Languages/Turkish: MergeTurkish.rc
+ PATCH: [ 1743504 ] new keywords (cleaned up)
+  Submitted by Andre Arpin
+  editlib: batch.cpp
 
 2008-01-09 Kimmo
  Update copyright year for 2008
