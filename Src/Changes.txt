@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2008-01-12 Takashi
+ BUG: [ 1869821 ] Register.bat doesn't work on W98 and Vista
+  ShellExtension: Register.bat Unregister.bat
+
 2008-01-10 Tim
  Fix spelling error "succesfully".
   Src: Merge.rc MergeDoc.cpp
