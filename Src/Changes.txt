@@ -2,6 +2,10 @@ Src\Changes.txt
 Add new items to top.
 (This summarizes all changes to all files under Src, including Src\Languages.)
 
+2008-01-17 Kimmo
+ Bump ShellExtension version to 1.9.4 and update copyright year to 2008
+  ShellExtension: ShellExtension.rc
+
 2008-01-15 Tim
  BUG: [ 1869621 ] xslt support
   Submitted by Joel Paula
