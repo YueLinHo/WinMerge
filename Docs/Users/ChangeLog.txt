@@ -5,6 +5,7 @@ http://winmerge.org/tracker/[tracker-id]
 
 WinMerge 2.15.1
   Update version number in trunk
+  Drag and drop items from the folder compare (#3186717)
   Installer: Remove Uninstall shortcut from start menu folder (#3076909)
   Installer: Don't install quick launch icon for Windows 7 (#3079966)
   Installer: Add OpenCandy to the InnoSetup installer (#3088720)

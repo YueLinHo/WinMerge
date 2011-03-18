@@ -399,6 +399,7 @@ protected:
 	afx_msg void OnPluginsList();
 	afx_msg void OnExpandFolder();
 	afx_msg void OnCollapseFolder();
+	afx_msg void OnBeginDrag(NMHDR* pNMHDR, LRESULT* pResult);
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 	BOOL OnHeaderBeginDrag(LPNMHEADER hdr, LRESULT* pResult);
@@ -444,6 +445,7 @@ private:
 	BOOL IsItemSelectedSpecial();
 	void CollapseSubdir(int sel);
 	void ExpandSubdir(int sel);
+	void PrepareDragData(String& filesForDroping);
 };
 
 
