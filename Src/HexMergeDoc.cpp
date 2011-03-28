@@ -446,7 +446,9 @@ HRESULT CHexMergeDoc::OpenDocs(LPCTSTR pathLeft, LPCTSTR pathRight, BOOL bROLeft
 		SUCCEEDED(hr = LoadOneFile(MERGE_VIEW_RIGHT, pathRight, bRORight)))
 	{
 		UpdateDiffItem(0);
-		pf->Invalidate();
+		// An extra ResizeWindow() on the left view aligns scroll ranges, and
+		// also triggers initial diff coloring by invalidating the client area.
+		m_pView[MERGE_VIEW_LEFT]->ResizeWindow();
 		if (GetOptionsMgr()->GetBool(OPT_SCROLL_TO_FIRST))
 			m_pView[MERGE_VIEW_LEFT]->SendMessage(WM_COMMAND, ID_FIRSTDIFF);
 	}
