@@ -43,16 +43,13 @@ public:
 // Dialog Data
 	//{{AFX_DATA(PropCompare)
 	enum { IDD = IDD_PROPPAGE_COMPARE };
-	int     m_compareMethod;
 	BOOL    m_bIgnoreEol;
 	BOOL    m_bIgnoreCase;
 	BOOL    m_bIgnoreBlankLines;
 	int     m_nIgnoreWhite;
 	BOOL    m_bMovedBlocks;
 	BOOL    m_bMatchSimilarLines;
-	BOOL    m_bStopAfterFirst;
 	BOOL    m_bFilterCommentsLines;
-	BOOL    m_bIgnoreSmallTimeDiff;
 	//}}AFX_DATA
 
 
@@ -69,7 +66,6 @@ protected:
 	//{{AFX_MSG(PropCompare)
 	afx_msg BOOL OnInitDialog();
 	afx_msg void OnDefaults();
-	afx_msg void OnCbnSelchangeComparemethodcombo();
 	//}}AFX_MSG
 	DECLARE_MESSAGE_MAP()
 };

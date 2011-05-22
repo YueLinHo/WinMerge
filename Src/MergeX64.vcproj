@@ -5328,6 +5328,10 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath=".\PropCompareFolder.cpp"
+				>
+			</File>
+			<File
 				RelativePath="PropEditor.cpp"
 				>
 				<FileConfiguration
@@ -7784,6 +7788,10 @@
 			</File>
 			<File
 				RelativePath="PropCompare.h"
+				>
+			</File>
+			<File
+				RelativePath=".\PropCompareFolder.h"
 				>
 			</File>
 			<File

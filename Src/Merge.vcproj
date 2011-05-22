@@ -3006,6 +3006,31 @@
 				</FileConfiguration>
 			</File>
 			<File
+				RelativePath="PropCompareFolder.cpp"
+				>
+				<FileConfiguration
+					Name="UnicodeRelease|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="1"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+					/>
+				</FileConfiguration>
+				<FileConfiguration
+					Name="UnicodeDebug|Win32"
+					>
+					<Tool
+						Name="VCCLCompilerTool"
+						Optimization="0"
+						AdditionalIncludeDirectories=""
+						PreprocessorDefinitions=""
+						BrowseInformation="1"
+					/>
+				</FileConfiguration>
+			</File>
+			<File
 				RelativePath="PropEditor.cpp"
 				>
 				<FileConfiguration
@@ -4594,6 +4619,10 @@
 			</File>
 			<File
 				RelativePath="PropCompare.h"
+				>
+			</File>
+			<File
+				RelativePath="PropCompareFolder.h"
 				>
 			</File>
 			<File
