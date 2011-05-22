@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: WinMerge\n"
 "Report-Msgid-Bugs-To: http://bugs.winmerge.org/\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2010-05-07 02:37+0900\n"
+"PO-Revision-Date: 2011-05-23 00:07+0900\n"
 "Last-Translator: Takashi Sawanaka <sawanaka at d1.dion.ne.jp>\n"
 "Language-Team: Japanese <winmerge-translate@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
@@ -877,8 +877,8 @@ msgstr "”äŠr(&A)"
 
 #: Merge.rc:506
 #, c-format
-msgid "Co&mpare Special"
-msgstr "“ÁŽê‚È”äŠr(&M)"
+msgid "Co&mpare As"
+msgstr "Œ`Ž®‚ðŽw’è‚µ‚Ä”äŠr(&M)"
 
 #: Merge.rc:508
 #, c-format
@@ -887,8 +887,8 @@ msgstr "XML(&X)"
 
 #: Merge.rc:509
 #, c-format
-msgid "&HEX"
-msgstr "HEX(&H)"
+msgid "&Binary"
+msgstr "ƒoƒCƒiƒŠ(&B)"
 
 #: Merge.rc:514
 #, c-format
