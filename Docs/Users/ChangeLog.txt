@@ -17,6 +17,7 @@ WinMerge 2.13.21
   Allow setting codepage from command line (#2725549)
   Allow giving encoding name as custom codepage (#2813825, #3010934)
   Add new options dialog panel for folder compare options (#2819626)
+  Add options GUI for quick compare limit (#2825628)
   Bugfix: Untranslated string ("Merge.rc:nnnn") was displayed 
     in status bar (#3025855)
   Bugfix: Pane headers not updated after language change (#2923684)

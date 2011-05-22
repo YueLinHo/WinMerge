@@ -30,6 +30,7 @@ PropCompareFolder::PropCompareFolder(COptionsMgr *optionsMgr)
  , m_compareMethod(-1)
  , m_bStopAfterFirst(FALSE)
  , m_bIgnoreSmallTimeDiff(FALSE)
+ , m_nQuickCompareLimit(4 * Mega)
 {
 }
 
@@ -40,6 +41,7 @@ void PropCompareFolder::DoDataExchange(CDataExchange* pDX)
 	DDX_CBIndex(pDX, IDC_COMPAREMETHODCOMBO, m_compareMethod);
 	DDX_Check(pDX, IDC_COMPARE_STOPFIRST, m_bStopAfterFirst);
 	DDX_Check(pDX, IDC_IGNORE_SMALLTIMEDIFF, m_bIgnoreSmallTimeDiff);
+	DDX_Text(pDX, IDC_COMPARE_QUICKC_LIMIT, m_nQuickCompareLimit);
 	//}}AFX_DATA_MAP
 }
 
@@ -61,6 +63,7 @@ void PropCompareFolder::ReadOptions()
 	m_compareMethod = GetOptionsMgr()->GetInt(OPT_CMP_METHOD);
 	m_bStopAfterFirst = GetOptionsMgr()->GetBool(OPT_CMP_STOP_AFTER_FIRST);
 	m_bIgnoreSmallTimeDiff = GetOptionsMgr()->GetBool(OPT_IGNORE_SMALL_FILETIME);
+	m_nQuickCompareLimit = GetOptionsMgr()->GetInt(OPT_CMP_QUICK_LIMIT) / Mega ;
 }
 
 /** 
@@ -73,6 +76,10 @@ void PropCompareFolder::WriteOptions()
 	GetOptionsMgr()->SaveOption(OPT_CMP_METHOD, (int)m_compareMethod);
 	GetOptionsMgr()->SaveOption(OPT_CMP_STOP_AFTER_FIRST, m_bStopAfterFirst == TRUE);
 	GetOptionsMgr()->SaveOption(OPT_IGNORE_SMALL_FILETIME, m_bIgnoreSmallTimeDiff == TRUE);
+
+	if (m_nQuickCompareLimit > 2000)
+		m_nQuickCompareLimit = 2000;
+	GetOptionsMgr()->SaveOption(OPT_CMP_QUICK_LIMIT, m_nQuickCompareLimit * Mega);
 }
 
 /** 
@@ -116,6 +123,8 @@ void PropCompareFolder::OnDefaults()
 	m_compareMethod = tmp;
 	GetOptionsMgr()->GetDefault(OPT_CMP_STOP_AFTER_FIRST, tmp);
 	m_bStopAfterFirst = tmp;
+	GetOptionsMgr()->GetDefault(OPT_CMP_QUICK_LIMIT, tmp);
+	m_nQuickCompareLimit = tmp / Mega;
 	UpdateData(FALSE);
 }
 

@@ -42,6 +42,7 @@ public:
 	int     m_compareMethod;
 	BOOL    m_bStopAfterFirst;
 	BOOL    m_bIgnoreSmallTimeDiff;
+	UINT    m_nQuickCompareLimit;
 	//}}AFX_DATA
 
 
