@@ -840,7 +840,7 @@ BOOL CDiffWrapper::RunFileDiff()
 			if (!::DeleteFile(strFile1Temp.c_str()))
 			{
 				LogErrorString(Fmt(_T("DeleteFile(%s) failed: %s"),
-					strFile1Temp.c_str(), GetSysError(GetLastError())));
+					strFile1Temp.c_str(), GetSysError(GetLastError()).c_str()));
 			}
 			strFile1Temp.erase();
 		}
@@ -849,7 +849,7 @@ BOOL CDiffWrapper::RunFileDiff()
 			if (!::DeleteFile(strFile2Temp.c_str()))
 			{
 				LogErrorString(Fmt(_T("DeleteFile(%s) failed: %s"),
-					strFile2Temp.c_str(), GetSysError(GetLastError())));
+					strFile2Temp.c_str(), GetSysError(GetLastError()).c_str()));
 			}
 			strFile2Temp.erase();
 		}

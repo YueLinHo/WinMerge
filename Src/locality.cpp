@@ -114,7 +114,7 @@ String GetLocaleStr(LPCTSTR str, int decimalDigits)
 	else
 	{
 		int nerr = GetLastError();
-		TRACE(_T("Error %d in NumToStr(): %s\n"), nerr, GetSysError(nerr));
+		TRACE(_T("Error %d in NumToStr(): %s\n"), nerr, GetSysError(nerr).c_str());
 		out = str;
 	}
 	return out;

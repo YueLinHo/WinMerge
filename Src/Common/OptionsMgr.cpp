@@ -283,7 +283,7 @@ int COption::Set(varprop::VariantValue value, bool allowConversion)
 			if (ConvertType(value, m_value.GetType()))
 				return Set(value);
 		}
-		_RPTF1(_CRT_ERROR, "Wrong type for option: %s", m_strName);
+		_RPTF1(_CRT_ERROR, "Wrong type for option: %s", m_strName.c_str());
 		return OPT_WRONG_TYPE;
 	}
 
@@ -329,7 +329,7 @@ int COption::SetDefault(varprop::VariantValue defaultValue)
 	varprop::VT_TYPE inType = defaultValue.GetType();
 	if (inType != m_valueDef.GetType())
 	{
-		_RPTF1(_CRT_ERROR, "Wrong type for option: %s!", m_strName);
+		_RPTF1(_CRT_ERROR, "Wrong type for option: %s!", m_strName.c_str());
 		return OPT_WRONG_TYPE;
 	}
 
