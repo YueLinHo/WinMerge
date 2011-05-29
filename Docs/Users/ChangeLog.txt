@@ -31,6 +31,7 @@ WinMerge 2.13.21
   Bugfix: Created new matching folder to wrong folder (#2890961)
   Bugfix: Strange scrolling effect in location pane (#2942869)
   Bugfix: Plugin error after interrupting folder compare (#2919475)
+  Bugfix: "+" and "-" from the number block don't work in the editor (#3306182)
   Translation updates:
   - Hungarian (#3164982)
 
