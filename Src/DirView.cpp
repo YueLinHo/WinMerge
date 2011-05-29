@@ -2487,6 +2487,17 @@ BOOL CDirView::PreTranslateMessage(MSG* pMsg)
 					return FALSE;
 				}
 			}
+			int sel = GetFocusedItem();
+			if (pMsg->wParam == VK_SUBTRACT)
+			{
+				CollapseSubdir(sel);
+				return TRUE;
+			}
+			if (pMsg->wParam == VK_ADD)
+			{
+				ExpandSubdir(sel);
+				return TRUE;
+			}
 		}
 		else
 		{
