@@ -14,6 +14,7 @@ WinMerge 2.15.1
   Bugfix: Keeps verifing path even turned off in options (#3111581)
   Bugfix: Crash after deleting text (#3109521)
   Bugfix: "+" and "-" from the number block don't work in the editor (#3306182)
+  Bugfix: Date format did not respect Regional Settings (#3175189)
   Translation updates:
   - Bulgarian (#3082392)
   - Hungarian (#3164982)

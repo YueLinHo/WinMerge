@@ -146,9 +146,9 @@ String TimeString(const __int64 * tim)
 	SYSTEMTIME sysTime;
 	odt.GetAsSystemTime(sysTime);
 	TCHAR buff[128];
-	int len = GetDateFormat(LOCALE_USER_DEFAULT, LOCALE_NOUSEROVERRIDE, &sysTime, NULL, buff, countof(buff));
+	int len = GetDateFormat(LOCALE_USER_DEFAULT, 0, &sysTime, NULL, buff, countof(buff));
 	buff[len - 1] = ' ';
-	GetTimeFormat(LOCALE_USER_DEFAULT, LOCALE_NOUSEROVERRIDE, &sysTime, NULL, buff + len, countof(buff) - len - 1);
+	GetTimeFormat(LOCALE_USER_DEFAULT, 0, &sysTime, NULL, buff + len, countof(buff) - len - 1);
 	return buff;
 }
 
