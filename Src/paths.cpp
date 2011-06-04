@@ -504,9 +504,10 @@ String paths_GetParentPath(LPCTSTR path)
 	// Remove last part of path
 	size_t pos = parentPath.rfind('\\');
 
-	if (pos > -1)
+	if (pos != parentPath.npos)
 	{
-		parentPath.resize(pos);
+		// Do not remove trailing slash from root directories
+		parentPath.resize(pos == 2 ? pos + 1 : pos);
 	}
 	return parentPath;
 }
