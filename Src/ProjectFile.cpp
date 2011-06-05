@@ -26,7 +26,6 @@
 #include <scew/scew.h>
 #include "UnicodeString.h"
 #include "ProjectFile.h"
-#include "Merge.h"
 
 // ATL conversion macro hack for UTF-8 conversion
 #define UTF82W(lpa) (\
@@ -263,13 +262,13 @@ BOOL ProjectFile::Save(LPCTSTR path, String *sError)
 				!scew_printf(_XT("\n")))
 			{
 				success = FALSE;
-				*sError = theApp.LoadString(IDS_FILEWRITE_ERROR);
+				*sError = LoadResString(IDS_FILEWRITE_ERROR);
 			}
 		}
 		else
 		{
 			success = FALSE;
-			*sError = theApp.LoadString(IDS_FILEWRITE_ERROR);
+			*sError = LoadResString(IDS_FILEWRITE_ERROR);
 		}
 		fclose(fp);
 	}
@@ -285,7 +284,7 @@ BOOL ProjectFile::Save(LPCTSTR path, String *sError)
 
 	if (success == FALSE)
 	{
-		*sError = theApp.LoadString(IDS_FILEWRITE_ERROR);
+		*sError = LoadResString(IDS_FILEWRITE_ERROR);
 	}
 	return success;
 }
