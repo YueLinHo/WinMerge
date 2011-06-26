@@ -1164,8 +1164,7 @@ bool CMergeDoc::DoSave(LPCTSTR szPath, BOOL &bSaveSuccess, int nBuffer)
 		nSaveErrorCode = SAVE_NO_FILENAME;
 
 	// Handle unnamed buffers
-	if ((m_nBufferType[nBuffer] == BUFFER_UNNAMED) ||
-		(m_nBufferType[nBuffer] == BUFFER_UNNAMED))
+	if (m_nBufferType[nBuffer] == BUFFER_UNNAMED)
 			nSaveErrorCode = SAVE_NO_FILENAME;
 
 	String sError;
