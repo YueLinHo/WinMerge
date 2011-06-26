@@ -35,6 +35,8 @@ WinMerge 2.13.21
   Bugfix: Date format did not respect Regional Settings (#3175189)
   Bugfix: When selecting multiple files in Patch Generator dialog,
     "Swap" button led to an error.  (#3043635, #3066200)
+  Bugfix: WinMerge contained a vulnerability in handling project files (#3185386)
+    (http://www.zeroscience.mk/mk/vulnerabilities/ZSL-2011-4997.php)
   Translation updates:
   - Hungarian (#3164982)
 
