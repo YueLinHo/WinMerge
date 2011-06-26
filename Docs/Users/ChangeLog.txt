@@ -33,6 +33,8 @@ WinMerge 2.13.21
   Bugfix: Plugin error after interrupting folder compare (#2919475)
   Bugfix: "+" and "-" from the number block don't work in the editor (#3306182)
   Bugfix: Date format did not respect Regional Settings (#3175189)
+  Bugfix: When selecting multiple files in Patch Generator dialog,
+    "Swap" button led to an error.  (#3043635, #3066200)
   Translation updates:
   - Hungarian (#3164982)
 

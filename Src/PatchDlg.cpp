@@ -428,13 +428,8 @@ void CPatchDlg::OnDiffSwapFiles()
 	m_file1 = file2;
 	m_file2 = file1;
 
-	// Empty list
-	m_fileList.clear();
-
-	// Add swapped files
-	files.lfile = file2;
-	files.rfile = file1;
-	AddItem(files);
+	//  swapped files
+	Swap();
 }
 
 /** 
@@ -561,4 +556,18 @@ void CPatchDlg::OnDefaultSettings()
 	m_includeCmdLine = FALSE;
 
 	UpdateSettings();
+}
+
+/**
+ * @brief Swap sides.
+ */
+void CPatchDlg::Swap()
+{
+	std::vector<PATCHFILES>::iterator iter = m_fileList.begin();
+	std::vector<PATCHFILES>::const_iterator iterEnd = m_fileList.end();
+	while (iter != iterEnd)
+	{
+		(*iter).swap_sides();
+		++iter;
+	}
 }
