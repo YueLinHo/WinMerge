@@ -119,7 +119,7 @@ AlwaysShowComponentsList=true
 Name: English; MessagesFile: ..\..\Translations\InnoSetup\English.isl
 
 ;Localizations:
-Name: Basque; MessagesFile: ..\..\Translations\InnoSetup\Basque.isl; InfoAfterFile: ..\..\Translations\Docs\Users\Readme\ReadMe-Basque.txt
+Name: Basque; MessagesFile: ..\..\Translations\InnoSetup\Basque.isl; InfoAfterFile: ..\..\Translations\Docs\Readme\ReadMe-Basque.txt
 Name: Bulgarian; MessagesFile: ..\..\Translations\InnoSetup\Bulgarian.isl; InfoAfterFile: ..\..\Translations\Docs\Readme\ReadMe-Bulgarian.txt
 Name: Catalan; MessagesFile: ..\..\Translations\InnoSetup\Catalan.isl; InfoAfterFile: ..\..\Translations\Docs\Readme\ReadMe-Catalan.txt
 Name: Chinese_Simplified; MessagesFile: ..\..\Translations\InnoSetup\Chinese_Simplified.isl; InfoAfterFile: ..\..\Translations\Docs\Readme\ReadMe-ChineseSimplified.txt
