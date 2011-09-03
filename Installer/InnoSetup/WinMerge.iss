@@ -606,24 +606,34 @@ Name: {app}; Type: dirifempty
 
 {Runs the runtime file installer}
 {Command line used is documented in:
+http://blogs.msdn.com/b/astebner/archive/2006/08/23/715755.aspx
 http://blogs.msdn.com/astebner/archive/2007/02/07/update-regarding-silent-install-of-the-vc-8-0-runtime-vcredist-packages.aspx
 }
 procedure RuntimesInstaller();
 var
     ResultCode: Integer;
 begin
-    Exec(ExpandConstant('{tmp}\vcredist_x86.exe'), '/q:a /c:"VCREDI~3.EXE /q:a /c:""msiexec /i vcredist.msi /qn"" "', '', SW_SHOW, ewWaitUntilTerminated, ResultCode)
+    Exec(ExpandConstant('{tmp}\vcredist_x86.exe'), '/q:a /c:"msiexec /i vcredist.msi /qn /l*v ' + GetTempDir() + '\vcredist_x86.log"', ExpandConstant('{tmp}'), SW_SHOW, ewWaitUntilTerminated, ResultCode)
+    if ResultCode <> 0 then
+      begin
+        Exec(ExpandConstant('{tmp}\vcredist_x86.exe'), '/q:a /c:"VCREDI~3.EXE /q:a /c:""msiexec /i vcredist.msi /qn"" "', ExpandConstant('{tmp}'), SW_SHOW, ewWaitUntilTerminated, ResultCode)
+      end
 end;
 
 {Runs the runtime file installer for X64}
 {Command line used is documented in:
+http://blogs.msdn.com/b/astebner/archive/2006/08/23/715755.aspx
 http://blogs.msdn.com/astebner/archive/2007/02/07/update-regarding-silent-install-of-the-vc-8-0-runtime-vcredist-packages.aspx
 }
 procedure RuntimesX64Installer();
 var
     ResultCode: Integer;
 begin
-    Exec(ExpandConstant('{tmp}\vcredist_x64.exe'), '/q:a /c:"VCREDI~2.EXE /q:a /c:""msiexec /i vcredist.msi /qn"" "', '', SW_SHOW, ewWaitUntilTerminated, ResultCode)
+    Exec(ExpandConstant('{tmp}\vcredist_x64.exe'), '/q:a /c:"msiexec /i vcredist.msi /qn /l*v ' + GetTempDir() + '\vcredist_x64.log"', ExpandConstant('{tmp}'), SW_SHOW, ewWaitUntilTerminated, ResultCode)
+    if ResultCode <> 0 then
+      begin
+        Exec(ExpandConstant('{tmp}\vcredist_x64.exe'), '/q:a /c:"VCREDI~2.EXE /q:a /c:""msiexec /i vcredist.msi /qn"" "', ExpandConstant('{tmp}'), SW_SHOW, ewWaitUntilTerminated, ResultCode)
+      end
 end;
 
 {Determines whether or not the user chose to create a start menu}
