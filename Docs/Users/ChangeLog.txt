@@ -39,6 +39,7 @@ WinMerge 2.13.21
     (http://www.zeroscience.mk/mk/vulnerabilities/ZSL-2011-4997.php)
   New translation: Basque (#3387142)
   Translation updates:
+  - French (#3412030)
   - Hungarian (#3164982)
 
 WinMerge 2.13.20 - 2010-10-20 (r7319)
