@@ -22,6 +22,7 @@ WinMerge 2.15.1
   New translation: Basque (#3387142)
   Translation updates:
   - Bulgarian (#3082392)
+  - French (#3412030)
   - Hungarian (#3164982)
 
 WinMerge 2.13.14 - 2010-09-15 (r7263)

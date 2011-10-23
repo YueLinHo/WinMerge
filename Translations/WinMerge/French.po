@@ -883,7 +883,7 @@ msgstr "Co&mparer"
 #: Merge.rc:506
 #, c-format
 msgid "Co&mpare As"
-msgstr ""
+msgstr "Co&mparer comme"
 
 #: Merge.rc:508
 #, c-format
@@ -893,7 +893,7 @@ msgstr "&XML"
 #: Merge.rc:509
 #, c-format
 msgid "&Binary"
-msgstr ""
+msgstr "&Binaire"
 
 #: Merge.rc:514
 #, c-format
@@ -2666,7 +2666,7 @@ msgstr "&Inclure le contenu des répertoires uniques"
 #: Merge.rc:1692
 #, c-format
 msgid "&Quick compare limit (MB):"
-msgstr "&limite de comparaison rapide (MO):"
+msgstr "&Limite de comparaison rapide (MO):"
 
 #. StringFileInfo.Block
 #: Merge.rc:1718
