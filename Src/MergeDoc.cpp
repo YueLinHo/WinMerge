@@ -436,7 +436,7 @@ int CMergeDoc::Rescan(BOOL &bBinary, BOOL &bIdentical,
 		LangFormatString1(msg, IDS_FILE_DISAPPEARED, m_filePaths.GetRight().c_str());
 		AfxMessageBox(msg);
 		BOOL bSaveResult = FALSE;
-		bool ok = DoSaveAs(m_filePaths.GetRight().c_str(), bSaveResult, 0);
+		bool ok = DoSaveAs(m_filePaths.GetRight().c_str(), bSaveResult, 1);
 		if (!ok || !bSaveResult)
 		{
 			return RESCAN_FILE_ERR;
