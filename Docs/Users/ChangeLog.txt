@@ -37,6 +37,7 @@ WinMerge 2.13.21
     "Swap" button led to an error.  (#3043635, #3066200)
   Bugfix: WinMerge contained a vulnerability in handling project files (#3185386)
     (http://www.zeroscience.mk/mk/vulnerabilities/ZSL-2011-4997.php)
+  Installer: Remove OpenCandy from the InnoSetup installer (r7572, r7539)
   New translation: Basque (#3387142)
   Translation updates:
   - French (#3412030)
