@@ -109,10 +109,10 @@
         </question>
 
         <answer>
-          <para>Not currently. If somebody wants to help with cross-platform
-          support (using <ulink
-          url="http://www.wxwidgets.org/">wxWidgets</ulink>, for example) we are
-          interested, of course.</para>
+          <para>Cross-platform support is being considered for WinMerge 3.x, 
+          which is being discussed in our <ulink
+          url="http://forums.winmerge.org/viewforum.php?f=9">WinMerge 3</ulink> forum.
+          Please join in, if you are interested.</para>
         </answer>
       </qandaentry>
 
