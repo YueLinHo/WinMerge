@@ -3,7 +3,7 @@ Numbers in parentheses refer to SourceForge.net tracker item numbers (#XXXXX) or
 to Subversion revision numbers (rXXXXX). To open the tracker item, go to URL:
 http://winmerge.org/tracker/[tracker-id]
 
-WinMerge 2.13.22
+WinMerge 2.13.22 - 2012-01-13 (r7585)
   Translation updates:
   - Turkish (#2967)
   - Russian (#3017)
