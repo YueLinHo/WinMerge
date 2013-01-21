@@ -12,10 +12,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: WinMerge\n"
 "Report-Msgid-Bugs-To: http://bugs.winmerge.org/\n"
-"POT-Creation-Date: \n"
-"PO-Revision-Date: 2010-01-18 16:20+0100\n"
+"POT-Creation-Date: 2011-08-19 21:57+0000\n"
+"PO-Revision-Date: 2013-01-19 20:15+0100\n"
 "Last-Translator: Filip Komar <filip.komar@gmail.com>\n"
 "Language-Team: Slovenian <winmerge-translate@lists.sourceforge.net>\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CP1250\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -291,12 +292,12 @@ msgstr "&Seznam ..."
 #: Merge.rc:152
 #, c-format
 msgid "Ma&nual Prediffer"
-msgstr "&Roèni predpregled razlik"
+msgstr "Roèe&n predpregled razlik"
 
 #: Merge.rc:153
 #, c-format
 msgid "A&utomatic Prediffer"
-msgstr "&Samodejni predpregled razlik"
+msgstr "Sa&modejen predpregled razlik"
 
 #: Merge.rc:155
 #: Merge.rc:276
@@ -712,7 +713,7 @@ msgstr "&Prilepi\tCtrl+V"
 #: Merge.rc:365
 #, c-format
 msgid "Select Line &Difference\tF4"
-msgstr "Izberi &razlièna polja\tF4"
+msgstr "Izberi &razlièni vrstici\tF4"
 
 #: Merge.rc:368
 #, c-format
@@ -879,7 +880,7 @@ msgstr "Prime&rjaj"
 #: Merge.rc:506
 #, c-format
 msgid "Co&mpare As"
-msgstr ""
+msgstr "Pri&merjaj kot"
 
 #: Merge.rc:508
 #, c-format
@@ -889,7 +890,7 @@ msgstr "&XML"
 #: Merge.rc:509
 #, c-format
 msgid "&Binary"
-msgstr ""
+msgstr "&Binarno"
 
 #: Merge.rc:514
 #, c-format
@@ -1330,7 +1331,7 @@ msgstr "Omogoèi veèkratna okna za primerjanje"
 #: Merge.rc:1609
 #, c-format
 msgid "&Folder compare"
-msgstr "primerjavi &map"
+msgstr "primerjava &map"
 
 #: Merge.rc:787
 #: Merge.rc:1611
@@ -1922,7 +1923,7 @@ msgstr "Obarvaj razlike v vrstici"
 #: Merge.rc:1196
 #, c-format
 msgid "View line differences"
-msgstr "Poglej vrstiène razlike na"
+msgstr "Poglej razlike vrstic na"
 
 #: Merge.rc:1198
 #, c-format
@@ -2403,7 +2404,7 @@ msgstr "Izberi kodno tabelo datoteke za"
 #: Merge.rc:1516
 #, c-format
 msgid "&File Loading:"
-msgstr "&nalaganje:"
+msgstr "&nalaganje datoteke:"
 
 #: Merge.rc:1518
 #: Merge.rc:1521
@@ -2414,7 +2415,7 @@ msgstr " ..."
 #: Merge.rc:1519
 #, c-format
 msgid "File &Saving:"
-msgstr "&shranjevanje:"
+msgstr "&shranjevanje datoteke:"
 
 #: Merge.rc:1522
 #, c-format
@@ -2645,7 +2646,7 @@ msgstr "Mapa"
 #: Merge.rc:1684
 #, c-format
 msgid "&Compare method:"
-msgstr "&Metoda primerjave:"
+msgstr "&Metoda za primerjanje datotek"
 
 #: Merge.rc:1686
 #, c-format
@@ -2665,7 +2666,7 @@ msgstr "&Vkljuèi podmape ki obstajajo samo na eni strani"
 #: Merge.rc:1692
 #, c-format
 msgid "&Quick compare limit (MB):"
-msgstr "&Meja hitre primerjave (MB):"
+msgstr "Omejitev za &hitro primerjavo (MB):"
 
 #. StringFileInfo.Block
 #: Merge.rc:1718
@@ -3263,7 +3264,7 @@ msgstr "Sintaksa"
 #: Merge.rc:1958
 #, c-format
 msgid "Version Control"
-msgstr "Version Control"
+msgstr "Nadzor razlièic"
 
 #: Merge.rc:1963
 #: Merge.rc:2334
@@ -4605,7 +4606,7 @@ msgstr "Verzija desne datoteke, samo za nekatere datoteène tipe."
 #: Merge.rc:2395
 #, c-format
 msgid "Short comparison result."
-msgstr "Kratki rezultati primerjave."
+msgstr "Rezultat kratke primerjave."
 
 #: Merge.rc:2396
 #, c-format
@@ -4739,7 +4740,7 @@ msgid ""
 " Do you want to change the options and preserve the different EOL ?"
 msgstr ""
 "Znaki za zakljuèke vrstic (EOL) so razliènega tipa (Windows/Unix/Mac) v datoteki '%1'.\n"
-"S trenutno nastavitvijo, bodo poenotene v glavnem tipu.\n"
+"S trenutnimi nastavitvitvami, bodo poenotene v glavnem tipu.\n"
 "Ali želite spremeniti možnosti in ohraniti razliène zakljuèke vrstic?"
 
 #: Merge.rc:2435
@@ -5002,7 +5003,7 @@ msgstr ""
 #: Merge.rc:2517
 #, c-format
 msgid "Regular expression error"
-msgstr "Napaka regularnega izraza"
+msgstr "Napaka regularnega izraza "
 
 #: Merge.rc:2518
 #, c-format
@@ -5869,7 +5870,7 @@ msgstr "PHP"
 #: Merge.rc:2758
 #, c-format
 msgid "Portable Object"
-msgstr "Portable Object"
+msgstr "Prenosni objekt"
 
 #: Merge.rc:2759
 #, c-format
@@ -5889,7 +5890,7 @@ msgstr "REXX"
 #: Merge.rc:2762
 #, c-format
 msgid "Resources"
-msgstr "Resources"
+msgstr "Sredstva"
 
 #: Merge.rc:2763
 #, c-format

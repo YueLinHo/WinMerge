@@ -30,6 +30,7 @@ WinMerge 2.15.1
   - Norwegian (#3018)
   - Danish (#3019)
   - Dutch (#3020)
+  - Slovenian (#3022)
 
 WinMerge 2.13.14 - 2010-09-15 (r7263)
   Update release compiler and runtimes to VS2008
