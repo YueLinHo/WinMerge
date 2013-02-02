@@ -1,19 +1,21 @@
 This file summarizes changes in WinMerge releases.
-Numbers in parentheses refer to SourceForge.net tracker item numbers (#XXXXX) or
+Numbers in parentheses refer to SourceForge.net tracker item numbers
+old format (#XXXXXXX) or new format (patches:#XXXX) or
 to Subversion revision numbers (rXXXXX). To open the tracker item, go to URL:
 http://winmerge.org/tracker/[tracker-id]
 
-WinMerge 2.13.23
+WinMerge 2.14.0
+  Bugfix: Shell extension uses unquoted program path (patches:#3023)
   Translation updates:
-  - Dutch (#3020)
-  - Slovenian (#3021)
+  - Dutch (patches:#3020)
+  - Slovenian (patches:#3021)
 
 WinMerge 2.13.22 - 2013-01-13 (r7585)
   Translation updates:
-  - Turkish (#2967)
-  - Russian (#3017)
-  - Norwegian (#3018)
-  - Danish (#3019)
+  - Turkish (patches:#2967)
+  - Russian (patches:#3017)
+  - Norwegian (patches:#3018)
+  - Danish (patches:#3019)
 
 WinMerge 2.13.21 - 2012-12-30 (r7575)
   Update PCRE to version 8.10
