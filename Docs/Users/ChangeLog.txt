@@ -1,5 +1,6 @@
 This file summarizes changes in WinMerge releases.
-Numbers in parentheses refer to SourceForge.net tracker item numbers (#XXXXX) or
+Numbers in parentheses refer to SourceForge.net tracker item numbers
+old format (#XXXXXXX) or new format (patches:#XXXX) or
 to Subversion revision numbers (rXXXXX). To open the tracker item, go to URL:
 http://winmerge.org/tracker/[tracker-id]
 
@@ -18,19 +19,20 @@ WinMerge 2.15.1
     "Swap" button led to an error.  (#3043635, #3066200)
   Bugfix: WinMerge contained a vulnerability in handling project files (#3185386)
     (http://www.zeroscience.mk/mk/vulnerabilities/ZSL-2011-4997.php)
+  Bugfix: Shell extension uses unquoted program path (patches:#3023)
   New translations: 
   - Basque (#3387142)
-  - Turkish (#2967)
+  - Turkish (patches:#2967)
   Translation updates:
   - Bulgarian (#3082392)
   - French (#3412030)
   - Hungarian (#3164982)
   - Spanish (#3412937)
-  - Russian (#3017)
-  - Norwegian (#3018)
-  - Danish (#3019)
-  - Dutch (#3020)
-  - Slovenian (#3022)
+  - Russian (patches:#3017)
+  - Norwegian (patches:#3018)
+  - Danish (patches:#3019)
+  - Dutch (patches:#3020)
+  - Slovenian (patches:#3022)
 
 WinMerge 2.13.14 - 2010-09-15 (r7263)
   Update release compiler and runtimes to VS2008

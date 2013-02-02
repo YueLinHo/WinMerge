@@ -599,7 +599,7 @@ String CWinMergeShell::GetHelpText(UINT_PTR idCmd)
 String CWinMergeShell::FormatCmdLine(const String &winmergePath,
 		const String &path1, const String &path2, BOOL bAlterSubFolders)
 {
-	String strCommandline(winmergePath);
+	String strCommandline = _T("\"") + winmergePath + _T("\"");
 
 	// Check if user wants to use context menu
 	BOOL bSubfoldersByDefault = FALSE;
