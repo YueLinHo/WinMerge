@@ -21,7 +21,7 @@ WinMerge 2.15.1
     (http://www.zeroscience.mk/mk/vulnerabilities/ZSL-2011-4997.php)
   Bugfix: Shell extension uses unquoted program path (patches:#3023)
   New translations: 
-  - Basque (#3387142)
+  - Basque (#3387142, patches:#3024)
   - Turkish (patches:#2967)
   Translation updates:
   - Bulgarian (#3082392)
