@@ -4,6 +4,10 @@ old format (#XXXXXXX) or new format (patches:#XXXX) or
 to Subversion revision numbers (rXXXXX). To open the tracker item, go to URL:
 http://winmerge.org/tracker/[tracker-id]
 
+WinMerge 2.14.2
+  Translation updates:
+  - Basque (patches:#3024)
+
 WinMerge 2.14.0 - 2013-02-02 (r7596)
   Bugfix: Shell extension uses unquoted program path (patches:#3023)
   Translation updates:

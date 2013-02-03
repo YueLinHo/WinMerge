@@ -2,7 +2,7 @@
 # Released under the "GNU General Public License"
 #
 # Translators:
-# * Xabier Aramendi <azpidatziak@gmail.com>
+# * Xabier Aramendi <azpidatziak at gmail.com>
 #
 # ID line follows -- this is updated by SVN
 # $Id$
@@ -12,8 +12,8 @@ msgstr ""
 "Project-Id-Version: WinMerge\n"
 "Report-Msgid-Bugs-To: http://sourceforge.net/tracker/?group_id=13216&atid=113216\n"
 "POT-Creation-Date: 2009-02-10 22:14+0000\n"
-"PO-Revision-Date: \n"
-"Last-Translator: Xabier Aramendi (Azpidatziak) <azpidatziak@gmail.com>\n"
+"PO-Revision-Date: 2013-02-03 22:14+0000\n"
+"Last-Translator: Xabier Aramendi (Azpidatziak) <azpidatziak at gmail.com>\n"
 "Language-Team: (EUS_Xabier Aramendi) <azpidatziak@gmail.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CP1252\n"
@@ -294,26 +294,26 @@ msgstr "&Zerrenda"
 #: Merge.rc:152
 #, c-format
 msgid "Ma&nual Prediffer"
-msgstr ""
+msgstr "&Eskuzko Aurrezberd"
 
 #: Merge.rc:153
 #, c-format
 msgid "A&utomatic Prediffer"
-msgstr ""
+msgstr "&Berezgaitasunezko Aurrezberd"
 
 #: Merge.rc:155
 #: Merge.rc:276
 #: Merge.rc:459
 #, c-format
 msgid "&Manual Unpacking"
-msgstr "&Eskuzko Despaketatzea"
+msgstr "E&skuzko Despaketatzea"
 
 #: Merge.rc:156
 #: Merge.rc:277
 #: Merge.rc:460
 #, c-format
 msgid "&Automatic Unpacking"
-msgstr "&Berezgaitasunezko Despaketatzea"
+msgstr "Be&rezgaitasunezko Despaketatzea"
 
 #: Merge.rc:158
 #: Merge.rc:279
@@ -355,7 +355,7 @@ msgstr "&Birrezarri Aukerak"
 #: Merge.rc:476
 #, c-format
 msgid "&Window"
-msgstr "&Leihoa"
+msgstr "Lei&hoa"
 
 #: Merge.rc:169
 #: Merge.rc:290
@@ -405,7 +405,7 @@ msgstr "&Urjauzia"
 #: Merge.rc:1933
 #, c-format
 msgid "&Help"
-msgstr "La&guntza"
+msgstr "&Laguntza"
 
 #: Merge.rc:180
 #: Merge.rc:301
@@ -426,14 +426,14 @@ msgstr "Argitalpen &Oharrak"
 #: Merge.rc:492
 #, c-format
 msgid "&Translations"
-msgstr "It&zulpenak"
+msgstr "&Itzulpenak"
 
 #: Merge.rc:184
 #: Merge.rc:305
 #: Merge.rc:493
 #, c-format
 msgid "C&onfiguration"
-msgstr "I&txurapena"
+msgstr "It&xurapena"
 
 #: Merge.rc:185
 #: Merge.rc:306
@@ -882,7 +882,7 @@ msgstr "Alder&atu"
 #: Merge.rc:506
 #, c-format
 msgid "Co&mpare As"
-msgstr ""
+msgstr "Alderatu &Honela"
 
 #: Merge.rc:508
 #, c-format
@@ -892,7 +892,7 @@ msgstr "&XML"
 #: Merge.rc:509
 #, c-format
 msgid "&Binary"
-msgstr ""
+msgstr "&Binarioa"
 
 #: Merge.rc:514
 #, c-format
@@ -2650,12 +2650,12 @@ msgstr "Ezikusi 3 segundu baino gut&xiagoko ezberdintasunak"
 #: Merge.rc:1681
 #, c-format
 msgid "&Compare method:"
-msgstr ""
+msgstr "Alderaketa &metodoa:"
 
 #: Merge.rc:1682
 #, c-format
 msgid "&Quick compare limit (MB):"
-msgstr ""
+msgstr "&Alderaketa azkar muga (MB):"
 
 #. StringFileInfo.Block
 #: Merge.rc:1708
@@ -3248,7 +3248,7 @@ msgstr "Ez egin ga&ldera hau berriro."
 #: Merge.rc:1946
 #, c-format
 msgid "Syntax"
-msgstr ""
+msgstr "Joskera"
 
 #: Merge.rc:1948
 #, c-format
