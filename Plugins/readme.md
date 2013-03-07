@@ -1,4 +1,5 @@
-WinMerge/Plugins/readme.txt
+Plugins
+=======
 
 Plugins holds the WinMerge runtime plugins, source code and binaries both.
 
