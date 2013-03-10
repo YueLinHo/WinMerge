@@ -8,6 +8,7 @@ WinMerge 2.14.2
   Bugfix: Download link to the 7-zip plugin installer is broken (bugs:#2128)
   Translation updates:
   - Basque (patches:#3024)
+  - Spanish (patches:#3027)
 
 WinMerge 2.14.0 - 2013-02-02 (r7596)
   Bugfix: Shell extension uses unquoted program path (patches:#3023)
