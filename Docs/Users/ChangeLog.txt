@@ -30,7 +30,7 @@ WinMerge 2.15.1
   - Bulgarian (#3082392)
   - French (#3412030)
   - Hungarian (#3164982)
-  - Spanish (#3412937)
+  - Spanish (#3412937, patches:#3027)
   - Russian (patches:#3017)
   - Norwegian (patches:#3018)
   - Danish (patches:#3019)

@@ -5,6 +5,7 @@
 # * Dean Grimm <grimmdp at yahoo.com>
 # * Jesús M. Delgado 'MacK' <nncsoft at yahoo.com>
 # * Mario Angel <marioangel70 at gmail.com>
+# * Alberto Cardoso <albercardoso at yahoo.es>
 #
 # ID line follows -- this is updated by SVN
 # $Id$
@@ -14,16 +15,16 @@ msgstr ""
 "Project-Id-Version: WinMerge\n"
 "Report-Msgid-Bugs-To: http://bugs.winmerge.org/\n"
 "POT-Creation-Date: 2009-02-10 22:14+0000\n"
-"PO-Revision-Date: 2011-09-21 21:52-0300\n"
-"Last-Translator: Mario Angel <marioangel70 at gmail.com>\n"
+"PO-Revision-Date: 2013-02-19 23:31+0100\n"
+"Last-Translator: Alberto Cardoso <albercardoso at yahoo.es>\n"
 "Language-Team: Spanish <winmerge-translate@lists.sourceforge.net>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CP1252\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Poedit-Language: Spanish\n"
 "X-Poedit-SourceCharset: CP1252\n"
 "X-Poedit-Basepath: ../../Src/\n"
-"X-Poedit-Country: ARGENTINA\n"
+"Language: es_AR\n"
+"X-Generator: Poedit 1.5.5\n"
 
 #. LANGUAGE, SUBLANGUAGE
 #: Merge.rc:22
@@ -293,12 +294,12 @@ msgstr "&Lista..."
 #: Merge.rc:152
 #, c-format
 msgid "Ma&nual Prediffer"
-msgstr ""
+msgstr "Prediferencias Ma&nuales"
 
 #: Merge.rc:153
 #, c-format
 msgid "A&utomatic Prediffer"
-msgstr ""
+msgstr "Prediferencias A&utomáticas"
 
 #: Merge.rc:155
 #: Merge.rc:276
@@ -881,7 +882,7 @@ msgstr "Com&parar"
 #: Merge.rc:506
 #, c-format
 msgid "Co&mpare As"
-msgstr ""
+msgstr "Co&mpara como"
 
 #: Merge.rc:508
 #, c-format
@@ -891,7 +892,7 @@ msgstr "&XML"
 #: Merge.rc:509
 #, c-format
 msgid "&Binary"
-msgstr ""
+msgstr "&Binario"
 
 #: Merge.rc:514
 #, c-format
@@ -1342,8 +1343,12 @@ msgstr "Comparación de &archivos"
 
 #: Merge.rc:789
 #, c-format
-msgid "WinMerge allows hiding some common messageboxes. Press the Reset button to make all messageboxes visible again."
-msgstr "WinMerge permite ocultar algunos mensajes comunes. Pulse Restablecer para hacer todos los mensajes visibles de nuevo."
+msgid ""
+"WinMerge allows hiding some common messageboxes. Press the Reset button to "
+"make all messageboxes visible again."
+msgstr ""
+"WinMerge permite ocultar algunos mensajes comunes. Pulse Restablecer para "
+"hacer todos los mensajes visibles de nuevo."
 
 #: Merge.rc:791
 #, c-format
@@ -2024,7 +2029,9 @@ msgstr "Página de código predeterminada"
 #: Merge.rc:1261
 #, c-format
 msgid "Select the default codepage assumed when loading non-Unicode files:"
-msgstr "Seleccione la página de códigos predeterminada a utilizar cuando se carguen archivos no Unicode:"
+msgstr ""
+"Seleccione la página de códigos predeterminada a utilizar cuando se carguen "
+"archivos no Unicode:"
 
 #: Merge.rc:1263
 #, c-format
@@ -2063,24 +2070,33 @@ msgstr "Imposible detectar la versión de 7-Zip (¿no instalado?)"
 #: Merge.rc:1284
 #, c-format
 msgid ""
-"Archive support requires 7-Zip 3.11 or later to be installed on your computer, or its\n"
-"essential components to be copied to the program directory for standalone operation."
+"Archive support requires 7-Zip 3.11 or later to be installed on your "
+"computer, or its\n"
+"essential components to be copied to the program directory for standalone "
+"operation."
 msgstr ""
-"El soporte de archivos requiere 7-Zip o posterior instalado en su PC, o sus \n"
-"componentes esenciales copiados en la carpeta del programa para operar en solitario."
+"El soporte de archivos requiere 7-Zip o posterior instalado en su PC, o "
+"sus \n"
+"componentes esenciales copiados en la carpeta del programa para operar en "
+"solitario."
 
 #: Merge.rc:1286
 #, c-format
-msgid "There must also be an appropriate interface plugin (Merge7z*.dll) on the path."
-msgstr "Además debe haber un plugin de interface apropiado (Merge7z*.dll) en la ruta."
+msgid ""
+"There must also be an appropriate interface plugin (Merge7z*.dll) on the "
+"path."
+msgstr ""
+"Además debe haber un plugin de interface apropiado (Merge7z*.dll) en la ruta."
 
 #: Merge.rc:1288
 #, c-format
 msgid ""
-"Please use the version of 7-Zip recommended below until interface plugins for later\n"
+"Please use the version of 7-Zip recommended below until interface plugins "
+"for later\n"
 "versions become available."
 msgstr ""
-"Por favor, use la versión de 7-Zip recomendada debajo hasta que haya disponible \n"
+"Por favor, use la versión de 7-Zip recomendada debajo hasta que haya "
+"disponible \n"
 "una nueva versión del plugin de interface."
 
 #: Merge.rc:1290
@@ -2644,7 +2660,7 @@ msgstr "Carpeta"
 #: Merge.rc:1684
 #, c-format
 msgid "&Compare method:"
-msgstr ""
+msgstr "Método de &Comparación"
 
 #: Merge.rc:1686
 #, c-format
@@ -2664,7 +2680,7 @@ msgstr ""
 #: Merge.rc:1692
 #, c-format
 msgid "&Quick compare limit (MB):"
-msgstr ""
+msgstr "Comparación &Rápida límite (MB):"
 
 #. StringFileInfo.Block
 #: Merge.rc:1718
@@ -3090,7 +3106,8 @@ msgstr "Cambia a la ventana del documento anterior"
 #: Merge.rc:1870
 #, c-format
 msgid "Close the active window and prompts to save the documents"
-msgstr "Cierra la ventana activa y pregunta al usuario si desea guardar los cambios"
+msgstr ""
+"Cierra la ventana activa y pregunta al usuario si desea guardar los cambios"
 
 #: Merge.rc:1875
 #, c-format
@@ -3174,15 +3191,23 @@ msgstr "Haga clic derecho en la ruta para copiar"
 #, c-format
 msgid ""
 "Developers:\n"
-"Dean Grimm, Christian List, Kimmo Varis, Jochen Tucht, Tim Gerundt, Takashi Sawanaki, Gal Hammer, Alexander Skinner"
+"Dean Grimm, Christian List, Kimmo Varis, Jochen Tucht, Tim Gerundt, Takashi "
+"Sawanaki, Gal Hammer, Alexander Skinner"
 msgstr ""
 "Desarrolladores:\n"
-"Dean Grimm, Christian List, Kimmo Varis, Jochen Tucht, Tim Gerundt, Takashi Sawanaki, Gal Hammer, Alexander Skinner"
+"Dean Grimm, Christian List, Kimmo Varis, Jochen Tucht, Tim Gerundt, Takashi "
+"Sawanaki, Gal Hammer, Alexander Skinner"
 
 #: Merge.rc:1919
 #, c-format
-msgid "WinMerge comes with ABSOLUTELY NO WARRANTY. This is free software and you are welcome to redistribute it under certain circumstances; see the GNU General Public License in the Help menu for details."
-msgstr "Winmerge no concede ABSOLUTAMENTE NINGUNA GARANTÍA. Es software libre, y puede ser redistribuido bajo ciertas reglas. Vea la Licencia Pública GNU en el menú Ayuda para más detalles."
+msgid ""
+"WinMerge comes with ABSOLUTELY NO WARRANTY. This is free software and you "
+"are welcome to redistribute it under certain circumstances; see the GNU "
+"General Public License in the Help menu for details."
+msgstr ""
+"Winmerge no concede ABSOLUTAMENTE NINGUNA GARANTÍA. Es software libre, y "
+"puede ser redistribuido bajo ciertas reglas. Vea la Licencia Pública GNU en "
+"el menú Ayuda para más detalles."
 
 #: Merge.rc:1925
 #, c-format
@@ -3257,7 +3282,7 @@ msgstr "No &preguntar de nuevo."
 #: Merge.rc:1956
 #, c-format
 msgid "Syntax"
-msgstr ""
+msgstr "Sintaxis"
 
 #: Merge.rc:1958
 #, c-format
@@ -3322,13 +3347,22 @@ msgstr "Todas las cajas de mensaje se mostrarán de nuevo."
 
 #: Merge.rc:1992
 #, c-format
-msgid "Modifications have been made to the current file comparison session.  Some settings may not take place until the current file comparison is restarted."
-msgstr "Se han realizado modificaciones en los archivos de la sesion de comparación actual. Algunas configuraciones pueden no surtir efecto hasta que la comparación de archivos se ejecute de nuevo."
+msgid ""
+"Modifications have been made to the current file comparison session.  Some "
+"settings may not take place until the current file comparison is restarted."
+msgstr ""
+"Se han realizado modificaciones en los archivos de la sesion de comparación "
+"actual. Algunas configuraciones pueden no surtir efecto hasta que la "
+"comparación de archivos se ejecute de nuevo."
 
 #: Merge.rc:1993
 #, c-format
-msgid "The selected font change will not be applied to any currently visible difference windows."
-msgstr "La fuente seleccionada no se aplicará a ninguna de las ventanas de diferencias abiertas actualmente."
+msgid ""
+"The selected font change will not be applied to any currently visible "
+"difference windows."
+msgstr ""
+"La fuente seleccionada no se aplicará a ninguna de las ventanas de "
+"diferencias abiertas actualmente."
 
 #: Merge.rc:1995
 #, c-format
@@ -3337,7 +3371,8 @@ msgid ""
 "\n"
 "Please use values 1 - %1."
 msgstr ""
-"Valor en Tamaño de Tab - el valor no está en el rango aceptado por WinMerge.\n"
+"Valor en Tamaño de Tab - el valor no está en el rango aceptado por "
+"WinMerge.\n"
 "\n"
 "Por favor, utilice valores 1 - %1."
 
@@ -3348,7 +3383,8 @@ msgid ""
 "\n"
 "Please re-start WinMerge after the reset."
 msgstr ""
-"¿Desea restablecer todas las configuraciones de WinMerge a las predeterminadas?\n"
+"¿Desea restablecer todas las configuraciones de WinMerge a las "
+"predeterminadas?\n"
 "\n"
 "Por favor reinicie WinMerge después de restablecer."
 
@@ -3379,13 +3415,18 @@ msgstr "Archivos de opciones (*.ini)|*.ini|Todos los archivos (*.*)|*.*||"
 
 #: Merge.rc:2014
 #, c-format
-msgid "Text Files (*.csv;*.asc;*.rpt;*.txt)|*.csv;*.asc;*.rpt;*.txt|All Files (*.*)|*.*||"
-msgstr "Archivos de texto (*.csv;*.asc;*.rpt;*.txt)|*.csv;*.asc;*.rpt;*.txt|Todos los archivos (*.*)|*.*||"
+msgid ""
+"Text Files (*.csv;*.asc;*.rpt;*.txt)|*.csv;*.asc;*.rpt;*.txt|All Files (*.*)|"
+"*.*||"
+msgstr ""
+"Archivos de texto (*.csv;*.asc;*.rpt;*.txt)|*.csv;*.asc;*.rpt;*.txt|Todos "
+"los archivos (*.*)|*.*||"
 
 #: Merge.rc:2015
 #, c-format
 msgid "HTML Files (*.htm,*.html)|*.htm;*.html|All Files (*.*)|*.*||"
-msgstr "Archivos HTML (*.htm,*.html)|*.htm;*.html|Todos los archivos (*.*)|*.*||"
+msgstr ""
+"Archivos HTML (*.htm,*.html)|*.htm;*.html|Todos los archivos (*.*)|*.*||"
 
 #: Merge.rc:2016
 #, c-format
@@ -3495,10 +3536,12 @@ msgid ""
 "\n"
 "Please make sure the folder exists and is writable."
 msgstr ""
-"No se pudo copiar el archivo con la plantilla de filtros de archivo a la carpeta:\n"
+"No se pudo copiar el archivo con la plantilla de filtros de archivo a la "
+"carpeta:\n"
 "%1\n"
 "\n"
-"Por favor, compruebe que la carpeta existe y que tiene permisos de escritura en ella."
+"Por favor, compruebe que la carpeta existe y que tiene permisos de escritura "
+"en ella."
 
 #: Merge.rc:2053
 #, c-format
@@ -3555,11 +3598,14 @@ msgstr "Expresión regular"
 msgid ""
 "Filters were updated. Do you want to refresh all open folder compares?\n"
 "\n"
-"If you do not want to refresh all compares now you can select No and refresh compares later."
+"If you do not want to refresh all compares now you can select No and refresh "
+"compares later."
 msgstr ""
-"Los Filtros fueron actualizados. ¿Quiere actualizar todas comparaciones de carpetas abiertas?\n"
+"Los Filtros fueron actualizados. ¿Quiere actualizar todas comparaciones de "
+"carpetas abiertas?\n"
 "\n"
-"Si no quiere actualizar todas las comparaciones puede elegir No y actualizar las comparaciones después."
+"Si no quiere actualizar todas las comparaciones puede elegir No y actualizar "
+"las comparaciones después."
 
 #: Merge.rc:2079
 #, c-format
@@ -3798,8 +3844,12 @@ msgstr "¿Guardar los cambios a %1?"
 
 #: Merge.rc:2158
 #, c-format
-msgid "%1 is marked read-only. Would you like to override the read-only file ? (No to save as new filename.)"
-msgstr "%1 es de sólo lectura. Desea sobreescribirlo de modos modos ? (No salvarlo con un nuevo nombre.)"
+msgid ""
+"%1 is marked read-only. Would you like to override the read-only file ? (No "
+"to save as new filename.)"
+msgstr ""
+"%1 es de sólo lectura. Desea sobreescribirlo de modos modos ? (No salvarlo "
+"con un nuevo nombre.)"
 
 #: Merge.rc:2159
 #, c-format
@@ -3850,7 +3900,8 @@ msgid ""
 "\n"
 "Do you want to save the unpacked version to another file?"
 msgstr ""
-"El Plugin '%2' no pudo empaquetar sus cambios al archivo de la izquierda en '%1'.\n"
+"El Plugin '%2' no pudo empaquetar sus cambios al archivo de la izquierda en "
+"'%1'.\n"
 "\n"
 "El archivo original no será cambiado.\n"
 "\n"
@@ -3865,7 +3916,8 @@ msgid ""
 "\n"
 "Do you want to save the unpacked version to another file?"
 msgstr ""
-"El Plugin '%2' no pudo empaquetar sus cambios al archivo de la derecha en '%1'.\n"
+"El Plugin '%2' no pudo empaquetar sus cambios al archivo de la derecha en "
+"'%1'.\n"
 "\n"
 "El archivo original no será cambiado.\n"
 "\n"
@@ -3938,14 +3990,19 @@ msgid ""
 "\n"
 "Refresh documents before continuing."
 msgstr ""
-"No se pueden combinar las diferencias cuando los documentos no están sincronizados.\n"
+"No se pueden combinar las diferencias cuando los documentos no están "
+"sincronizados.\n"
 "\n"
 "Actualize los documentos antes de continuar."
 
 #: Merge.rc:2183
 #, c-format
-msgid "You must specify a SourceSafe project path in order to continue (ie:  $/MyProject)"
-msgstr "Debe especificar la ruta del proyecto de SourceSafe para continuar (ej. $/MiProyecto)"
+msgid ""
+"You must specify a SourceSafe project path in order to continue (ie:  $/"
+"MyProject)"
+msgstr ""
+"Debe especificar la ruta del proyecto de SourceSafe para continuar (ej. $/"
+"MiProyecto)"
 
 #: Merge.rc:2184
 #, c-format
@@ -3954,8 +4011,12 @@ msgstr "Desproteger archivos de VSS..."
 
 #: Merge.rc:2185
 #, c-format
-msgid "Versioning System returned an error while attempting to check out the file.  Unable to continue..."
-msgstr "El sistema de versionado devolvío un error mientras trataba de desproteger el archivo.  Imposible continuar..."
+msgid ""
+"Versioning System returned an error while attempting to check out the file.  "
+"Unable to continue..."
+msgstr ""
+"El sistema de versionado devolvío un error mientras trataba de desproteger "
+"el archivo.  Imposible continuar..."
 
 #: Merge.rc:2186
 #, c-format
@@ -3964,8 +4025,12 @@ msgstr "Error ejecutando el comando del sistema de versionado."
 
 #: Merge.rc:2187
 #, c-format
-msgid "The VSS Working Folder and the location of the current file do not match. Continue?"
-msgstr "La carpeta de trabajo de VSS y la ubicación del archivo actual no coinciden. ¿Continuar?"
+msgid ""
+"The VSS Working Folder and the location of the current file do not match. "
+"Continue?"
+msgstr ""
+"La carpeta de trabajo de VSS y la ubicación del archivo actual no coinciden. "
+"¿Continuar?"
 
 #: Merge.rc:2188
 #, c-format
@@ -3984,17 +4049,20 @@ msgid ""
 " Please, check config spec of used view.\n"
 " Undo checkout operation?"
 msgstr ""
-"El sistema de versionado devolvió un error cuando se intentaba proteger el archivo.\n"
+"El sistema de versionado devolvió un error cuando se intentaba proteger el "
+"archivo.\n"
 " Por favor, compruebe la configuración de la vista utilizada.\n"
 " ¿Desea deshacer la desprotección?"
 
 #: Merge.rc:2191
 #, c-format
 msgid ""
-"Versioning System returned an error while attempting to undo checkout the file.\n"
+"Versioning System returned an error while attempting to undo checkout the "
+"file.\n"
 " Please, check config spec of used view. "
 msgstr ""
-"El sistema de versionado devolvió un error cuando se intentaba deshacer la desprotección del archivo.\n"
+"El sistema de versionado devolvió un error cuando se intentaba deshacer la "
+"desprotección del archivo.\n"
 " Por favor, compruebe la configuración de la vista utilizada. "
 
 #: Merge.rc:2197
@@ -4593,12 +4661,14 @@ msgstr "Indica que lado tiene la fecha de modificación más reciente."
 #: Merge.rc:2393
 #, c-format
 msgid "Left side file version, only for some filetypes."
-msgstr "Versión del archivo del lado izquierdo, sólo para algunos tipos de archivo."
+msgstr ""
+"Versión del archivo del lado izquierdo, sólo para algunos tipos de archivo."
 
 #: Merge.rc:2394
 #, c-format
 msgid "Right side file version, only for some filetypes."
-msgstr "Versión del archivo del lado derecho, sólo para algunos tipos de archivo."
+msgstr ""
+"Versión del archivo del lado derecho, sólo para algunos tipos de archivo."
 
 #: Merge.rc:2395
 #, c-format
@@ -4637,13 +4707,21 @@ msgstr "Codificación del lado derecho."
 
 #: Merge.rc:2407
 #, c-format
-msgid "Number of ignored differences in file. These differences are ignored by WinMerge and cannot be merged."
-msgstr "Número de diferencias ignoradas en el archivo. Estas diferencias son ignoradas por WinMerge y no se pueden combinar."
+msgid ""
+"Number of ignored differences in file. These differences are ignored by "
+"WinMerge and cannot be merged."
+msgstr ""
+"Número de diferencias ignoradas en el archivo. Estas diferencias son "
+"ignoradas por WinMerge y no se pueden combinar."
 
 #: Merge.rc:2408
 #, c-format
-msgid "Number of differences in file. This number does not include ignored differences."
-msgstr "Número de diferencias en el archivo. Este número no incluye las diferencias ignoradas."
+msgid ""
+"Number of differences in file. This number does not include ignored "
+"differences."
+msgstr ""
+"Número de diferencias en el archivo. Este número no incluye las diferencias "
+"ignoradas."
 
 #: Merge.rc:2409
 #, c-format
@@ -4711,23 +4789,33 @@ msgstr "Ocurrió un error cuando se estaban comparando los archivos"
 
 #: Merge.rc:2432
 #, c-format
-msgid "Temporary files could not be created. Check your temporary path settings."
-msgstr "Los archivos temporales no se pudieron crear. Compruebe su ruta para archivos temporales."
+msgid ""
+"Temporary files could not be created. Check your temporary path settings."
+msgstr ""
+"Los archivos temporales no se pudieron crear. Compruebe su ruta para "
+"archivos temporales."
 
 #: Merge.rc:2433
 #, c-format
 msgid ""
 "These files use different carriage return types.\n"
 "\n"
-"Do you want to treat all carriage return types as equivalent for this comparison?\n"
+"Do you want to treat all carriage return types as equivalent for this "
+"comparison?\n"
 "\n"
-"Note: If you always want to treat all carriage return types as equivalent, set the option 'Ignore carriage return differences..' in the Compare tab of the options dialog (available under Edit/Options)."
+"Note: If you always want to treat all carriage return types as equivalent, "
+"set the option 'Ignore carriage return differences..' in the Compare tab of "
+"the options dialog (available under Edit/Options)."
 msgstr ""
 "Estos archivos utilizan tipos diferentes de salto de línea.\n"
 "\n"
-"¿Desea tratar todos los tipos de salto de línea como equivalentes para esta comparación?\n"
+"¿Desea tratar todos los tipos de salto de línea como equivalentes para esta "
+"comparación?\n"
 "\n"
-"Nota: si desea tratar siempre todos los tipos de saltos de línea como equivalentes, seleccione la opción 'Ignorar saltos de línea diferentes..' en la pestaña Comparar del dialogo Configuración (disponible en Editar/Configuración)."
+"Nota: si desea tratar siempre todos los tipos de saltos de línea como "
+"equivalentes, seleccione la opción 'Ignorar saltos de línea diferentes..' en "
+"la pestaña Comparar del dialogo Configuración (disponible en Editar/"
+"Configuración)."
 
 #: Merge.rc:2434
 #, c-format
@@ -4742,8 +4830,12 @@ msgstr ""
 
 #: Merge.rc:2435
 #, c-format
-msgid "An error occurred while prediffing the file '%1' with the plugin '%2'. The prediffing is not applied any more."
-msgstr "Ocurrió un error mientras se precomparaba el archivo '%1' con el plugin '%2'. La precomparación no será aplicada de nuevo."
+msgid ""
+"An error occurred while prediffing the file '%1' with the plugin '%2'. The "
+"prediffing is not applied any more."
+msgstr ""
+"Ocurrió un error mientras se precomparaba el archivo '%1' con el plugin "
+"'%2'. La precomparación no será aplicada de nuevo."
 
 #: Merge.rc:2436
 #, c-format
@@ -4774,17 +4866,26 @@ msgstr ""
 #, c-format
 msgid ""
 "Different codepages found in left (cp%d) and right (cp%d) files. \n"
-"Displaying each file in its codepage will give a better display but merging/copying will be dangerous.\n"
-"Would you like to treat both files as being in the default windows codepage (recommended)?"
+"Displaying each file in its codepage will give a better display but merging/"
+"copying will be dangerous.\n"
+"Would you like to treat both files as being in the default windows codepage "
+"(recommended)?"
 msgstr ""
-"Las páginas de códigos son diferentes en el archivo de la izquierda (cp%d) y el de la derecha (cp%d). \n"
-"Mostrar cada archivo en su página de códigos dará una mejor visualización, pero combinar/copiar sería peligroso.\n"
-"¿Le gustaría tratar ambos archivos con la página de códigos predeterminada de windows (recomendado)?"
+"Las páginas de códigos son diferentes en el archivo de la izquierda (cp%d) y "
+"el de la derecha (cp%d). \n"
+"Mostrar cada archivo en su página de códigos dará una mejor visualización, "
+"pero combinar/copiar sería peligroso.\n"
+"¿Le gustaría tratar ambos archivos con la página de códigos predeterminada "
+"de windows (recomendado)?"
 
 #: Merge.rc:2445
 #, c-format
-msgid "Warning: Files use different encodings, left=%s and right=%s, and merging may lead to information loss."
-msgstr "Atención: los archivos utilizan codificaciones diferentes, izquierdo=%s y derecho=%s, y la combinación podría provocar perdida de información."
+msgid ""
+"Warning: Files use different encodings, left=%s and right=%s, and merging "
+"may lead to information loss."
+msgstr ""
+"Atención: los archivos utilizan codificaciones diferentes, izquierdo=%s y "
+"derecho=%s, y la combinación podría provocar perdida de información."
 
 #: Merge.rc:2446
 #, c-format
@@ -4799,7 +4900,8 @@ msgstr "Información perdida debido a errores de codificación: archivo derecho"
 #: Merge.rc:2448
 #, c-format
 msgid "Information lost due to encoding errors: left file"
-msgstr "Información perdida debido a errores de codificación: archivo izquierdo"
+msgstr ""
+"Información perdida debido a errores de codificación: archivo izquierdo"
 
 #: Merge.rc:2454
 #, c-format
@@ -4899,7 +5001,8 @@ msgstr "Especifique un archivo de salida"
 #: Merge.rc:2493
 #, c-format
 msgid "Cannot create a patch file from binary files."
-msgstr "No se puede crear un archivo de corrección a partir de un archivo binario."
+msgstr ""
+"No se puede crear un archivo de corrección a partir de un archivo binario."
 
 #: Merge.rc:2494
 #, c-format
@@ -4915,7 +5018,8 @@ msgid ""
 msgstr ""
 "Por favor, guarde todos los archivos antes.\n"
 "\n"
-"Crear una corrección requiere que no haya cambios pendientes de ser guardados."
+"Crear una corrección requiere que no haya cambios pendientes de ser "
+"guardados."
 
 #: Merge.rc:2496
 #, c-format
@@ -4931,12 +5035,15 @@ msgstr "Los resultados de comparación de carpetas actuales serán eliminados."
 #, c-format
 msgid ""
 "Archive support is not enabled.\n"
-"All needed components (7-zip and/or Merge7z*.dll) for archive support cannot be found.\n"
+"All needed components (7-zip and/or Merge7z*.dll) for archive support cannot "
+"be found.\n"
 "See manual for more info about archive support and how to enable it."
 msgstr ""
 "El soporte de archivos no está habilitado.\n"
-"Los componentes necesarios(7-zip y/o Merge7z*.dll) para el archivo no están disponibles.\n"
-"Vea el manual para más información acerca del soporte de archivos y cómo habilitarlo."
+"Los componentes necesarios(7-zip y/o Merge7z*.dll) para el archivo no están "
+"disponibles.\n"
+"Vea el manual para más información acerca del soporte de archivos y cómo "
+"habilitarlo."
 
 #: Merge.rc:2503
 #, c-format
@@ -4945,16 +5052,19 @@ msgid ""
 "Note: 7-Zip integration is disabled in WinMerge settings."
 msgstr ""
 "\n"
-"Nota: La integración con 7-Zip está deshabilitada en la configuracion de WinMerge."
+"Nota: La integración con 7-Zip está deshabilitada en la configuracion de "
+"WinMerge."
 
 #: Merge.rc:2504
 #, c-format
 msgid ""
 "\n"
-"Note: 7-Zip integration is restricted to standalone operation in WinMerge settings."
+"Note: 7-Zip integration is restricted to standalone operation in WinMerge "
+"settings."
 msgstr ""
 "\n"
-"Nota: La integración con 7-Zip está restringida a operación en solitario en la configuracion de WinMerge."
+"Nota: La integración con 7-Zip está restringida a operación en solitario en "
+"la configuracion de WinMerge."
 
 #: Merge.rc:2505
 #, c-format
@@ -5270,7 +5380,9 @@ msgstr ""
 #: Merge.rc:2600
 #, c-format
 msgid "Copy selected lines to clipboard adding linenumbers to line begin"
-msgstr "Copiar las líneas seleccionadas al portapapeles añadiendo números de línea al principio de cada una de ellas"
+msgstr ""
+"Copiar las líneas seleccionadas al portapapeles añadiendo números de línea "
+"al principio de cada una de ellas"
 
 #: Merge.rc:2601
 #, c-format
@@ -5561,7 +5673,9 @@ msgstr "Elimina los elementos seleccionados de ambas carpetas"
 #: Merge.rc:2654
 #, c-format
 msgid "Compare selected item (compare first item if multiple items selected)"
-msgstr "Compara el elemento seleccionado (compara el primero si hay múltiples elementos seleccionados)"
+msgstr ""
+"Compara el elemento seleccionado (compara el primero si hay múltiples "
+"elementos seleccionados)"
 
 #: Merge.rc:2660
 #, c-format
@@ -5591,12 +5705,18 @@ msgstr "Mostrar una lista de plugins disponibles"
 #: Merge.rc:2670
 #, c-format
 msgid "The user selects the unpacker (no unpacking when comparing dir)"
-msgstr "El usuario selecciona el desempaquetador (no se desempaqueta cuando se comparan carpetas)"
+msgstr ""
+"El usuario selecciona el desempaquetador (no se desempaqueta cuando se "
+"comparan carpetas)"
 
 #: Merge.rc:2671
 #, c-format
-msgid "The adapted unpacker is applied to both files (one file only needs the extension)"
-msgstr "El desempaquetador elegido se aplica a ambos archivos (sólo un archivo necesita tener la extensión)"
+msgid ""
+"The adapted unpacker is applied to both files (one file only needs the "
+"extension)"
+msgstr ""
+"El desempaquetador elegido se aplica a ambos archivos (sólo un archivo "
+"necesita tener la extensión)"
 
 #: Merge.rc:2672
 #, c-format
@@ -5649,7 +5769,9 @@ msgstr ""
 #: Merge.rc:2690
 #, c-format
 msgid "Outputs current WinMerge version info and configuration to text file"
-msgstr "Escribe la información de la versión actual de Winmerge y la configuración a un archivo de texto"
+msgstr ""
+"Escribe la información de la versión actual de Winmerge y la configuración a "
+"un archivo de texto"
 
 #: Merge.rc:2691
 #, c-format
