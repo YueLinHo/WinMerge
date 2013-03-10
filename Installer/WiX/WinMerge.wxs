@@ -3,7 +3,7 @@
     candleArgs: "WinMerge.wxs" "Fragments\Core.wxs" "Fragments\Docs.wxs" "Fragments\Filters.wxs" "Fragments\Languages.wxs" "Fragments\Features.wxs" "Fragments\WixUI_WinMerge.wxs" "Fragments\WixUI_AdditionalTasksDlg.wxs" <extensions>
     lightArgs: "WinMerge.wixobj" "Core.wixobj" "Docs.wixobj" "Filters.wixobj" "Languages.wixobj" "Features.wixobj" "WixUI_WinMerge.wixobj" "WixUI_AdditionalTasksDlg.wixobj" -ext WixUIExtension -out "<projectname>.msi" <extensions>
 -->
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:util="http://schemas.microsoft.com/wix/UtilExtension">
   <?include Config.wxi ?>
   <!--
     TODO:
@@ -12,6 +12,7 @@
           * Quick Launch
         * Integrate to...
           * TortoiseCVS
+          * TortoiseGit
           * TortoiseSVN
           * ClearCase
         * Modify Path
@@ -37,7 +38,8 @@
       Languages="1033" 
       Manufacturer="$(var.PackageDescription)" 
       Platform="$(var.PackagePlatform)" 
-      SummaryCodepage="1252" />
+      SummaryCodepage="1252"
+      InstallScope="perMachine" />
     
     <Media Id="1"
       Cabinet="winmerge.cab"
@@ -63,23 +65,44 @@
     <Property Id="TASK_STARTMENUSHORTCUTS">1</Property>
     <Property Id="TASK_DESKTOPSHORTCUT">1</Property>
     
+    <!--Search the registry for WinMerge version 2.14 or older. 
+    These versions where installed using InnoSetup and requires a special executable to be executed to uninstall-->
+    <Property Id="UNINSTALLINNOSETUP">
+      <RegistrySearch Id="UninstallInnoSetup" Root="HKLM" Key="SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\WinMerge_is1" Name="QuietUninstallString" Type="raw"/>
+    </Property>
+    
+    <!--Set the command line to be executed in a CustomAction-->
+    <SetProperty Id="QtExecCmdLine" Value="[UNINSTALLINNOSETUP]" After="AppSearch"/>
+    <CustomAction Id="UninstallInnoSetupCA" BinaryKey="WixCA" DllEntry="CAQuietExec" Execute="immediate" Return="check"/>
+
+    <InstallExecuteSequence>
+      <!--Execute the CustomAction to uninstall the old InnoSetup based installer-->
+      <Custom Action="UninstallInnoSetupCA" After="InstallInitialize" >
+        <![CDATA[(NOT Installed) OR UNINSTALLINNOSETUP]]>
+      </Custom>
+    </InstallExecuteSequence>
+
+
     <FeatureRef Id="WinMerge" />
     
-    <!-- TODO: Works this really? -->
-    <Condition Message="WinMerge requires Windows 2000/XP/2003/Vista/2008 or later to install.">
-      <![CDATA[( VersionNT <= 500 ) OR ( Version9x <> 0 )]]>
+    <Condition Message="WinMerge requires Windows 2000/XP/2003/Vista/2008/7/8/2012 or later to install.">
+      <![CDATA[Installed OR (VersionNT >= 500)]]>
     </Condition>
     
     <WixVariable Id="WixUILicenseRtf" Value="..\..\Docs\users\GPL.rtf" />
     <WixVariable Id="WixUIBannerBmp" Value="Bitmaps\banner.bmp" /> 
     <WixVariable Id="WixUIDialogBmp" Value="Bitmaps\dialog.bmp" />
     
+    <!--Some properties to set on Add/Remove Programs (ARP)-->
     <Icon Id="Merge.ico" SourceFile="..\..\Src\res\Merge.ico"/>
     <Property Id="ARPPRODUCTICON" Value="Merge.ico" />
+    <SetProperty Id="ARPINSTALLLOCATION" Value="[INSTALLDIR]" After="CostFinalize"/>
+    <Property Id="ARPURLINFOABOUT" Value="http://WinMerge.org" />
+    <Property Id="ARPHELPLINK" Value="http://WinMerge.org" />
+    <Property Id="ARPURLUPDATEINFO" Value="http://WinMerge.org/" />
+    <SetProperty Id="ARPREADME" Value="[DOCSDIR]ReadMe.txt" After="CostFinalize"/>
     
     <UIRef Id="WixUI_WinMerge" />
-    
-    <UI />
     
   </Product>
 </Wix>

@@ -1,31 +1,47 @@
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <DefineSolutionProperties>false</DefineSolutionProperties>
-    
-    <WixToolPath Condition="'$(WixToolPath)' == ''">$(PROGRAMFILES)\Windows Installer XML v3.5\bin\</WixToolPath>
+    <WixToolPath Condition="'$(WixToolPath)' == ''">$(PROGRAMFILES)\WiX Toolset v3.6\bin\</WixToolPath>
     <WixTargetsPath Condition="'$(WixTargetsPath)' == ''">$(MSBuildExtensionsPath)\Microsoft\WiX\v3.x\Wix.targets</WixTargetsPath>
-    
     <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    
+    <ProductVersion>1.2.3</ProductVersion>
     <OutputName Condition=" '$(ProductVersion)' != '' ">WinMerge-$(ProductVersion)-$(Platform)-Setup</OutputName>
     <OutputName Condition=" '$(ProductVersion)' == '' ">WinMerge-$(Platform)-Setup</OutputName>
     <OutputPath>..\..\Build\WiX\$(Configuration)\$(Platform)\</OutputPath>
     <IntermediateOutputPath>..\..\BuildTmp\WiX\$(Configuration)\$(Platform)\</IntermediateOutputPath>
     <OutputType>package</OutputType>
+    <ProjectGuid>{cec830a7-1d3b-4558-be94-48a390ef894b}</ProjectGuid>
   </PropertyGroup>
-  
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DefineConstants>
+    </DefineConstants>
+  </PropertyGroup>
   <ItemGroup>
-    <WixExtension Include="$(WixToolPath)WixUIExtension.dll" />
-    <Compile Include="WinMerge.wxs"/>
-    <Compile Include="Fragments\Core.wxs"/>
-    <Compile Include="Fragments\Docs.wxs"/>
-    <Compile Include="Fragments\Filters.wxs"/>
-    <Compile Include="Fragments\Languages.wxs"/>
-    <Compile Include="Fragments\Features.wxs"/>
-    <Compile Include="Fragments\WixUI_WinMerge.wxs"/>
-    <Compile Include="Fragments\WixUI_AdditionalTasksDlg.wxs"/>
+    <WixExtension Include="WixUIExtension">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.6\bin\WixUIExtension.dll</HintPath>
+      <Name>WixUIExtension</Name>
+    </WixExtension>
+    <WixExtension Include="WixUtilExtension">
+      <HintPath>C:\Program Files (x86)\WiX Toolset v3.6\bin\WixUtilExtension.dll</HintPath>
+      <Name>WixUtilExtension</Name>
+    </WixExtension>
+    <Compile Include="Fragments\ShellExtension.wxs" />
+    <Compile Include="WinMerge.wxs" />
+    <Compile Include="Fragments\Core.wxs" />
+    <Compile Include="Fragments\Docs.wxs" />
+    <Compile Include="Fragments\Filters.wxs" />
+    <Compile Include="Fragments\Languages.wxs" />
+    <Compile Include="Fragments\Features.wxs" />
+    <Compile Include="Fragments\WixUI_WinMerge.wxs" />
+    <Compile Include="Fragments\WixUI_AdditionalTasksDlg.wxs" />
   </ItemGroup>
-  
-  <Import Project="$(WixTargetsPath)"/>
+  <ItemGroup>
+    <Folder Include="Fragments\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config.wxi" />
+  </ItemGroup>
+  <Import Project="$(WixTargetsPath)" />
 </Project>

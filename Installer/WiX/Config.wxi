@@ -19,9 +19,9 @@
     <?define UpgradeGuid = "79F16C51-8485-426E-BF23-F4D3D0D431D7" ?>
     
     <?define ProgramFilesFolder = "ProgramFiles64Folder" ?>
-    <?define MergeBuildDir = "..\..\Build\x64\MergeRelease" ?>
+    <?define MergeBuildDir = "..\..\Build\x64\MergeUnicodeRelease" ?>
     <?define ExpatBuildDir = "..\..\Build\expat\lib\x64\Release" ?>
-    <?define PcreBuildDir = "..\..\Build\pcre\lib\x64\Release" ?>
+    <?define PcreBuildDir = "..\..\Build\pcre\x64\Release" ?>
     <?define ShellExtBuildDir = "..\..\Build\ShellExtension\x64 release" ?>
     
     <?define StartMenuShortcutsGuid = "CDC49AA0-DC37-439d-8358-68E2EA9EF909" ?>
