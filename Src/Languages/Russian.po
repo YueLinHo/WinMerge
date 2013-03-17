@@ -811,7 +811,7 @@ msgstr "Заблокировать панели"
 #: Merge.rc:408
 #, c-format
 msgid "&View Whitespace"
-msgstr "Показы&вать невидимые"
+msgstr "Показы&вать пробелы"
 
 #: Merge.rc:409
 #, c-format
@@ -1326,7 +1326,7 @@ msgstr "О&ткрыть диалог Автодополнения:"
 #: Merge.rc:783
 #, c-format
 msgid "Enable multiple compare windows for"
-msgstr "Включить окна множественного сравнения для"
+msgstr "Разрешить несколько окон сравнения для"
 
 #: Merge.rc:785
 #: Merge.rc:1601
@@ -1679,7 +1679,7 @@ msgstr "Контекст:"
 #: Merge.rc:1039
 #, c-format
 msgid "W&hitespaces"
-msgstr "Невидимые"
+msgstr "Пробелы"
 
 #: Merge.rc:1040
 #, c-format
@@ -1826,22 +1826,22 @@ msgstr "Сравнение"
 #: Merge.rc:1154
 #, c-format
 msgid "Whitespace"
-msgstr "Невидимые"
+msgstr "Пробелы"
 
 #: Merge.rc:1155
 #, c-format
 msgid "&Compare"
-msgstr "Учитывать &невидимые"
+msgstr "Учитывать &пробелы"
 
 #: Merge.rc:1156
 #, c-format
 msgid "&Ignore change"
-msgstr "Игнорировать измененные невидимые"
+msgstr "Игнорировать &смену"
 
 #: Merge.rc:1157
 #, c-format
 msgid "I&gnore all"
-msgstr "Игнорировать &все невидимые"
+msgstr "Игнорировать &все пробелы"
 
 #: Merge.rc:1158
 #, c-format
@@ -2470,7 +2470,7 @@ msgstr "Настроить цвета"
 #: Merge.rc:1550
 #, c-format
 msgid "Whitespace:"
-msgstr "Невидимые:"
+msgstr "Пробелы:"
 
 #: Merge.rc:1551
 #, c-format
@@ -2516,7 +2516,7 @@ msgstr "Резервные копии"
 #: Merge.rc:1600
 #, c-format
 msgid "Create backup files in:"
-msgstr "Создать резервные файлы в:"
+msgstr "Создать резервные файлы для:"
 
 #: Merge.rc:1605
 #, c-format
@@ -3243,7 +3243,7 @@ msgstr "Не задавать &больше этот вопрос"
 #: Merge.rc:1946
 #, c-format
 msgid "Syntax"
-msgstr ""
+msgstr "Синтаксис"
 
 #: Merge.rc:1948
 #, c-format
@@ -3999,12 +3999,12 @@ msgstr "Visual SourceSafe (5.0 и выше)"
 #: Merge.rc:2191
 #, c-format
 msgid "Break at whitespace"
-msgstr "Разбивать по невидимым"
+msgstr "Разбивать по пробелам"
 
 #: Merge.rc:2192
 #, c-format
 msgid "Break at whitespace or punctuation"
-msgstr "Разбивать по невидимым и знакам пунктуации"
+msgstr "Разбивать по пробелам и знакам пунктуации"
 
 #: Merge.rc:2198
 #: Merge.rc:2200

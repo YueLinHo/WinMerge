@@ -10,6 +10,7 @@ WinMerge 2.14.2
   - Basque (patches:#3024)
   - Spanish (patches:#3027)
   - Italian (patches:#3028)
+  - Russian (patches:#3029)
 
 WinMerge 2.14.0 - 2013-02-02 (r7596)
   Bugfix: Shell extension uses unquoted program path (patches:#3023)
