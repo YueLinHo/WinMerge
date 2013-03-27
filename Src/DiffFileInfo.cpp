@@ -22,11 +22,11 @@
 // ID line follows -- this is updated by SVN
 // $Id$
 
-#include "stdafx.h"
+#include <windows.h>
+#include <tchar.h>
+
 #include "DirItem.h"
 #include "DiffFileInfo.h"
-#include "unicoder.h"
-#include "UnicodeString.h"
 
 /**
  * @brief Convert file flags to string presentation.
