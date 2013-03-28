@@ -860,31 +860,31 @@ static LPTSTR s_apszUser1KeywordList[] =
     NULL
   };
 
-static BOOL
+static bool
 IsXKeyword (LPTSTR apszKeywords[], LPCTSTR pszChars, int nLength)
 {
   for (int L = 0; apszKeywords[L] != NULL; L++)
     {
       if (_tcsnicmp (apszKeywords[L], pszChars, nLength) == 0
             && apszKeywords[L][nLength] == 0)
-        return TRUE;
+        return true;
     }
-  return FALSE;
+  return false;
 }
 
-static BOOL
+static bool
 IsTexKeyword (LPCTSTR pszChars, int nLength)
 {
   return IsXKeyword (s_apszTexKeywordList, pszChars, nLength);
 }
 
-static BOOL
+static bool
 IsUser1Keyword (LPCTSTR pszChars, int nLength)
 {
   return IsXKeyword (s_apszUser1KeywordList, pszChars, nLength);
 }
 
-static BOOL
+static bool
 IsTexNumber (LPCTSTR pszChars, int nLength)
 {
   if (nLength > 2 && pszChars[0] == '0' && pszChars[1] == 'x')
@@ -894,20 +894,20 @@ IsTexNumber (LPCTSTR pszChars, int nLength)
           if (_istdigit (pszChars[I]) || (pszChars[I] >= 'A' && pszChars[I] <= 'F') ||
                 (pszChars[I] >= 'a' && pszChars[I] <= 'f'))
             continue;
-          return FALSE;
+          return false;
         }
-      return TRUE;
+      return true;
     }
   if (!_istdigit (pszChars[0]))
-    return FALSE;
+    return false;
   for (int I = 1; I < nLength; I++)
     {
       if (!_istdigit (pszChars[I]) && pszChars[I] != '+' &&
             pszChars[I] != '-' && pszChars[I] != '.' && pszChars[I] != 'e' &&
             pszChars[I] != 'E')
-        return FALSE;
+        return false;
     }
-  return TRUE;
+  return true;
 }
 
 #define DEFINE_BLOCK(pos, colorindex)   \
@@ -935,9 +935,9 @@ ParseLineTex (DWORD dwCookie, int nLineIndex, TEXTBLOCK * pBuf, int &nActualItem
     return dwCookie & COOKIE_EXT_COMMENT;
 
   LPCTSTR pszChars = GetLineChars (nLineIndex);
-  BOOL bFirstChar = (dwCookie & ~COOKIE_EXT_COMMENT) == 0;
-  BOOL bRedefineBlock = TRUE;
-  BOOL bDecIndex = FALSE;
+  bool bFirstChar = (dwCookie & ~COOKIE_EXT_COMMENT) == 0;
+  bool bRedefineBlock = true;
+  bool bDecIndex = false;
   int nIdentBegin = -1;
   int nPrevI = -1;
   int I=0;
@@ -972,13 +972,13 @@ ParseLineTex (DWORD dwCookie, int nLineIndex, TEXTBLOCK * pBuf, int &nActualItem
               else
                 {
                   DEFINE_BLOCK (nPos, COLORINDEX_OPERATOR);
-                  bRedefineBlock = TRUE;
-                  bDecIndex = TRUE;
+                  bRedefineBlock = true;
+                  bDecIndex = true;
                   goto out;
                 }
             }
-          bRedefineBlock = FALSE;
-          bDecIndex = FALSE;
+          bRedefineBlock = false;
+          bDecIndex = false;
         }
 out:
 
@@ -1000,7 +1000,7 @@ out:
           if (pszChars[I] == '"' && (I == 0 || I == 1 && pszChars[nPrevI] != '\\' || I >= 2 && (pszChars[nPrevI] != '\\' || pszChars[nPrevI] == '\\' && *::CharPrev(pszChars, pszChars + nPrevI) == '\\')))
             {
               dwCookie &= ~COOKIE_STRING;
-              bRedefineBlock = TRUE;
+              bRedefineBlock = true;
             }
           continue;
         }
@@ -1011,7 +1011,7 @@ out:
           if (pszChars[I] == '\'' && (I == 0 || I == 1 && pszChars[nPrevI] != '\\' || I >= 2 && (pszChars[nPrevI] != '\\' || pszChars[nPrevI] == '\\' && *::CharPrev(pszChars, pszChars + nPrevI) == '\\')))
             {
               dwCookie &= ~COOKIE_CHAR;
-              bRedefineBlock = TRUE;
+              bRedefineBlock = true;
             }
           continue;
         }
@@ -1044,7 +1044,7 @@ out:
       if (bFirstChar)
         {
           if (!xisspace (pszChars[I]))
-            bFirstChar = FALSE;
+            bFirstChar = false;
         }
 
       if (pBuf == NULL)
@@ -1074,7 +1074,7 @@ out:
                 }
               else
                 {
-                  bool bFunction = FALSE;
+                  bool bFunction = false;
 
                   if (!bFunction)
                     {
@@ -1084,7 +1084,7 @@ out:
                             {
                               if (pszChars[j] == '$')
                                 {
-                                  bFunction = TRUE;
+                                  bFunction = true;
                                 }
                               break;
                             }
@@ -1095,8 +1095,8 @@ out:
                       DEFINE_BLOCK (nIdentBegin, COLORINDEX_FUNCNAME);
                     }
                 }
-              bRedefineBlock = TRUE;
-              bDecIndex = TRUE;
+              bRedefineBlock = true;
+              bDecIndex = true;
               nIdentBegin = -1;
             }
         }
@@ -1118,7 +1118,7 @@ out:
         }
       else
         {
-          bool bFunction = FALSE;
+          bool bFunction = false;
 
           if (!bFunction)
             {
@@ -1128,7 +1128,7 @@ out:
                     {
                       if (pszChars[j] == '$')
                         {
-                          bFunction = TRUE;
+                          bFunction = true;
                         }
                       break;
                     }

@@ -169,37 +169,37 @@ static LPTSTR s_apszUser2KeywordList[] =
     NULL
   };
 
-static BOOL
+static bool
 IsXKeyword (LPTSTR apszKeywords[], LPCTSTR pszChars, int nLength)
 {
   for (int L = 0; apszKeywords[L] != NULL; L++)
     {
       if (_tcsnicmp (apszKeywords[L], pszChars, nLength) == 0
             && apszKeywords[L][nLength] == 0)
-        return TRUE;
+        return true;
     }
-  return FALSE;
+  return false;
 }
 
-static BOOL
+static bool
 IsXmlKeyword (LPCTSTR pszChars, int nLength)
 {
   return IsXKeyword (s_apszXmlKeywordList, pszChars, nLength);
 }
 
-static BOOL
+static bool
 IsUser1Keyword (LPCTSTR pszChars, int nLength)
 {
   return IsXKeyword (s_apszUser1KeywordList, pszChars, nLength);
 }
 
-static BOOL
+static bool
 IsUser2Keyword (LPCTSTR pszChars, int nLength)
 {
   return IsXKeyword (s_apszUser2KeywordList, pszChars, nLength);
 }
 
-static BOOL
+static bool
 IsXmlNumber (LPCTSTR pszChars, int nLength)
 {
   if (nLength > 2 && pszChars[0] == '0' && pszChars[1] == 'x')
@@ -209,20 +209,20 @@ IsXmlNumber (LPCTSTR pszChars, int nLength)
           if (_istdigit (pszChars[I]) || (pszChars[I] >= 'A' && pszChars[I] <= 'F') ||
                 (pszChars[I] >= 'a' && pszChars[I] <= 'f'))
             continue;
-          return FALSE;
+          return false;
         }
-      return TRUE;
+      return true;
     }
   if (!_istdigit (pszChars[0]))
-    return FALSE;
+    return false;
   for (int I = 1; I < nLength; I++)
     {
       if (!_istdigit (pszChars[I]) && pszChars[I] != '+' &&
             pszChars[I] != '-' && pszChars[I] != '.' && pszChars[I] != 'e' &&
             pszChars[I] != 'E')
-        return FALSE;
+        return false;
     }
-  return TRUE;
+  return true;
 }
 
 #define DEFINE_BLOCK(pos, colorindex)   \
@@ -252,9 +252,9 @@ ParseLineXml (DWORD dwCookie, int nLineIndex, TEXTBLOCK * pBuf, int &nActualItem
     return dwCookie & COOKIE_EXT_COMMENT;
 
   LPCTSTR pszChars = GetLineChars (nLineIndex);
-  BOOL bFirstChar = (dwCookie & ~COOKIE_EXT_COMMENT) == 0;
-  BOOL bRedefineBlock = TRUE;
-  BOOL bDecIndex = FALSE;
+  bool bFirstChar = (dwCookie & ~COOKIE_EXT_COMMENT) == 0;
+  bool bRedefineBlock = true;
+  bool bDecIndex = false;
   int nIdentBegin = -1;
   int nPrevI = -1;
   int I=0;
@@ -293,13 +293,13 @@ ParseLineXml (DWORD dwCookie, int nLineIndex, TEXTBLOCK * pBuf, int &nActualItem
               else
                 {
                   DEFINE_BLOCK (nPos, COLORINDEX_OPERATOR);
-                  bRedefineBlock = TRUE;
-                  bDecIndex = TRUE;
+                  bRedefineBlock = true;
+                  bDecIndex = true;
                   goto out;
                 }
             }
-          bRedefineBlock = FALSE;
-          bDecIndex = FALSE;
+          bRedefineBlock = false;
+          bDecIndex = false;
         }
 out:
 
@@ -321,7 +321,7 @@ out:
           if (pszChars[I] == '"')
             {
               dwCookie &= ~COOKIE_STRING;
-              bRedefineBlock = TRUE;
+              bRedefineBlock = true;
             }
           continue;
         }
@@ -332,7 +332,7 @@ out:
           if (pszChars[I] == '\'')
             {
               dwCookie &= ~COOKIE_CHAR;
-              bRedefineBlock = TRUE;
+              bRedefineBlock = true;
             }
           continue;
         }
@@ -343,7 +343,7 @@ out:
           if (I > 1 && pszChars[I] == '>' && pszChars[nPrevI] == '-' && *::CharPrev(pszChars, pszChars + nPrevI) == '-')
             {
               dwCookie &= ~COOKIE_EXT_COMMENT;
-              bRedefineBlock = TRUE;
+              bRedefineBlock = true;
             }
           continue;
         }
@@ -354,7 +354,7 @@ out:
           if (I > 0 && pszChars[I] == '>' && pszChars[nPrevI] == '?')
             {
               dwCookie &= ~COOKIE_EXT_USER1;
-              bRedefineBlock = TRUE;
+              bRedefineBlock = true;
             }
           continue;
         }
@@ -388,7 +388,7 @@ out:
       if (bFirstChar)
         {
           if (!xisspace (pszChars[I]))
-            bFirstChar = FALSE;
+            bFirstChar = false;
         }
 
       if (pBuf == NULL)
@@ -442,8 +442,8 @@ out:
                 {
                   goto next;
                 }
-              bRedefineBlock = TRUE;
-              bDecIndex = TRUE;
+              bRedefineBlock = true;
+              bDecIndex = true;
               nIdentBegin = -1;
 next:
               ;
@@ -464,7 +464,7 @@ next:
                 {
                   dwCookie &= ~COOKIE_PREPROCESSOR;
                   nIdentBegin = -1;
-                  bRedefineBlock = TRUE;
+                  bRedefineBlock = true;
                   continue;
                 }
             }
