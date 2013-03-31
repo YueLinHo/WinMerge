@@ -23,6 +23,7 @@ WinMerge 2.15.1
   Bugfix: WinMerge contained a vulnerability in handling project files (#3185386)
     (http://www.zeroscience.mk/mk/vulnerabilities/ZSL-2011-4997.php)
   Bugfix: Shell extension uses unquoted program path (patches:#3023)
+  Bugfix: Unquoted program path vulnerability in installer integration with subversion (patches:#3030)
   Bugfix: Download link to the 7-zip plugin installer is broken (bugs:#2128)
   New translations: 
   - Basque (#3387142, patches:#3024)

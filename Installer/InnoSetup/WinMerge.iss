@@ -552,10 +552,10 @@ Root: HKCU; SubKey: Software\TortoiseCVS\Prefs\External Merge Application; Value
 Root: HKCU; SubKey: Software\TortoiseCVS\Prefs\External Merge2 Params; ValueType: string; ValueName: _; ValueData: """%mine"" ""%yours"""; Flags: uninsdeletevalue dontcreatekey; Tasks: TortoiseCVS
 
 ;Set WinMerge as TortoiseGit diff tool
-Root: HKCU; SubKey: Software\TortoiseGit; ValueType: string; ValueName: Diff; ValueData: {app}\{code:ExeName} -e -ub -dl %bname -dr %yname %base %mine; Flags: uninsdeletevalue; Tasks: TortoiseGit
+Root: HKCU; SubKey: Software\TortoiseGit; ValueType: string; ValueName: Diff; ValueData: """{app}\{code:ExeName}"" -e -u -dl %bname -dr %yname %base %mine"; Flags: uninsdeletevalue; Tasks: TortoiseGit
 
 ;Set WinMerge as TortoiseSVN diff tool
-Root: HKCU; SubKey: Software\TortoiseSVN; ValueType: string; ValueName: Diff; ValueData: {app}\{code:ExeName} -e -ub -dl %bname -dr %yname %base %mine; Flags: uninsdeletevalue; Tasks: TortoiseSVN
+Root: HKCU; SubKey: Software\TortoiseSVN; ValueType: string; ValueName: Diff; ValueData: """{app}\{code:ExeName}"" -e -u -dl %bname -dr %yname %base %mine"; Flags: uninsdeletevalue; Tasks: TortoiseSVN
 
 ;Whatever the user chooses at the [Select Setup Language] dialog should also determine what language WinMerge will start up in
 ;(unless the user already has a startup language specified)
