@@ -5,6 +5,7 @@ to Subversion revision numbers (rXXXXX). To open the tracker item, go to URL:
 http://winmerge.org/tracker/[tracker-id]
 
 WinMerge 2.14.2
+  Bugfix: Unquoted program path vulnerability in installer integration with subversion (patches:#3030)
   Bugfix: Download link to the 7-zip plugin installer is broken (bugs:#2128)
   Translation updates:
   - Basque (patches:#3024)
