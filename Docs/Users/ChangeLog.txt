@@ -39,6 +39,7 @@ WinMerge 2.15.1
   - Dutch (patches:#3020)
   - Slovenian (patches:#3022)
   - Italian (patches:#3028)
+  - Portuguese
 
 WinMerge 2.13.14 - 2010-09-15 (r7263)
   Update release compiler and runtimes to VS2008
